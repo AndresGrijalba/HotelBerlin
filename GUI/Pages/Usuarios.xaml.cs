@@ -39,16 +39,24 @@ namespace GUI.Pages
 
             StackPanel mainStackPanel = new StackPanel();
             mainStackPanel.Orientation = Orientation.Vertical;
-            mainStackPanel.Margin = new Thickness(0,100,0,0);
-            
+            mainStackPanel.Margin = new Thickness(0,80,0,0);
+
+
 
             foreach (var usuario in usuarios)
             {
+                // Crea un Border para cada usuario
+                Border border = new Border();
+                border.CornerRadius = new CornerRadius(10); // Ajusta el radio de las esquinas según tu preferencia
+                border.BorderThickness = new Thickness(0);
+                border.BorderBrush = Brushes.Transparent; // Puedes cambiar el color del borde si lo deseas
+                border.Margin = new Thickness(18, 15, 0, 0);
+                border.Background = Brushes.White;
 
-                // Crea un StackPanel para cada usuario
+                // Crea un StackPanel dentro del Border para colocar los elementos del usuario
                 StackPanel usuarioPanel = new StackPanel();
                 usuarioPanel.Orientation = Orientation.Horizontal;
-                usuarioPanel.Margin = new Thickness(18, 15, 0, 0); // Espacio entre cada usuario
+                usuarioPanel.Height = 40;
 
                 // Crea TextBlocks para mostrar la información del usuario
                 TextBlock nombreTextBlock = new TextBlock();
@@ -56,28 +64,32 @@ namespace GUI.Pages
                 nombreTextBlock.FontWeight = FontWeights.Bold;
                 nombreTextBlock.Foreground = Brushes.Black;
                 nombreTextBlock.Margin = new Thickness(0, 0, 0, 0);
-                nombreTextBlock.Width = 100; // Puedes cambiar el color según lo necesites
+                nombreTextBlock.Width = 100;
+                nombreTextBlock.VerticalAlignment = VerticalAlignment.Center;
 
                 TextBlock apellidoTextBlock = new TextBlock();
                 apellidoTextBlock.Text = " " + usuario.Apellido;
                 apellidoTextBlock.FontWeight = FontWeights.Bold;
                 apellidoTextBlock.Foreground = Brushes.Black;
                 apellidoTextBlock.Margin = new Thickness(10, 0, 0, 0);
-                apellidoTextBlock.Width = 100; // Puedes cambiar el color según lo necesites
+                apellidoTextBlock.Width = 100;
+                apellidoTextBlock.VerticalAlignment = VerticalAlignment.Center;
 
                 TextBlock cedulaTextBlock = new TextBlock();
                 cedulaTextBlock.Text = " " + usuario.Cedula;
                 cedulaTextBlock.FontWeight = FontWeights.Bold;
                 cedulaTextBlock.Foreground = Brushes.Black;
                 cedulaTextBlock.Margin = new Thickness(10, 0, 0, 0);
-                cedulaTextBlock.Width = 100; // Puedes cambiar el color según lo necesites
+                cedulaTextBlock.Width = 100;
+                cedulaTextBlock.VerticalAlignment = VerticalAlignment.Center;
 
                 TextBlock correoTextBlock = new TextBlock();
                 correoTextBlock.Text = " " + usuario.Correo;
                 correoTextBlock.FontWeight = FontWeights.Bold;
                 correoTextBlock.Foreground = Brushes.Black;
-                correoTextBlock.Margin = new Thickness(10,0,0,0);
-                correoTextBlock.Width = 200; // Puedes cambiar el color según lo necesites
+                correoTextBlock.Margin = new Thickness(10, 0, 0, 0);
+                correoTextBlock.Width = 200;
+                correoTextBlock.VerticalAlignment = VerticalAlignment.Center;
 
                 // Agrega los TextBlocks al StackPanel del usuario
                 usuarioPanel.Children.Add(nombreTextBlock);
@@ -85,9 +97,13 @@ namespace GUI.Pages
                 usuarioPanel.Children.Add(cedulaTextBlock);
                 usuarioPanel.Children.Add(correoTextBlock);
 
-                // Agrega el StackPanel del usuario al StackPanel principal
-                mainStackPanel.Children.Add(usuarioPanel);
+                // Añade el StackPanel del usuario al Border
+                border.Child = usuarioPanel;
+
+                // Añade el Border al StackPanel principal
+                mainStackPanel.Children.Add(border);
             }
+
 
             // Agrega el StackPanel principal al Grid (o al contenedor adecuado en tu XAML)
             ContentGrid.Children.Add(mainStackPanel); // ContentGrid es el Grid donde quieres mostrar los usuarios

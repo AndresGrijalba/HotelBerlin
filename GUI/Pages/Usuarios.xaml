@@ -13,13 +13,13 @@
 
         <!-- Contenido de la página dentro del ContentGrid -->
         <Grid x:Name="ContentGrid">
-            <Label Content="Nombre" Margin="20 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
-            <Label Content="Apellido" Margin="130 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
-            <Label Content="Cedula" Margin="240 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
-            <Label Content="Correo" Margin="347 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+            <Label Content="Nombre" Margin="15 60 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+            <Label Content="Apellido" Margin="125 60 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+            <Label Content="Cedula" Margin="238 60 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+            <Label Content="Correo" Margin="347 60 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
 
             <!-- StackPanel principal donde se agregarán los usuarios -->
-            <StackPanel x:Name="MainStackPanel" Margin="0 120 0 0" HorizontalAlignment="Left" Background="White"/>
+            <StackPanel x:Name="MainStackPanel" Margin="0 120 0 0" HorizontalAlignment="Left"/>
             <Label Content="Lista Usuarios" Margin="0 -20 0 0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryBlueText}"/>
         </Grid>
 
