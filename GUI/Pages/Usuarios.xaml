@@ -1,0 +1,27 @@
+﻿<Page x:Class="GUI.Pages.Usuarios"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GUI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="672" d:DesignWidth="800"
+      Title="Usuarios" Background="{DynamicResource PrimaryColor}">
+
+    <!-- Grid que envuelve todo el contenido de la página -->
+    <Grid>
+
+        <!-- Contenido de la página dentro del ContentGrid -->
+        <Grid x:Name="ContentGrid">
+            <Label Content="Nombre" Margin="20 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+            <Label Content="Apellido" Margin="130 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+            <Label Content="Cedula" Margin="240 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+            <Label Content="Correo" Margin="347 50 0 0" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource PrimaryBlueText}"/>
+
+            <!-- StackPanel principal donde se agregarán los usuarios -->
+            <StackPanel x:Name="MainStackPanel" Margin="0 120 0 0" HorizontalAlignment="Left" Background="White"/>
+            <Label Content="Lista Usuarios" Margin="0 -20 0 0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryBlueText}"/>
+        </Grid>
+
+    </Grid>
+</Page>

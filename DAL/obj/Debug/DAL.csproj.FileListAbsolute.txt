@@ -1,0 +1,11 @@
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\bin\Debug\DAL.dll
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\bin\Debug\DAL.pdb
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\bin\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\bin\Debug\System.Data.SqlClient.dll
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\bin\Debug\Entity.pdb
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\bin\Debug\System.Data.SqlClient.xml
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.dll
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.pdb

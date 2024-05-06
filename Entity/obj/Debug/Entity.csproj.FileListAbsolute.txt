@@ -1,0 +1,6 @@
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\bin\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\bin\Debug\Entity.pdb
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.pdb
