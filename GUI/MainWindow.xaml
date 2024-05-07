@@ -38,7 +38,8 @@
                         <RadioButton x:Name="rdRegistrarReserva" Content="Registrar Reserva" Style="{DynamicResource MenuRadioButtonStyleRReservas}" Margin="0 30 0 0" Click="rdRegistrarReserva_Click" Checked="rdRegistrarReserva_Checked"/>
                         <RadioButton x:Name="rdReservas" Content="Reservas" Style="{DynamicResource MenuRadioButtonStyleReservas}" Margin="0 1 0 1" Click="rdReservas_Click" Checked="rdReservas_Checked"/>
                         <RadioButton x:Name="rdHabitaciones" Content="Habitaciones" Style="{DynamicResource MenuRadioButtonStyleHabitaciones}" Margin="0 1 0 1" Click="rdHabitaciones_Click" Checked="rdHabitaciones_Checked"/>
-                        <RadioButton x:Name="rdUsuarios" Content="Usuarios" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
+                        <RadioButton x:Name="rdRegistrarUsuario" Content="Registrar Cliente" Style="{DynamicResource MenuRadioButtonStyleRegistrarUsuarios}" Margin="0 1 0 1" Click="rdRegistrarUsuario_Click" Checked="rdRegistrarUsuario_Checked"/>
+                        <RadioButton x:Name="rdUsuarios" Content="Clientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
                         <!--<TreeView x:Name="tvListar" Background="{DynamicResource SecundaryColor}" BorderBrush="Transparent">
                             <TreeViewItem Header="Listar" IsExpanded="True" Margin="25 6 0 0" Foreground="{DynamicResource PrimaryColor}" FontSize="15" FontWeight="Medium">
                                 <TreeViewItem Header="Reserva" IsExpanded="True" Foreground="{DynamicResource PrimaryColor}" FontSize="15" FontWeight="Medium"/>
@@ -117,8 +118,12 @@
                 </StackPanel>
 
                 <Border Grid.Row="1" CornerRadius="0 0 5 0" Background="Transparent">
-                    <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" Margin="10"/>
+                    <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" Margin="10,-20,10,10"/>
                 </Border>
+
+                <Grid>
+                    <Frame x:Name="MainFrame" />
+                </Grid>
 
             </Grid>
         </Grid>

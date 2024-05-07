@@ -71,6 +71,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AgregarReserva.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AgregarClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Habitaciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,11 +87,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\Reservas.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\Usuarios.xaml">
+    <Page Include="Pages\Clientes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -97,17 +101,20 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AgregarReserva.xaml.cs">
+      <DependentUpon>AgregarReserva.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AgregarClientes.xaml.cs">
+      <DependentUpon>AgregarClientes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Habitaciones.xaml.cs">
       <DependentUpon>Habitaciones.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListaReservas.xaml.cs">
       <DependentUpon>ListaReservas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Reservas.xaml.cs">
-      <DependentUpon>Reservas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Usuarios.xaml.cs">
-      <DependentUpon>Usuarios.xaml</DependentUpon>
+    <Compile Include="Pages\Clientes.xaml.cs">
+      <DependentUpon>Clientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -158,6 +165,12 @@
     <Resource Include="Images\reservaover.png" />
     <Resource Include="Images\user.png" />
     <Resource Include="Images\userover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

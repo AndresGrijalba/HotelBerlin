@@ -4,8 +4,6 @@ C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Themes\Light
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\MainWindow.g.cs
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Habitaciones.g.cs
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\ListaReservas.g.cs
-C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Reservas.g.cs
-C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Usuarios.g.cs
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\App.g.cs
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI_MarkupCompile.cache
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI_MarkupCompile.lref
@@ -23,8 +21,6 @@ C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Assets\Icons
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\MainWindow.baml
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Habitaciones.baml
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\ListaReservas.baml
-C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Reservas.baml
-C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Usuarios.baml
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI.g.resources
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
@@ -32,3 +28,9 @@ C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI.csproj.C
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI.exe
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\GUI.pdb
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\AgregarReserva.g.cs
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\AgregarReserva.baml
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Clientes.g.cs
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\AgregarClientes.g.cs
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\AgregarClientes.baml
+C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\obj\Debug\Pages\Clientes.baml

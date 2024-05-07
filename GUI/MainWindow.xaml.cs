@@ -28,7 +28,7 @@ namespace GUI
 
         private void rdReservas_Click(object sender, RoutedEventArgs e)
         {
-
+            frameContent.Navigate(new ListaReservas());
         }
 
         private void rdReservas_Checked(object sender, RoutedEventArgs e)
@@ -37,7 +37,7 @@ namespace GUI
         }
         private void rdRegistrarReserva_Click(object sender, RoutedEventArgs e)
         {
-            frameContent.Navigate(new Reservas());
+            frameContent.Navigate(new AgregarReserva());
         }
 
         private void rdRegistrarReserva_Checked(object sender, RoutedEventArgs e)
@@ -57,10 +57,20 @@ namespace GUI
 
         private void rdUsuarios_Click(object sender, RoutedEventArgs e)
         {
-            frameContent.Navigate(new Usuarios());
+            frameContent.Navigate(new Clientes());
         }
 
         private void rdUsuarios_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdRegistrarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frameContent.Navigate(new AgregarClientes());
+        }
+
+        private void rdRegistrarUsuario_Checked(object sender, RoutedEventArgs e)
         {
 
         }

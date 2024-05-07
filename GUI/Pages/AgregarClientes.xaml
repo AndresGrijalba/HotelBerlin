@@ -1,25 +1,32 @@
-﻿<Page x:Class="GUI.Pages.Reservas"
+﻿<Page x:Class="GUI.Pages.AgregarClientes"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GUI.Pages"
-      mc:Ignorable="d" d:DesignWidth="820"
-      Title="Reservas" Height="672">
+            mc:Ignorable="d" d:DesignWidth="820"
+      Title="AgregarClientes" Height="672">
 
     <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
-        <Grid x:Name="gridReservas">
+        <Grid x:Name="gridClientes">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="179*"/>
+                <ColumnDefinition Width="641*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="500"/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="Reservas" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
+            <Button Content="Regresar" Height="40" Width="80" HorizontalAlignment="Left" Margin="30,20,0,20" Foreground="{DynamicResource PrimaryBlueText}" FontSize="18" Click="Regresar_Click"/>
+            <Image Source="/Images/back.png" Height="20" Width="20" HorizontalAlignment="Left" Margin="10,30,0,30"/>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1" Margin="182,0,0,0">
+                <Label Content="Cliente" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,0,415,-190">
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,0,415,310" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <TextBlock Text="Nombre"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
@@ -97,7 +104,7 @@
                             Width="295"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="415,0,0,-190">
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,0,0,310" Grid.Column="1" Grid.RowSpan="2">
                 <TextBlock Text="Apellido"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
@@ -164,8 +171,8 @@
                 </ListBox>
             </StackPanel>
 
-            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,120,0,150">
-                <Button x:Name="btnRegistrar" Content="Registrar reserva" Click="RegistrarReserva_Click"
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,215,0,0" Grid.Column="1">
+                <Button x:Name="btnRegistrar" Content="Registrar cliente" Click="RegistrarCliente_Click"
                         FontSize="25"
                         FontFamily="Montserrat"
                         Foreground="{DynamicResource PrimaryColor}"
@@ -211,6 +218,9 @@
             </StackPanel>-->
 
 
+            <Border CornerRadius="0 0 5 0" Margin="0,33,0,0" Background="Transparent">
+                <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" Margin="10,-40,10,27"/>
+            </Border>
         </Grid>
     </Border>
 </Page>

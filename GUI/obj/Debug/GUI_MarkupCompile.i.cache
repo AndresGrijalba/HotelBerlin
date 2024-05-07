@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\GUI\App.xaml
-8-1496138029
+9-1991038949
 
-101495231160
+11-764063024
 15-1911317362
-Assets\Icons\Icons.xaml;MainWindow.xaml;Pages\Habitaciones.xaml;Pages\ListaReservas.xaml;Pages\Reservas.xaml;Pages\Usuarios.xaml;Styles\RadioButtonStyle.xaml;Themes\LightTheme.xaml;
+Assets\Icons\Icons.xaml;MainWindow.xaml;Pages\AgregarReserva.xaml;Pages\AgregarClientes.xaml;Pages\Habitaciones.xaml;Pages\ListaReservas.xaml;Pages\Clientes.xaml;Styles\RadioButtonStyle.xaml;Themes\LightTheme.xaml;
 
-True
+False
 

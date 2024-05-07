@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DatabaseConnection
     {
-        private static string connectionString = @"Data Source=Lenovo\SQLEXPRESS;Initial Catalog=USUARIOS;user Id=soporte;Password=1234";
+        private static string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=HotelBerlinDB;user Id=soporte;Password=123456";
 
         public static SqlConnection GetConnection()
         {

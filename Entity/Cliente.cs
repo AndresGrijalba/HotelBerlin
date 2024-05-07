@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class Usuario
+    public class Cliente
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Correo { get; set; }
         public string Cedula{ get; set; }
-        public Usuario() { }
+        public Cliente() { }
 
         public override string ToString()
         {
