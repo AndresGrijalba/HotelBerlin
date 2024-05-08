@@ -84,6 +84,16 @@ namespace GUI
         {
 
         }
+        private void rdUsuariosPrueba_Click(object sender, RoutedEventArgs e)
+        {
+            frameContent.Navigate(new pruebaCliente());
+        }
+
+        private void rdUsuariosPrueba_Checked(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {

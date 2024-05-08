@@ -4,3 +4,9 @@ C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.cs
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.dll
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\Entity\obj\Debug\Entity.pdb
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\bin\Debug\Entity.dll
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\bin\Debug\Entity.pdb
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\obj\Debug\Entity.dll
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\obj\Debug\Entity.pdb

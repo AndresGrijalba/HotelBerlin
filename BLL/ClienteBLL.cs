@@ -32,17 +32,22 @@ namespace BLL
 
         }
 
-        public bool EliminarCliente(string cedula)
+        public string EliminarCliente(string cedula)
         {
             try
             {
-                return clienteDAL.EliminarCliente(cedula);
+                var Respuesta = clienteDAL.EliminarCliente(cedula);
+                if (Respuesta)
+                {
+                    return "Se elimino el cliente";
+                }
+                return "No se eliminó el cliente";
             }
             catch (Exception ex)
             {
                 // Maneja cualquier excepción que ocurra durante la eliminación
-                Console.WriteLine("Error en la capa BLL al eliminar el usuario: " + ex.Message);
-                return false; // Fallo al eliminar el usuario
+                //Console.WriteLine("Error en la capa BLL al eliminar el usuario: " + ex.Message);
+                return "Error al eliminar el cliente"; // Fallo al eliminar el usuario
             }
         }
 

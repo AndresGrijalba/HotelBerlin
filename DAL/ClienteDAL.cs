@@ -61,6 +61,7 @@ namespace DAL
             {
                 string query = "SELECT * FROM Table_Usuarios";
 
+                connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
@@ -79,8 +80,9 @@ namespace DAL
                         }
                     }
                 }
+                connection.Close();
             }
-
+            
             return clientes;
         }
     }

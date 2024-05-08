@@ -118,13 +118,23 @@ namespace GUI.Pages
         {
             Button botonEliminar = sender as Button;
             string cedulaCliente = botonEliminar.Tag as string;
+            MessageBox.Show(cedulaCliente);
+        }
+        private void EditarCliente_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EliminarCliente_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void CrearCliente_Click(object sender, RoutedEventArgs e)
         {
             mainStackPanel.Children.Clear();
 
-            frameContent.Navigate(new AgregarClientes());
+            //frameContent.Navigate(new AgregarClientes());
         }
     }
 }
