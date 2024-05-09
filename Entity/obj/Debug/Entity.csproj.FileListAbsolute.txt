@@ -10,3 +10,9 @@ C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin
 C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\obj\Debug\Entity.dll
 C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\Entity\obj\Debug\Entity.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\bin\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\bin\Debug\Entity.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.pdb

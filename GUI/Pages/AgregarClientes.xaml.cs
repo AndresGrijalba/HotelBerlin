@@ -44,12 +44,7 @@ namespace GUI.Pages
             string cedula = txtCedula.Text;
             string correo = txtCorreo.Text;
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(cedula) || string.IsNullOrEmpty(correo))
-            {
-                MessageBox.Show("Todos los campos son obligatorios.");
-                return; // Salir del método si algún campo está vacío
-            }
-
+            
             // Crear una instancia de ClienteBLL
             ClienteBLL clienteBLL = new ClienteBLL();
 

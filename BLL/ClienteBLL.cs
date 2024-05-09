@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Net.Http;
 
 namespace BLL
 {
@@ -27,6 +28,8 @@ namespace BLL
                 Cedula = cedula,
                 Correo = correo,
             };
+
+            
 
             clienteDAL.AgregarCliente(usuario);
 

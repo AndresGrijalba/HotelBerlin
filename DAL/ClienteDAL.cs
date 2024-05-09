@@ -1,6 +1,7 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,10 @@ namespace DAL
     {
         public void AgregarCliente(Cliente cliente)
         {
+            Console.WriteLine(cliente);
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
+                connection.Open();
                 string query = "INSERT INTO Table_Usuarios (Nombre, Apellido, Cedula, Correo)" +
                                "VALUES (@Nombre, @Apellido, @Cedula, @Correo)";
 
@@ -41,15 +44,22 @@ namespace DAL
                     {
                         connection.Open();
                         int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0; // Devuelve verdadero si se eliminó al menos una fila
+                        return rowsAffected > 0;
+
+                         // Devuelve verdadero si se eliminó al menos una fila
                     }
                     catch (Exception ex)
                     {
                         // Maneja cualquier excepción que ocurra durante la eliminación
                         Console.WriteLine("Error al eliminar el cliente: " + ex.Message);
                         return false; // Fallo al eliminar el usuario
+
                     }
+                    
+
+
                 }
+
             }
         }
 

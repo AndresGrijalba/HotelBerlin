@@ -8,71 +8,28 @@
       d:DesignHeight="700" d:DesignWidth="800"
       Title="Clientes" Background="{DynamicResource PrimaryColor}">
 
-    <!-- Grid que envuelve todo el contenido de la página -->
-    <Grid Margin="0,-18,0,0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <!-- Contenido de la página dentro del ContentGrid -->
-        <Grid x:Name="ContentGrid" Margin="0,27,0,0">
+        <Label Content="Lista de Clientes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
 
-            <Label Content="Lista Clientes" Margin="0,0,0,0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Foreground="{DynamicResource PrimaryBlueText}"/>
-
-            <!-- DataGrid para mostrar la lista de clientes -->
-            <DataGrid x:Name="ClientesDataGrid" Margin="0,50,0,50" AutoGenerateColumns="False" CanUserAddRows="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Cédula" Binding="{Binding Cedula}" />
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
-                    <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" />
-                    <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" />
-                    <DataGridTemplateColumn Header="Acciones">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Content="Editar" Margin="5" Click="EditarCliente_Click"/>
-                                    <Button Content="Eliminar" Margin="5" Click="EliminarCliente_Click"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-
-            <Image Source="/Images/buscar.png" Height="20" Width="20" Margin="0 0 0 0"/>
-            <TextBox x:Name="Buscar"
-                    FontSize="16"
-                    FontWeight="Normal"
-                    FontFamily="Montserrat"                            
-                    Foreground="{DynamicResource PrimaryBlueText}"
-                    CaretBrush="LightGray"
-                    Background="Transparent"
-                    BorderBrush="{DynamicResource SecundaryBlueText}"
-                    BorderThickness="0,0,0,2"
-                    Height="25"
-                    Width="220"
-                    Margin="550 0 0 0"/>
-
-            <Button x:Name="AgregarCliente" Content="Agregar Cliente" Margin="0 460 0 0" Click="CrearCliente_Click">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="red"/>
-                                <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
-                                <Setter Property="FontWeight" Value="Bold"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="20" Height="20" CornerRadius="5" Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-
-        </Grid>
+        <DataGrid x:Name="ClientesDataGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}" Width="*"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" Width="*"/>
+                <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" Width="*"/>
+                <DataGridTemplateColumn Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Eliminar" Click="EliminarCliente_Click" Tag="{Binding Cedula}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
