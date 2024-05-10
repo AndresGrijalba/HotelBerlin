@@ -1,4 +1,5 @@
 ﻿using GUI.Pages;
+using GUI.Themes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -75,14 +77,12 @@ namespace GUI
 
         }
 
-        private void rdCerrarSesion_Click(object sender, RoutedEventArgs e)
+        private void Themes_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void rdCerrarSesion_Checked(object sender, RoutedEventArgs e)
-        {
-
+            if (Themes.IsChecked == true)
+                ThemesController.SetTheme(ThemesController.ThemeTypes.Dark);
+            else
+                ThemesController.SetTheme(ThemesController.ThemeTypes.Light);
         }
 
 

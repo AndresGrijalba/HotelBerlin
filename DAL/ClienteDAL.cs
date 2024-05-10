@@ -13,12 +13,11 @@ namespace DAL
     {
         public void AgregarCliente(Cliente cliente)
         {
-            Console.WriteLine(cliente);
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
-                string query = "INSERT INTO Table_Usuarios (Nombre, Apellido, Cedula, Correo)" +
-                               "VALUES (@Nombre, @Apellido, @Cedula, @Correo)";
+                string query = "INSERT INTO Table_Usuarios (Nombre, Apellido, Cedula, Correo, Telefono)" +
+                               "VALUES (@Nombre, @Apellido, @Cedula, @Correo, @Telefono)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -26,6 +25,7 @@ namespace DAL
                     command.Parameters.AddWithValue("@Apellido", cliente.Apellido);
                     command.Parameters.AddWithValue("@Cedula", cliente.Cedula);
                     command.Parameters.AddWithValue("@Correo", cliente.Correo);
+                    command.Parameters.AddWithValue("@Telefono", cliente.Telefono);
                     command.ExecuteNonQuery();
                 }
             }
@@ -46,13 +46,12 @@ namespace DAL
                         int rowsAffected = command.ExecuteNonQuery();
                         return rowsAffected > 0;
 
-                         // Devuelve verdadero si se eliminó al menos una fila
                     }
                     catch (Exception ex)
                     {
-                        // Maneja cualquier excepción que ocurra durante la eliminación
+
                         Console.WriteLine("Error al eliminar el cliente: " + ex.Message);
-                        return false; // Fallo al eliminar el usuario
+                        return false;
 
                     }
                     
@@ -83,7 +82,8 @@ namespace DAL
                                 Nombre = reader["Nombre"].ToString(),
                                 Apellido = reader["Apellido"].ToString(),
                                 Cedula = reader["Cedula"].ToString(),
-                                Correo = reader["Correo"].ToString()
+                                Correo = reader["Correo"].ToString(),
+                                Telefono = reader["Telefono"].ToString()
                             };
 
                             clientes.Add(cliente);

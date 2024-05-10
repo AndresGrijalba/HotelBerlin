@@ -38,52 +38,35 @@ namespace GUI.Pages
 
         private void RegistrarCliente_Click(object sender, RoutedEventArgs e)
         {
-            // Obtener los datos del formulario
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string cedula = txtCedula.Text;
             string correo = txtCorreo.Text;
+            string telefono = txtTelefono.Text;
 
             
-            // Crear una instancia de ClienteBLL
             ClienteBLL clienteBLL = new ClienteBLL();
 
             try
             {
-                // Llamar al método AgregarCliente para agregar el cliente a la base de datos
-                clienteBLL.AgregarCliente(nombre, apellido, cedula, correo);
-
-                // Mostrar un mensaje de éxito
+                clienteBLL.AgregarCliente(nombre, apellido, cedula, correo, telefono);
                 MessageBox.Show("Cliente registrado correctamente.");
-
-                // Limpiar los campos del formulario después de agregar el cliente
                 LimpiarCampos();
             }
             catch (Exception ex)
             {
-                // Manejar la excepción
                 MessageBox.Show($"Error al registrar el cliente: {ex.Message}");
             }
-            // Crear una instancia de UsuarioDAL
-            //ClienteBLL clienteBLL = new ClienteBLL();
 
-            //// Llamar al método AgregarUsuario para agregar el usuario a la base de datos
-            //clienteBLL.AgregarCliente(nombre, apellido, cedula, correo);
-
-            //// Mostrar un mensaje de éxito
-            //MessageBox.Show("Usuario registrado correctamente.");
-
-            //// Limpiar los campos del formulario después de agregar el usuario
-            //LimpiarCampos();
         }
 
-        // Método para limpiar los campos del formulario
         private void LimpiarCampos()
         {
             txtNombre.Text = "";
             txtApellido.Text = "";
             txtCedula.Text = "";
             txtCorreo.Text = "";
+            txtTelefono.Text = "";
         }
 
         private void Regresar_Click(object sender, RoutedEventArgs e)

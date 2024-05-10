@@ -72,6 +72,15 @@ C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin
 C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\GUI\obj\Debug\GUI.pdb
 C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\GUI\obj\Debug\Pages\pruebaCliente.g.cs
 C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\GUI\obj\Debug\Pages\pruebaCliente.baml
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.exe.config
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.exe
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\BLL.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\DAL.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\BLL.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\Entity.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\DAL.pdb
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Styles\RadioButtonStyle.baml
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Themes\LightTheme.baml
@@ -84,15 +93,6 @@ C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\App.g.cs
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI_MarkupCompile.cache
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI_MarkupCompile.lref
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.exe.config
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.exe
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.pdb
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\BLL.dll
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\Entity.dll
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\DAL.dll
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\BLL.pdb
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\Entity.pdb
-C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\DAL.pdb
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\App.baml
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Assets\Icons\Icons.baml
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\MainWindow.baml
@@ -108,3 +108,4 @@ C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI.exe
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Themes\DarkTheme.baml

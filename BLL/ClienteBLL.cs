@@ -13,10 +13,10 @@ namespace BLL
     {
         private ClienteDAL clienteDAL = new ClienteDAL();
 
-        public void AgregarCliente(string nombre, string apellido, string cedula, string correo)
+        public void AgregarCliente(string nombre, string apellido, string cedula, string correo, string telefono)
         {
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(cedula) || string.IsNullOrEmpty(correo))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(cedula) || string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(telefono))
             {
                 throw new ArgumentException("Todos los campos son obligatorios.");
             }
@@ -27,6 +27,7 @@ namespace BLL
                 Apellido = apellido,
                 Cedula = cedula,
                 Correo = correo,
+                Telefono = telefono
             };
 
             
@@ -42,15 +43,13 @@ namespace BLL
                 var Respuesta = clienteDAL.EliminarCliente(cedula);
                 if (Respuesta)
                 {
-                    return "Se elimino el cliente";
+                    return "Se elimino el cliente correctamente";
                 }
                 return "No se eliminó el cliente";
             }
             catch (Exception ex)
             {
-                // Maneja cualquier excepción que ocurra durante la eliminación
-                //Console.WriteLine("Error en la capa BLL al eliminar el usuario: " + ex.Message);
-                return "Error al eliminar el cliente"; // Fallo al eliminar el usuario
+                return "Error al eliminar el cliente"; 
             }
         }
 

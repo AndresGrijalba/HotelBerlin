@@ -40,7 +40,6 @@ namespace GUI.Pages
             string cedulaCliente = botonEliminar.Tag as string;
             var mensaje = servicio.EliminarCliente(cedulaCliente);
             MessageBox.Show(mensaje);
-            //MessageBox.Show($"Cédula del cliente a eliminar: {cedulaCliente}", "Cédula del cliente", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

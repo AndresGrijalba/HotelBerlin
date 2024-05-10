@@ -12,6 +12,7 @@ namespace Entity
         public string Apellido { get; set; }
         public string Correo { get; set; }
         public string Cedula{ get; set; }
+        public string Telefono { get ; set; }
         public Cliente() { }
 
         public override string ToString()

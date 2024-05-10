@@ -9,13 +9,11 @@ namespace DAL
 {
     public class DatabaseConnection
     {
-        //private static string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=HotelBerlinDB;
         private static string connectionString = "Server=.\\SQLEXPRESS;Database=HotelBerlinDB;Trusted_Connection=True";
 
         public static SqlConnection GetConnection()
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            //connection.Open();
             return connection;
         }
     }

@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="MenuRadioButtonStyleRReservas" TargetType="{x:Type RadioButton}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Height" Value="48"/>
@@ -22,7 +22,7 @@
                             <Border x:Name="btnSelected"
                                 Grid.ColumnSpan="2"
                                 CornerRadius="10"
-                                Width="225" HorizontalAlignment="Right">
+                                Width="200" HorizontalAlignment="Center">
                             </Border>
 
                             <Rectangle Name="Indicator"
@@ -32,10 +32,7 @@
                                        RadiusX="3" RadiusY="3">
                             </Rectangle>
 
-                            <Path x:Name="Icon" Data="{Binding Tag,
-                            RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
-                              Height="24" Width="24"
-                              Stretch="None" Fill="{DynamicResource PrimaryBlueText}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0"/>
+
 
                             <TextBlock x:Name="txtName" HorizontalAlignment="Left"
                                    VerticalAlignment="Center" Margin="0 0 0 0"
@@ -44,19 +41,17 @@
                                    FontWeight="{TemplateBinding FontWeight}"
                                    FontSize="{TemplateBinding FontSize}"/>
 
-                            <Image x:Name="img" Source="/Images/listreserv.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
+                            <Image x:Name="img" Source="/Images/listreservover.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource SecundaryBlueText}"/>
-                            <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource SecundaryBlueText}"/>
+                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/listreservover.png"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource PrimaryBlueText}"/>
-                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource TertiaryBlueText}"/>
+                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource SecundaryColor}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/listreservover.png"/>
@@ -69,7 +64,7 @@
 
     <Style x:Key="MenuRadioButtonStyleReservas" TargetType="{x:Type RadioButton}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Height" Value="48"/>
@@ -89,7 +84,7 @@
                             <Border x:Name="btnSelected"
                             Grid.ColumnSpan="2"
                             CornerRadius="10"
-                            Width="225" HorizontalAlignment="Right">
+                            Width="200" HorizontalAlignment="Center">
                             </Border>
 
                             <Rectangle Name="Indicator"
@@ -111,19 +106,19 @@
                                FontWeight="{TemplateBinding FontWeight}"
                                FontSize="{TemplateBinding FontSize}"/>
 
-                            <Image x:Name="img" Source="/Images/reserva.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
+                            <Image x:Name="img" Source="/Images/reservaover.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource SecundaryBlueText}"/>
+                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource SecundaryBlueText}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/reservaover.png"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource PrimaryBlueText}"/>
-                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource TertiaryBlueText}"/>
+                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource SecundaryColor}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/reservaover.png"/>
@@ -136,7 +131,7 @@
 
     <Style x:Key="MenuRadioButtonStyleHabitaciones" TargetType="{x:Type RadioButton}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Height" Value="48"/>
@@ -156,7 +151,7 @@
                             <Border x:Name="btnSelected"
                             Grid.ColumnSpan="2"
                             CornerRadius="10"
-                            Width="225" HorizontalAlignment="Right">
+                            Width="200" HorizontalAlignment="Center">
                             </Border>
 
                             <Rectangle Name="Indicator"
@@ -178,19 +173,19 @@
                                FontWeight="{TemplateBinding FontWeight}"
                                FontSize="{TemplateBinding FontSize}"/>
 
-                            <Image x:Name="img" Source="/Images/habitacion.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
+                            <Image x:Name="img" Source="/Images/habitacionover.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource SecundaryBlueText}"/>
+                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource SecundaryBlueText}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/habitacionover.png"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource PrimaryBlueText}"/>
-                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource TertiaryBlueText}"/>
+                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource SecundaryColor}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/habitacionover.png"/>
@@ -203,7 +198,7 @@
 
     <Style x:Key="MenuRadioButtonStyleRegistrarUsuarios" TargetType="{x:Type RadioButton}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Height" Value="48"/>
@@ -223,7 +218,7 @@
                             <Border x:Name="btnSelected"
                         Grid.ColumnSpan="2"
                         CornerRadius="10"
-                        Width="225" HorizontalAlignment="Right">
+                        Width="200" HorizontalAlignment="Center">
                             </Border>
 
                             <Rectangle Name="Indicator"
@@ -245,19 +240,19 @@
                            FontWeight="{TemplateBinding FontWeight}"
                            FontSize="{TemplateBinding FontSize}"/>
 
-                            <Image x:Name="img" Source="/Images/listreserv.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
+                            <Image x:Name="img" Source="/Images/listreservover.png" Stretch="fill" Width="20" Height="20" Margin="15 0 0 0" HorizontalAlignment="Left"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource SecundaryBlueText}"/>
+                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource SecundaryBlueText}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/listreservover.png"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource PrimaryBlueText}"/>
-                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource TertiaryBlueText}"/>
+                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource SecundaryColor}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/listreservover.png"/>
@@ -270,7 +265,7 @@
 
     <Style x:Key="MenuRadioButtonStyleUsuarios" TargetType="{x:Type RadioButton}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Height" Value="48"/>
@@ -278,8 +273,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
                     <Border x:Name="menuButton"
-                        Background="{TemplateBinding Background}"
-                        BorderThickness="{TemplateBinding BorderThickness}">
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="45"/>
@@ -288,46 +283,110 @@
 
 
                             <Border x:Name="btnSelected"
-                            Grid.ColumnSpan="2"
-                            CornerRadius="10"
-                            Width="225" HorizontalAlignment="Right">
+                                    Grid.ColumnSpan="2"
+                                    CornerRadius="10"
+                                    Width="200" HorizontalAlignment="Center">
                             </Border>
 
                             <Rectangle Name="Indicator"
-                                   HorizontalAlignment="Left"
-                                   Width="6" Height="25"
-                                   VerticalAlignment="Center"
-                                   RadiusX="3" RadiusY="3">
+                                       HorizontalAlignment="Left"
+                                       Width="6" Height="25"
+                                       VerticalAlignment="Center"
+                                       RadiusX="3" RadiusY="3">
                             </Rectangle>
 
-                            <Path x:Name="Icon" Data="{Binding Tag,
-                        RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
-                          Height="24" Width="24"
-                          Stretch="None" Fill="{DynamicResource PrimaryBlueText}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0"/>
-
                             <TextBlock x:Name="txtName" HorizontalAlignment="Left"
-                               VerticalAlignment="Center" Margin="0 0 0 0"
-                               Grid.Column="1" Text="{TemplateBinding Content}"
-                               Foreground="{TemplateBinding Foreground}"
-                               FontWeight="{TemplateBinding FontWeight}"
-                               FontSize="{TemplateBinding FontSize}"/>
+                                       VerticalAlignment="Center" Margin="0 0 0 0"
+                                       Grid.Column="1" Text="{TemplateBinding Content}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       FontWeight="{TemplateBinding FontWeight}"
+                                       FontSize="{TemplateBinding FontSize}"/>
 
-                            <Image x:Name="img" Source="/Images/user.png" Stretch="fill" Width="20" Height="15" Margin="15 0 0 0" HorizontalAlignment="Left"/>
+                            <Image x:Name="img" Source="/Images/userover.png" Stretch="fill" Width="20" Height="15" Margin="15 0 0 0" HorizontalAlignment="Left"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource SecundaryBlueText}"/>
-                            <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource SecundaryBlueText}"/>
+                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/userover.png"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource PrimaryBlueText}"/>
-                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource TertiaryBlueText}"/>
+                            <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource SecundaryColor}"/>
                             <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryColor}"/>
                             <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter TargetName="img" Property="Source" Value="/Images/userover.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ToggleButtonStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Background" Value="{DynamicResource WhiteColor}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource SecundaryBlueText}"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="MaxHeight" Value="20"/>
+        <Setter Property="MaxWidth" Value="35"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid>
+                        <Border x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="7"
+                            Height="14"
+                            Width="35"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                        </Border>
+                        <Ellipse x:Name="Ellipse"
+                                 Height="20"
+                                 Width="20"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Left"
+                                 Fill="{DynamicResource SecundaryBlueText}"
+                                 Stroke="{TemplateBinding BorderBrush}"
+                                 StrokeThickness="3">
+                        </Ellipse>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- EventTrigger Checked -->
+                        <EventTrigger RoutedEvent="Checked">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                    To="#C2D1FC" Duration="0:0:0.2"/>
+                                    <ThicknessAnimation Storyboard.TargetName="Ellipse"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        To="15 0 0 0" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <!-- EventTrigger UnChecked -->
+                        <EventTrigger RoutedEvent="Unchecked">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Border"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                    To="#CECECE" Duration="0:0:0.2"/>
+                                    <ThicknessAnimation Storyboard.TargetName="Ellipse"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        To="0 0 0 0" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Ellipse"
+                                Property="Fill"
+                                Value="{DynamicResource TertiaryBlueText}"/>
+                            <Setter TargetName="Ellipse"
+                               Property="Stroke"
+                               Value="{DynamicResource TertiaryBlueText}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

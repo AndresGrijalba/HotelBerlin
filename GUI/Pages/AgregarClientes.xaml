@@ -19,9 +19,6 @@
                 <RowDefinition Height="500"/>
             </Grid.RowDefinitions>
 
-            <Button Content="Regresar" Height="40" Width="80" HorizontalAlignment="Left" Margin="30,20,0,20" Foreground="{DynamicResource PrimaryBlueText}" FontSize="18" Click="Regresar_Click"/>
-            <Image Source="/Images/back.png" Height="20" Width="20" HorizontalAlignment="Left" Margin="10,30,0,30"/>
-
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1" Margin="182,0,0,0">
                 <Label Content="Cliente" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
             </StackPanel>
@@ -76,7 +73,7 @@
                            HorizontalAlignment="Left"
                            Margin="51 40 0 8"/>
 
-                <TextBox x:Name="txtNumber" 
+                <TextBox x:Name="txtTelefono" 
                          FontSize="16"
                          FontWeight="Normal"
                          FontFamily="Montserrat"                            
@@ -194,7 +191,7 @@
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="220" Height="40"
-                                        CornerRadius="20"
+                                        CornerRadius="12"
                                         Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="Center"/>
@@ -205,22 +202,6 @@
                 </Button>
 
             </StackPanel>
-
-
-            <!--<StackPanel Grid.Row="1" VerticalAlignment="Center">
-                <RadioButton x:Name="rdReservas" Content="Reservas" Style="{DynamicResource MenuRadioButtonStyle}" Margin="0 30 0 0" Click="rdReservas_Click" Checked="rdReservas_Checked"/>
-                <RadioButton x:Name="rdHabitaciones" Content="Habitaciones" Style="{DynamicResource MenuRadioButtonStyle}" Margin="0 1 0 1" Click="rdHabitaciones_Click" Checked="rdHabitaciones_Checked"/>
-                <RadioButton x:Name="rdUsuarios" Content="Usuarios" Style="{DynamicResource MenuRadioButtonStyle}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
-            </StackPanel>
-
-            <StackPanel Grid.Row="2" VerticalAlignment="Bottom">
-                <RadioButton x:Name="rdCerrarSesion" Content="Cerrar Sesión" Style="{DynamicResource MenuRadioButtonStyle}" Margin="0"/>
-            </StackPanel>-->
-
-
-            <Border CornerRadius="0 0 5 0" Margin="0,33,0,0" Background="Transparent">
-                <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" Margin="10,-40,10,27"/>
-            </Border>
         </Grid>
     </Border>
 </Page>
