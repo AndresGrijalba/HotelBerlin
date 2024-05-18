@@ -16,7 +16,7 @@ namespace DAL
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
-                string query = "INSERT INTO Table_Usuarios (Nombre, Apellido, Cedula, Correo, Telefono)" +
+                string query = "INSERT INTO Table_Clientes (Nombre, Apellido, Cedula, Correo, Telefono)" +
                                "VALUES (@Nombre, @Apellido, @Cedula, @Correo, @Telefono)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -68,7 +68,7 @@ namespace DAL
 
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
-                string query = "SELECT * FROM Table_Usuarios";
+                string query = "SELECT * FROM Table_Clientes";
 
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -95,5 +95,43 @@ namespace DAL
             
             return clientes;
         }
+
+        public List<Cliente> BuscarClientesPorCedula(string cedula)
+        {
+            List<Cliente> clientes = new List<Cliente>();
+
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT * FROM Table_Usuarios WHERE Cedula LIKE '%' + @Cedula + '%'";
+
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Cedula", cedula);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cliente cliente = new Cliente
+                            {
+                                Nombre = reader["Nombre"].ToString(),
+                                Apellido = reader["Apellido"].ToString(),
+                                Cedula = reader["Cedula"].ToString(),
+                                Correo = reader["Correo"].ToString(),
+                                Telefono = reader["Telefono"].ToString()
+                            };
+
+                            clientes.Add(cliente);
+                        }
+                    }
+                }
+                connection.Close();
+            }
+
+            return clientes;
+        }
+
+
     }
 }

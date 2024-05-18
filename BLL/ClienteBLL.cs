@@ -21,7 +21,7 @@ namespace BLL
                 throw new ArgumentException("Todos los campos son obligatorios.");
             }
 
-            Cliente usuario = new Cliente
+            Cliente cliente = new Cliente
             {
                 Nombre = nombre,
                 Apellido = apellido,
@@ -32,7 +32,7 @@ namespace BLL
 
             
 
-            clienteDAL.AgregarCliente(usuario);
+            clienteDAL.AgregarCliente(cliente);
 
         }
 
@@ -56,6 +56,16 @@ namespace BLL
         public List<Cliente> ObtenerClientes()
         {
             return clienteDAL.ObtenerClientes(); 
+        }
+
+        public List<Cliente> BuscarClientesPorCedula(string cedula)
+        {
+            if (string.IsNullOrEmpty(cedula))
+            {
+                throw new ArgumentException("La cédula no puede estar vacía.");
+            }
+
+            return clienteDAL.BuscarClientesPorCedula(cedula);
         }
     }
 }

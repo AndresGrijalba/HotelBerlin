@@ -14,9 +14,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Lista de Reservas" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+        <Label Content="Lista de Reservas" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10" Foreground="{DynamicResource PrimaryBlueText}"/>
 
-        <DataGrid x:Name="ClientesDataGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False">
+        <DataGrid x:Name="ClientesDataGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}" Width="*"/>

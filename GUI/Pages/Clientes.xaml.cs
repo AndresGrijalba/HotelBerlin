@@ -26,6 +26,7 @@ namespace GUI.Pages
         public List<Cliente> cliente = null;
 
         ClienteBLL servicio = new ClienteBLL();
+
         public Clientes()
         {
             InitializeComponent();

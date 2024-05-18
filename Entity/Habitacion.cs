@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace Entity
 { 
-    public class Habitacion
+    public class Habitacion : TipoHabitacion
     {
-        public string NombreHabitacion {  get; set; }
-        public string TipoHabitacion { get; set; }
+        public string Id {  get; set; }
+        public string Numero {  get; set; }
+        public string Disponibilidad { get; set; }
+        public string Id_Tipo { get; set; }
 
+        public Habitacion() { }
+
+        public override string ToString()
+        {
+            return $"{Id_Tipo}";
+        }
     }
 }

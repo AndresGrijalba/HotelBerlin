@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GUI.Pages"
       mc:Ignorable="d" 
-      d:DesignWidth="820"
+      Width="820"
       Title="Reservas" Height="672">
 
     <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
@@ -21,7 +21,6 @@
             </Grid.RowDefinitions>
 
             <!--<Button Content="Regresar" Height="40" Width="80" HorizontalAlignment="Left" Margin="30,20,0,20" Foreground="{DynamicResource PrimaryBlueText}" FontSize="18" Click="Regresar_Click"/>-->
-            <Image Source="/Images/back.png" Height="20" Width="20" HorizontalAlignment="Left" Margin="10,30,0,30"/>
 
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1" Margin="182,0,0,0">
                 <Label Content="Reservas" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
@@ -56,19 +55,15 @@
                            HorizontalAlignment="Left"
                            Margin="51 40 0 8"/>
 
-                <TextBox x:Name="txtCedula" 
-                         FontSize="16"
-                         FontWeight="Normal"
-                         FontFamily="Montserrat"                            
-                         Foreground="{DynamicResource PrimaryBlueText}"
-                         CaretBrush="LightGray"
-                         Background="Transparent"
-                         BorderBrush="{DynamicResource SecundaryBlueText}"
-                         BorderThickness="0,0,0,2"
-                         Height="25"
-                         Width="295"
-                         HorizontalAlignment="Center">
-                </TextBox>
+                <ComboBox Name="cmbCedula"
+                          IsEditable="True"
+                          TextSearch.TextPath="Cedula"
+                          PreviewTextInput="CmbCedula_PreviewTextInput"
+                          IsTextSearchEnabled="True"
+                          Text="{Binding Cedula}"
+                          Height="25"
+                          Width="300">
+                </ComboBox>
 
                 <TextBlock Text="Telefono"
                            Foreground="{DynamicResource PrimaryBlueText}"
@@ -127,7 +122,7 @@
                          HorizontalAlignment="Center">
                 </TextBox>
 
-                <TextBlock Text="Correo"
+                <TextBlock Text="Noches"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
                            FontSize="20"
@@ -159,7 +154,7 @@
                             Height="25"
                             Width="295"/>
 
-                <TextBlock Text="Tipo Habitación"
+                <TextBlock Text="Precio Total"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
                            FontSize="20"
@@ -167,9 +162,22 @@
                            Margin="51 40 0 8"/>
 
 
-                <ListBox Height="25" Width="295" Margin="0 0 0 0" SelectionChanged="ListBox_SelectionChanged">
-                    <Menu Height="98" Width="255"/>
-                </ListBox>
+                <ComboBox x:Name="cmbTipoHabitacion"
+                          FontSize="16"
+                          FontWeight="Normal"
+                          FontFamily="Montserrat"                            
+                          Foreground="{DynamicResource PrimaryBlueText}"
+                          BorderBrush="{DynamicResource SecundaryBlueText}"
+                          BorderThickness="0,0,0,2"
+                          Height="25"
+                          Width="295"
+                          HorizontalAlignment="Center"
+                          IsEditable="True"
+                          TextSearch.TextPath="Cedula"
+                          PreviewTextInput="CmbCedula_PreviewTextInput"
+                          IsTextSearchEnabled="True">
+                    <!--Text="{Binding Cedula}"-->
+                </ComboBox>
             </StackPanel>
 
             <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,215,0,0" Grid.Column="1">
@@ -195,8 +203,8 @@
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="220" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
                                                       HorizontalAlignment="Center"/>
                             </Border>

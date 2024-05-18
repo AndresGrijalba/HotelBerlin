@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +22,8 @@ namespace GUI.Pages
     /// </summary>
     public partial class AgregarReserva : Page
     {
+
+        ClienteBLL clienteBLL = new ClienteBLL();
         public AgregarReserva()
         {
             InitializeComponent();
@@ -39,6 +43,23 @@ namespace GUI.Pages
         {
 
         }
+
+        private void CmbCedula_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string cedulaIncompleta = cmbCedula.Text + e.Text;
+
+            List<Cliente> clientesCoincidentes = BuscarClientesPorCedula(cedulaIncompleta);
+
+            cmbCedula.ItemsSource = clientesCoincidentes;
+        }
+
+        private List<Cliente> BuscarClientesPorCedula(string cedula)
+        {
+            ClienteBLL clienteBLL = new ClienteBLL();
+            List<Cliente> clientes = clienteBLL.BuscarClientesPorCedula(cedula);
+            return clientes;
+        }
+
 
     }
 }

@@ -77,6 +77,16 @@ namespace GUI
 
         }
 
+        private void rdRegistrarHabitacion_Click(object sender, RoutedEventArgs e)
+        {
+            frameContent.Navigate(new AgregarHabitacion());
+        }
+
+        private void rdRegistrarHabitacion_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Themes_Click(object sender, RoutedEventArgs e)
         {
             if (Themes.IsChecked == true)

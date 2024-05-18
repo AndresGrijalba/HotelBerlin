@@ -9,9 +9,10 @@
         AllowsTransparency="True"
         Background="Transparent"
         WindowStyle="None"
+        WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize" WindowState="Normal">
-    <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
+        ResizeMode="NoResize">
+    <Border CornerRadius="0" Background="{DynamicResource PrimaryColor}">
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -27,7 +28,6 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -38,36 +38,31 @@
                     <StackPanel Grid.Row="1" VerticalAlignment="Center">
                         <RadioButton x:Name="rdRegistrarReserva" Content="Registrar Reserva" Style="{DynamicResource MenuRadioButtonStyleRReservas}" Margin="0 30 0 0" Click="rdRegistrarReserva_Click" Checked="rdRegistrarReserva_Checked"/>
                         <RadioButton x:Name="rdReservas" Content="Reservas" Style="{DynamicResource MenuRadioButtonStyleReservas}" Margin="0 1 0 1" Click="rdReservas_Click" Checked="rdReservas_Checked"/>
+                        <RadioButton x:Name="rdRegistrarHabitacion" Content="Agregar Habitacion" Style="{DynamicResource MenuRadioButtonStyleRReservas}" Margin="0 1 0 1" Click="rdRegistrarHabitacion_Click" Checked="rdRegistrarHabitacion_Checked"/>
                         <RadioButton x:Name="rdHabitaciones" Content="Habitaciones" Style="{DynamicResource MenuRadioButtonStyleHabitaciones}" Margin="0 1 0 1" Click="rdHabitaciones_Click" Checked="rdHabitaciones_Checked"/>
-                        <RadioButton x:Name="rdRegistrarUsuario" Content="Registrar Cliente" Style="{DynamicResource MenuRadioButtonStyleRegistrarUsuarios}" Margin="0 1 0 1" Click="rdRegistrarUsuario_Click" Checked="rdRegistrarUsuario_Checked"/>
+                        <RadioButton x:Name="rdRegistrarUsuario" Content="Agregar Cliente" Style="{DynamicResource MenuRadioButtonStyleRegistrarUsuarios}" Margin="0 1 0 1" Click="rdRegistrarUsuario_Click" Checked="rdRegistrarUsuario_Checked"/>
                         <RadioButton x:Name="rdUsuarios" Content="Clientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
                         <!--<RadioButton x:Name="rdUsuarios_Copiar" Content="PruebaClientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Click="rdUsuariosPrueba_Click" Checked="rdUsuariosPrueba_Checked"/>-->
-                        <!--<TreeView x:Name="tvListar" Background="{DynamicResource SecundaryColor}" BorderBrush="Transparent">
-                            <TreeViewItem Header="Listar" IsExpanded="True" Margin="25 6 0 0" Foreground="{DynamicResource PrimaryColor}" FontSize="15" FontWeight="Medium">
-                                <TreeViewItem Header="Reserva" IsExpanded="True" Foreground="{DynamicResource PrimaryColor}" FontSize="15" FontWeight="Medium"/>
-                                <TreeViewItem Header="Habitaciones" IsExpanded="True" Foreground="{DynamicResource PrimaryColor}" FontSize="15" FontWeight="Medium"/>
-                            </TreeViewItem>
-
-                        </TreeView>-->
 
                     </StackPanel>
 
 
-                    <StackPanel Grid.Row="1" VerticalAlignment="Top" Height="105" Margin="0,550,0,0" Grid.RowSpan="2">
-                        <Label Content="Administrador" FontSize="25" FontWeight="Bold" Foreground="{DynamicResource PrimaryBlueText}"/>
-                        <Label Content="hotelberlinva@gmail.com" Foreground="{DynamicResource PrimaryBlueText}"/>
-                    </StackPanel>
-
-                    <Border Grid.Row="1" CornerRadius="18" Width="220" Height="35" Background="Transparent" Margin="0,515,0,10">
+                    <Border Grid.Row="1" CornerRadius="18" Height="35" Background="Transparent" Margin="0,515,0,10">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Modo Oscuro" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource PrimaryBlueText}" FontSize="18"/>
                             <ToggleButton x:Name="Themes"
                                           IsChecked="False"
-                                          Margin="20 0 0 0"
+                                          Margin="30 0 0 0"
                                           Click="Themes_Click"
                                           Style="{DynamicResource ToggleButtonStyle}"/>
                         </StackPanel>
                     </Border>
+
+
+                    <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Height="70" Margin="0 590,0,0" Orientation="Vertical">
+                        <Label Content="Administrador" FontSize="25" FontWeight="Bold" Foreground="{DynamicResource PrimaryBlueText}" Height="38"/>
+                        <Label Content="hotelberlinva@gmail.com" Foreground="{DynamicResource PrimaryBlueText}" Height="37"/>
+                    </StackPanel>
                 </Grid>
             </Border>
 
@@ -135,7 +130,7 @@
                 </StackPanel>
 
                 <Border Grid.Row="1" CornerRadius="0 0 5 0" Background="Transparent">
-                    <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" Margin="10,-20,10,10"/>
+                    <Frame x:Name="frameContent" NavigationUIVisibility="Hidden" Margin="10,0,20,10"/>
                 </Border>
 
                 <Grid>

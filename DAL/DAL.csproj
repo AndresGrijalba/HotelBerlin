@@ -47,6 +47,7 @@
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj">
