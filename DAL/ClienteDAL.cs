@@ -31,6 +31,22 @@ namespace DAL
             }
         }
 
+        public bool CedulaExiste(string cedula)
+        {
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT COUNT(1) FROM Table_Clientes WHERE Cedula = @Cedula";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Cedula", cedula);
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
         public bool EliminarCliente(string cedula)
         {
             using (SqlConnection connection = DatabaseConnection.GetConnection()) 

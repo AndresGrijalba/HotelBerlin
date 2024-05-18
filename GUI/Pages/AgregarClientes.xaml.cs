@@ -49,13 +49,16 @@ namespace GUI.Pages
 
             try
             {
-                clienteBLL.AgregarCliente(nombre, apellido, cedula, correo, telefono);
-                MessageBox.Show("Cliente registrado correctamente.");
-                LimpiarCampos();
+                clienteBLL.AgregarCliente(txtNombre.Text, txtApellido.Text, txtCedula.Text, txtCorreo.Text, txtTelefono.Text);
+                MessageBox.Show("Cliente registrado exitosamente.", "Registro Exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Error de Validación", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al registrar el cliente: {ex.Message}");
+                MessageBox.Show("Ocurrió un error al registrar el cliente: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
@@ -67,11 +70,6 @@ namespace GUI.Pages
             txtCedula.Text = "";
             txtCorreo.Text = "";
             txtTelefono.Text = "";
-        }
-
-        private void Regresar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

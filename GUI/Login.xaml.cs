@@ -28,12 +28,27 @@ namespace GUI
 
         public void btnIngresar_Click(object sender, RoutedEventArgs e)
         {
-            ValidarCredenciales();
+            if (string.IsNullOrEmpty(user))
+            {
+                MessageBox.Show("Debes ingresar un usuario");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Debes ingresar una contraseña");
+                return;
+            }
+
             if (user == User.Text && password == Password.Password)
             {
                 MainWindow menu = new MainWindow();
                 menu.Show();
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }
 

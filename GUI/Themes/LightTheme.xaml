@@ -29,6 +29,7 @@
     <SolidColorBrush x:Key="PrimaryRedColor" Color="#E63535"/>
     <SolidColorBrush x:Key="SecundaryRedColor" Color="#FF3B3B"/>
     <SolidColorBrush x:Key="TertiaryRedColor" Color="#FF5C5C"/>
+    <SolidColorBrush x:Key="ErrorRedBrush" Color="red"/>
 
     <!-- Green Colors-->
     <SolidColorBrush x:Key="PrimaryGreenColor" Color="#05A660"/>
