@@ -69,7 +69,6 @@ namespace GUI.Pages
             if (exito)
             {
                 MessageBox.Show("Datos del cliente actualizados correctamente.");
-                // Navegar de vuelta a Page1 (Clientes)
                 this.NavigationService.Navigate(new Clientes());
             }
             else

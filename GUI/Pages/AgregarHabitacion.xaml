@@ -36,7 +36,7 @@
                           Height="25" 
                           Margin="10"
                           FontSize="16"
-                          FontWeight="Normal"
+                          FontWeight="SemiBold"
                           FontFamily="Montserrat"
                           Foreground="{DynamicResource PrimaryBlueText}"
                           Background="Transparent"
@@ -70,16 +70,18 @@
                             <StackPanel Orientation="Horizontal">
                                 <BulletDecorator Background="Transparent">
                                     <BulletDecorator.Bullet>
-                                        <Grid Width="20" Height="20">
+                                        <Grid Width="22" Height="22">
                                             <Ellipse x:Name="Ellipse"
-                                             Stroke="{TemplateBinding BorderBrush}"
-                                             StrokeThickness="2"
-                                             Fill="{TemplateBinding Background}"/>
+                                                     Stroke="{DynamicResource BlueTransparent}"
+                                                     StrokeThickness="2"
+                                                     Fill="{TemplateBinding Background}"
+                                                     Width="20" Height="20"/>
                                             <Path x:Name="CheckMark"
-                                          Data="M0,6 L2,8 L8,2"
-                                          StrokeThickness="2"
-                                          Stroke="{TemplateBinding Foreground}"
-                                          Visibility="Collapsed"/>
+                                                  Margin="-5 0 0 0"
+                                                  Data="M0,6 L2,8 L8,2"
+                                                  StrokeThickness="2"
+                                                  Stroke="{DynamicResource PrimaryBlueText}"
+                                                  Visibility="Collapsed"/>
                                         </Grid>
                                     </BulletDecorator.Bullet>
                                     <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0"/>

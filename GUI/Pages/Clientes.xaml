@@ -28,7 +28,7 @@
                     <Setter Property="BorderThickness" Value="0"/>
                     <Setter Property="Padding" Value="10"/>
                     <Setter Property="Margin" Value="0 8 0 0"/>
-                    <Setter Property="Background" Value="white"/>
+                    <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="DataGridCell">
@@ -41,7 +41,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
-                                        <Setter Property="Background" Value="white"/>
+                                        <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
@@ -51,7 +51,7 @@
                 </Style>
 
                 <Style TargetType="DataGridRowHeader">
-                    <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                    <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type DataGridRowHeader}">
@@ -64,7 +64,7 @@
                 </Style>
 
                 <Style TargetType="DataGridColumnHeader">
-                    <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                    <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                     <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                     <Setter Property="BorderThickness" Value="0"/>
                     <Setter Property="FontWeight" Value="Bold"/>
@@ -76,7 +76,7 @@
                 <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}" Width="140">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="white"/>
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -86,7 +86,7 @@
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="140">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="white"/>
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -96,7 +96,7 @@
                 <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" Width="140">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="white"/>
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -106,17 +106,17 @@
                 <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" Width="220">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="white"/>
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="320">
+                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="310">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="white"/>
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -135,7 +135,7 @@
                                         <Setter Property="FontWeight" Value="Bold"/>
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#102C40"/>
+                                                <Setter Property="Background" Value="#266593"/>
                                                 <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                                             </Trigger>
                                         </Style.Triggers>
@@ -144,11 +144,21 @@
 
                                 <Button.Template>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border Width="60" Height="25"
-                                CornerRadius="5"
-                                Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="Center"
-                                              HorizontalAlignment="Center"/>
+                                        <Border Width="68" Height="25"
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}">
+                                            <Grid>
+                                                <Image Source="/Images/edit.png" 
+                                                       VerticalAlignment="Center" 
+                                                       HorizontalAlignment="Left" 
+                                                       Width="16" 
+                                                       Height="16"
+                                                       Margin="5 0 0 0"/>
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Right"
+                                                                  Margin="0 0 10 0"
+                                                                  Content="{TemplateBinding Content}"/>
+                                            </Grid>
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
@@ -161,14 +171,14 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Eliminar" Click="EliminarCliente_Click" Tag="{Binding Cedula}">
-                                <Button.Style>
+                            <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
                                         <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                                         <Setter Property="FontWeight" Value="Bold"/>
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="red"/>
+                                                <Setter Property="Background" Value="#D10000"/>
                                                 <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                                             </Trigger>
                                         </Style.Triggers>
@@ -177,11 +187,21 @@
 
                                 <Button.Template>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border Width="60" Height="25"
+                                        <Border Width="80" Height="25"
                                                 CornerRadius="5"
                                                 Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="Center"
-                                                              HorizontalAlignment="Center"/>
+                                            <Grid>
+                                                <Image Source="/Images/delete.png" 
+                                                       VerticalAlignment="Center" 
+                                                       HorizontalAlignment="Left" 
+                                                       Width="16" 
+                                                       Height="16"
+                                                       Margin="5 0 0 0"/>
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Right"
+                                                                  Margin="0 0 10 0"
+                                                                  Content="{TemplateBinding Content}"/>
+                                            </Grid>
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>

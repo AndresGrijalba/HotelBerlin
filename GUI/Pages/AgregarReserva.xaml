@@ -65,14 +65,14 @@
                           Width="300">
                 </ComboBox>
 
-                <TextBlock Text="Telefono"
+                <TextBlock Text="Cantidad de noches"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
                            FontSize="20"
                            HorizontalAlignment="Left"
                            Margin="51 40 0 8"/>
 
-                <TextBox x:Name="txtNumber" 
+                <TextBox x:Name="txtNumeroNoches" 
                          FontSize="16"
                          FontWeight="Normal"
                          FontFamily="Montserrat"                            

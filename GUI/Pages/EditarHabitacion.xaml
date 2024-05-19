@@ -1,0 +1,141 @@
+﻿<Page x:Class="GUI.Pages.EditarHabitacion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GUI.Pages"
+      mc:Ignorable="d" 
+      Title="EditarHabitacion"
+      Width="820" 
+      Height="672">
+
+    <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
+        <Grid x:Name="gridClientes">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="179*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="0,0,0,0">
+                <Label Content="Habitacion" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,70,0,310" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center">
+                <TextBlock Text="Tipo de habitacion"
+                       Foreground="{DynamicResource PrimaryBlueText}"
+                       FontWeight="SemiBold"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="10 40 0 8"/>
+
+                <ComboBox Name="cmbTipoHabitacion" 
+                      Width="295" 
+                      Height="25" 
+                      Margin="10"
+                      FontSize="16"
+                      FontWeight="SemiBold"
+                      FontFamily="Montserrat"
+                      Foreground="{DynamicResource PrimaryBlueText}"
+                      Background="Transparent"
+                      BorderBrush="{DynamicResource SecundaryBlueText}"
+                      BorderThickness="0,0,0,2"/>
+
+                <TextBlock Text="Numero de Habitacion"
+                   Foreground="{DynamicResource PrimaryBlueText}"
+                   FontWeight="SemiBold"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   Margin="10 20 0 8"/>
+
+                <TextBox x:Name="txtNumero" 
+                 FontSize="16"
+                 FontWeight="Normal"
+                 FontFamily="Montserrat"                            
+                 Foreground="{DynamicResource PrimaryBlueText}"
+                 CaretBrush="LightGray"
+                 Background="Transparent"
+                 BorderBrush="{DynamicResource SecundaryBlueText}"
+                 BorderThickness="0,0,0,2"
+                 Height="25"
+                 Width="295"
+                 HorizontalAlignment="Center">
+                </TextBox>
+
+                <CheckBox x:Name="cbDisponibilidad" Content="Disponible" IsChecked="True" FontSize="20" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Medium" Margin="10 40 0 0">
+                    <CheckBox.Template>
+                        <ControlTemplate TargetType="CheckBox">
+                            <StackPanel Orientation="Horizontal">
+                                <BulletDecorator Background="Transparent">
+                                    <BulletDecorator.Bullet>
+                                        <Grid Width="22" Height="22">
+                                            <Ellipse x:Name="Ellipse"
+                                                 Stroke="{DynamicResource BlueTransparent}"
+                                                 StrokeThickness="2"
+                                                 Fill="{TemplateBinding Background}"
+                                                 Width="20" Height="20"/>
+                                            <Path x:Name="CheckMark"
+                                              Margin="-5 0 0 0"
+                                              Data="M0,6 L2,8 L8,2"
+                                              StrokeThickness="2"
+                                              Stroke="{DynamicResource PrimaryBlueText}"
+                                              Visibility="Collapsed"/>
+                                        </Grid>
+                                    </BulletDecorator.Bullet>
+                                    <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0"/>
+                                </BulletDecorator>
+                            </StackPanel>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                                    <Setter TargetName="Ellipse" Property="Fill" Value="{DynamicResource PrimaryBlueText}"/>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="Ellipse" Property="Stroke" Value="Gray"/>
+                                    <Setter TargetName="CheckMark" Property="Stroke" Value="Gray"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </CheckBox.Template>
+                </CheckBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0" Grid.Column="1">
+                <Button x:Name="btnRegistrar" Content="Editar Habitacion" Click="ActualizarInformacion_Click"
+                    FontSize="25"
+                    FontFamily="Montserrat"
+                    Foreground="{DynamicResource PrimaryColor}"
+                    FontWeight="Bold"
+                    Height="40"
+                    Width="260"
+                    Margin="0 0 0 0">
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="260" Height="40"
+                    CornerRadius="12"
+                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

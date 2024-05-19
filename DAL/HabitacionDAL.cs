@@ -60,5 +60,31 @@ namespace DAL
 
             return habitaciones;
         }
+
+        public bool EliminarHabitacion(int id)
+        {
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "DELETE FROM habitaciones WHERE id = @id";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al eliminar la habitación: " + ex.Message);
+                        return false;
+                    }
+                }
+            }
+        }
+
     }
 }

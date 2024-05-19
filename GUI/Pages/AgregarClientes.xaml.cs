@@ -26,16 +26,6 @@ namespace GUI.Pages
             InitializeComponent();
         }
 
-        public void btnFecha_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void RegistrarCliente_Click(object sender, RoutedEventArgs e)
         {
             string nombre = txtNombre.Text;

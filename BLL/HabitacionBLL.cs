@@ -22,5 +22,23 @@ namespace BLL
         {
             return habitacionDAL.ObtenerHabitaciones();
         }
+
+        public string EliminarHabitacion(int id)
+        {
+            try
+            {
+                var respuesta = habitacionDAL.EliminarHabitacion(id);
+                if (respuesta)
+                {
+                    return "Se eliminó la habitación correctamente";
+                }
+                return "No se eliminó la habitación";
+            }
+            catch (Exception ex)
+            {
+                return "Error al eliminar la habitación: " + ex.Message;
+            }
+        }
+
     }
 }

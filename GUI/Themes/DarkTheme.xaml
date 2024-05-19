@@ -11,6 +11,7 @@
     <SolidColorBrush x:Key="SecundaryBlueText" Color="#102341"/>
     <SolidColorBrush x:Key="TertiaryBlueText" Color="#086BFF"/>
     <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#CACACA"/>
+    <SolidColorBrush x:Key="TertiaryBackgroundColor" Color="#00090F"/>
 
     <SolidColorBrush x:Key="PrimaryRedColor" Color="#E63535"/>
     <SolidColorBrush x:Key="SecundaryRedColor" Color="#FF3B3B"/>

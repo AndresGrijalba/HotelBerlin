@@ -24,7 +24,7 @@ namespace GUI.Pages
     /// </summary>
     public partial class Habitaciones : Page
     {
-        public List<Habitacion> habitaciones = null;
+        public List<Habitacion> habitacion = null;
 
         HabitacionBLL servicio = new HabitacionBLL();
 
@@ -33,18 +33,26 @@ namespace GUI.Pages
         {
             InitializeComponent();
             DataContext = this;
-            habitaciones = servicio.ObtenerHabitaciones();
-            HabitacionesDataGrid.ItemsSource = habitaciones;
+            habitacion = servicio.ObtenerHabitaciones();
+            HabitacionesDataGrid.ItemsSource = habitacion;
         }
 
-        private void EditarCliente_Click(object sender, RoutedEventArgs e)
+        private void EditarHabitacion_Click(object sender, RoutedEventArgs e)
         {
-            
+            //Button button = sender as Button;
+            //int habitacionId = (int)button.Tag;
+            //EditarHabitacion editarHabitacionPage = new EditarHabitacion(habitacionId);
+            //this.NavigationService.Navigate(editarHabitacionPage);
         }
 
-        private void EliminarCliente_Click(object sender, RoutedEventArgs e)
+        private void EliminarHabitacion_Click(object sender, RoutedEventArgs e)
         {
-            
+            Button botonEliminar = sender as Button;
+            int habitacionId = (int)botonEliminar.Tag;
+            var mensaje = servicio.EliminarHabitacion(habitacionId);
+            MessageBox.Show(mensaje);
+            Habitaciones updateHabitacion = new Habitaciones();
+            this.NavigationService.Navigate(updateHabitacion);
         }
     }
 }
