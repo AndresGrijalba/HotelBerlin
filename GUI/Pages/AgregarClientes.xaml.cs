@@ -51,6 +51,8 @@ namespace GUI.Pages
             {
                 clienteBLL.AgregarCliente(txtNombre.Text, txtApellido.Text, txtCedula.Text, txtCorreo.Text, txtTelefono.Text);
                 MessageBox.Show("Cliente registrado exitosamente.", "Registro Exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
+                Clientes clientePage = new Clientes();
+                this.NavigationService.Navigate(clientePage);
             }
             catch (ArgumentException ex)
             {
@@ -60,7 +62,6 @@ namespace GUI.Pages
             {
                 MessageBox.Show("Ocurrió un error al registrar el cliente: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
         }
 
         private void LimpiarCampos()

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -22,10 +24,27 @@ namespace GUI.Pages
     /// </summary>
     public partial class Habitaciones : Page
     {
+        public List<Habitacion> habitaciones = null;
+
+        HabitacionBLL servicio = new HabitacionBLL();
+
+
         public Habitaciones()
         {
             InitializeComponent();
-           
+            DataContext = this;
+            habitaciones = servicio.ObtenerHabitaciones();
+            HabitacionesDataGrid.ItemsSource = habitaciones;
+        }
+
+        private void EditarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void EliminarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

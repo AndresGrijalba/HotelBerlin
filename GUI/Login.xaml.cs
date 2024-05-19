@@ -19,8 +19,8 @@ namespace GUI
     /// </summary>
     public partial class Login : Window
     {
-        string user = "Admin";
-        string password = "1234";
+        string user = "hotelberlinva@gmail.com";
+        string password = "adminhotelberlin";
         public Login()
         {
             InitializeComponent();

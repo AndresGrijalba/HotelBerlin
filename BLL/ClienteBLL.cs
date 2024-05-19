@@ -50,6 +50,16 @@ namespace BLL
             }
         }
 
+        public Cliente ObtenerClientePorCedula(string cedula)
+        {
+            return clienteDAL.ObtenerClientePorCedula(cedula);
+        }
+
+        public bool ActualizarCliente(Cliente cliente)
+        {
+            return clienteDAL.ActualizarCliente(cliente);
+        }
+
         public string EliminarCliente(string cedula)
         {
             try

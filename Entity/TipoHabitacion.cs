@@ -8,7 +8,9 @@ namespace Entity
 {
     public class TipoHabitacion
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
-        public double Precio_Noche {  get; set; }
+        public string Descripcion { get; set; }
+        public int Precio_Noche {  get; set; }
     }
 }

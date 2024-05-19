@@ -1,0 +1,174 @@
+﻿<Page x:Class="GUI.Pages.EditarCliente"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GUI.Pages"
+      mc:Ignorable="d" 
+      Height="672" Width="820"
+      Title="EditarCliente" Background="{DynamicResource PrimaryColor}">
+
+    <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
+        <Grid x:Name="gridClientes">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="104*"/>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="641*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="2" Margin="182,0,0,0">
+                <Label Content="Cliente" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,45,415,455" Grid.ColumnSpan="3" Grid.RowSpan="2">
+                <TextBlock Text="Nombre"
+                       Foreground="{DynamicResource PrimaryBlueText}"
+                       FontWeight="SemiBold"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="54 40 0 8"/>
+
+                <TextBox x:Name="NombreTextBox"
+                     FontSize="16"
+                     FontWeight="Normal"
+                     FontFamily="Montserrat"                            
+                     Foreground="{DynamicResource PrimaryBlueText}"
+                     CaretBrush="white"
+                     Background="Transparent"
+                     BorderBrush="{DynamicResource PrimaryBlueText}"
+                     BorderThickness="0,0,0,2"
+                     Height="25"
+                     Width="295"
+                     HorizontalAlignment="Center">
+                </TextBox>
+
+                <TextBlock Text="Cedula"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="54 40 0 8"/>
+
+                <TextBox x:Name="CedulaTextBox" 
+                         IsReadOnly="True" 
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"                            
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,45,0,455" Grid.Column="2" Grid.RowSpan="2">
+                <TextBlock Text="Apellido"
+                       Foreground="{DynamicResource PrimaryBlueText}"
+                       FontWeight="SemiBold"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="54 40 0 8"/>
+
+                <TextBox x:Name="ApellidoTextBox"
+                     FontSize="16"
+                     FontWeight="Normal"
+                     FontFamily="Montserrat"                            
+                     Foreground="{DynamicResource PrimaryBlueText}"
+                     CaretBrush="LightGray"
+                     Background="Transparent"
+                     BorderBrush="{DynamicResource PrimaryBlueText}"
+                     BorderThickness="0,0,0,2"
+                     Height="25"
+                     Width="295"
+                     HorizontalAlignment="Center">
+                </TextBox>
+
+                <TextBlock Text="Correo"
+                       Foreground="{DynamicResource PrimaryBlueText}"
+                       FontWeight="SemiBold"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="54 40 0 8"/>
+
+                <TextBox x:Name="CorreoTextBox"
+                     FontSize="16"
+                     FontWeight="Normal"
+                     FontFamily="Montserrat"                            
+                     Foreground="{DynamicResource PrimaryBlueText}"
+                     CaretBrush="LightGray"
+                     Background="Transparent"
+                     BorderBrush="{DynamicResource PrimaryBlueText}"
+                     BorderThickness="0,0,0,2"
+                     Height="25"
+                     Width="295"
+                     HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="2" Height="270" Width="439">
+
+                <TextBlock Text="Telefono"
+                       Foreground="{DynamicResource PrimaryBlueText}"
+                       FontWeight="SemiBold"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="70 40 0 8"/>
+
+                <TextBox x:Name="TelefonoTextBox"
+                     FontSize="16"
+                     FontWeight="Normal"
+                     FontFamily="Montserrat"                            
+                     Foreground="{DynamicResource PrimaryBlueText}"
+                     CaretBrush="LightGray"
+                     Background="Transparent"
+                     BorderBrush="{DynamicResource PrimaryBlueText}"
+                     BorderThickness="0,0,0,2"
+                     Height="25"
+                     Width="295"
+                     HorizontalAlignment="Center">
+                </TextBox>
+                <Button x:Name="btnRegistrar" Content="Actualizar cliente" Click="ActualizarInformacion_Click"
+                    FontSize="25"
+                    FontFamily="Montserrat"
+                    Foreground="{DynamicResource PrimaryColor}"
+                    FontWeight="Bold"
+                    Height="40"
+                    Width="240"
+                    Margin="0 80 0 0">
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="220" Height="40"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

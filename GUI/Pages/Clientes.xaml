@@ -20,25 +20,28 @@
         <Label Content="Apellido" FontSize="15" FontWeight="Bold" Margin="280 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Correo" FontSize="15" FontWeight="Bold" Margin="420 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Telefono" FontSize="15" FontWeight="Bold" Margin="640 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1015 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
 
-        <DataGrid x:Name="ClientesDataGrid" Grid.Row="1" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None">
+        <DataGrid x:Name="ClientesDataGrid" Grid.Row="1" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None">
             <DataGrid.Resources>
                 <Style TargetType="DataGridCell">
                     <Setter Property="BorderThickness" Value="0"/>
-                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Margin" Value="0 8 0 0"/>
+                    <Setter Property="Background" Value="white"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="DataGridCell">
                                 <Border Background="{TemplateBinding Background}"
-                                Padding="{TemplateBinding Padding}"
-                                BorderThickness="0">
-                                    <!-- Modificación aquí -->
+                                        Padding="{TemplateBinding Padding}"
+                                        BorderThickness="0"
+                                        CornerRadius="10"
+                                        Margin="0 0 -20 0">
                                     <ContentPresenter/>
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
-                                        <Setter Property="Background" Value="{DynamicResource PrimaryBackgroundColor}"/>
+                                        <Setter Property="Background" Value="white"/>
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
@@ -73,7 +76,7 @@
                 <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}" Width="140">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="Background" Value="white"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -83,7 +86,7 @@
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="140">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="Background" Value="white"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -93,7 +96,7 @@
                 <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" Width="140">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="Background" Value="white"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -103,17 +106,17 @@
                 <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" Width="220">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="Background" Value="white"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="340">
+                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="320">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter Property="Background" Value="white"/>
                             <Setter Property="FontWeight" Value="SemiBold"/>
                             <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -124,7 +127,7 @@
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Editar" Click="EliminarCliente_Click" Tag="{Binding Cedula}">
+                            <Button Content="Editar" Click="EditarCliente_Click" Tag="{Binding Cedula}" Margin="0 0 10 0">
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
