@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,60 @@ namespace GUI.Pages
     /// </summary>
     public partial class AgregarHabitacion : Page
     {
+        private HabitacionBLL habitacionBLL;
+        private TipoHabitacionBLL tipoHabitacionBLL;
         public AgregarHabitacion()
         {
             InitializeComponent();
+            habitacionBLL = new HabitacionBLL();
+            tipoHabitacionBLL = new TipoHabitacionBLL();
+            CargarTiposHabitacion();
+        }
+
+        private void btnAgregarHabitacion_Click(object sender, RoutedEventArgs e)
+        {
+            int numeroHabitacion;
+            int idTipoHabitacion;
+            bool? disponibilidad = cbDisponibilidad.IsChecked;
+
+            if (cmbTipoHabitacion.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de habitación.");
+                return;
+            }
+
+            if (!int.TryParse(txtNumero.Text, out numeroHabitacion))
+            {
+                MessageBox.Show("Por favor, ingrese un número de habitación válido.");
+                return;
+            }
+            idTipoHabitacion = (int)cmbTipoHabitacion.SelectedValue;
+
+            Habitacion nuevaHabitacion = new Habitacion
+            {
+                Numero = numeroHabitacion,
+                Id_Tipo = idTipoHabitacion,
+                Disponibilidad = disponibilidad 
+            };
+
+            try
+            {
+                habitacionBLL.AgregarHabitacion(nuevaHabitacion);
+                MessageBox.Show("Habitación agregada exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar la habitación: " + ex.Message);
+            }
+
+        }
+
+        private void CargarTiposHabitacion()
+        {
+            List<TipoHabitacion> tiposHabitacion = tipoHabitacionBLL.ObtenerTiposHabitacion();
+            cmbTipoHabitacion.ItemsSource = tiposHabitacion;
+            cmbTipoHabitacion.DisplayMemberPath = "Nombre";
+            cmbTipoHabitacion.SelectedValuePath = "Id";
         }
     }
 }
