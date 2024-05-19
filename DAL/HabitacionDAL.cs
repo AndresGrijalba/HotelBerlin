@@ -45,6 +45,7 @@ namespace DAL
                         {
                             Habitacion habitacion = new Habitacion
                             (
+                                Convert.ToInt32(reader["id"]),
                                 Convert.ToInt32(reader["numero"]),
                                 Convert.ToString(reader["estado"]),
                                 Convert.ToString(reader["tipo_habitacion"]),

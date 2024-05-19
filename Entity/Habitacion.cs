@@ -18,8 +18,9 @@ namespace Entity
 
         public Habitacion() { }
 
-        public Habitacion(int numero, string disponibilidad, string tipo, float precioNoche)
+        public Habitacion(int id,int numero, string disponibilidad, string tipo, float precioNoche)
         {
+            this.Id = id;
             this.Numero = numero;
             this.setDisponibilidad(disponibilidad);
             this.tipoHabitacion = tipo;
