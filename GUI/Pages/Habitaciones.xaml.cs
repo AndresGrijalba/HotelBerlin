@@ -28,7 +28,6 @@ namespace GUI.Pages
 
         HabitacionBLL servicio = new HabitacionBLL();
 
-
         public Habitaciones()
         {
             InitializeComponent();
@@ -37,12 +36,17 @@ namespace GUI.Pages
             HabitacionesDataGrid.ItemsSource = habitacion;
         }
 
+        public Habitaciones(Habitacion habitacionId)
+        {
+
+        }
+
         private void EditarHabitacion_Click(object sender, RoutedEventArgs e)
         {
-            //Button button = sender as Button;
-            //int habitacionId = (int)button.Tag;
-            //EditarHabitacion editarHabitacionPage = new EditarHabitacion(habitacionId);
-            //this.NavigationService.Navigate(editarHabitacionPage);
+            Button button = sender as Button;
+            int habitacionId = (int)button.Tag;
+            EditarHabitacion editarHabitacionPage = new EditarHabitacion(Convert.ToString(habitacionId));
+            this.NavigationService.Navigate(editarHabitacionPage);
         }
 
         private void EliminarHabitacion_Click(object sender, RoutedEventArgs e)

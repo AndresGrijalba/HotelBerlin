@@ -22,12 +22,24 @@ namespace Entity
         {
             this.Id = id;
             this.Numero = numero;
-            this.setDisponibilidad(disponibilidad);
+            this.setDisponibilidadString(disponibilidad);
             this.tipoHabitacion = tipo;
             this.precioNoche = precioNoche;
         }
 
-        private void setDisponibilidad(string disponibilidad)
+        public void setDisponibilidad(string disponibilidad)
+        {
+            if (disponibilidad.Equals("1"))
+            {
+                this.Disponibilidad = true;
+            }
+            else
+            {
+                this.Disponibilidad = false;
+            }
+        }
+
+        private void setDisponibilidadString(string disponibilidad)
         {
             if (disponibilidad.Equals("1"))
             {
@@ -37,11 +49,6 @@ namespace Entity
             {
                 this.disponibilidadString = "No";
             }
-        }
-
-        public override string ToString()
-        {
-            return $"{Id_Tipo}";
         }
     }
 }

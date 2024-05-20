@@ -62,6 +62,75 @@ namespace DAL
             return habitaciones;
         }
 
+        public Habitacion obtenerHabitacionPorId(string id)
+        {
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT * FROM habitaciones WHERE id = @id";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Habitacion habitacion = new Habitacion
+                            {
+                                Id = Convert.ToInt32(reader["id"]),
+                                Numero = Convert.ToInt32(reader["numero"]),
+                                Id_Tipo = Convert.ToInt32(reader["id_tipo"])
+                            };
+
+                            habitacion.setDisponibilidad(reader["estado"].ToString());
+
+                            return habitacion;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
+
+        public bool actualizarHabitacion(Habitacion habitacion)
+        {
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                bool tipoHabitacionExistente = false;
+                string tipoHabitacionQuery = "SELECT COUNT(*) FROM tipo_habitacion WHERE id = @id_tipo";
+
+                using (SqlCommand tipoHabitacionCommand = new SqlCommand(tipoHabitacionQuery, connection))
+                {
+                    tipoHabitacionCommand.Parameters.AddWithValue("@id_tipo", habitacion.Id_Tipo);
+                    connection.Open();
+                    int tipoHabitacionCount = (int)tipoHabitacionCommand.ExecuteScalar();
+                    tipoHabitacionExistente = tipoHabitacionCount > 0;
+                }
+
+                if (!tipoHabitacionExistente)
+                {
+                    return false;
+                }
+
+                string query = "UPDATE habitaciones SET numero = @numero, estado = @estado, id_tipo = @id_tipo WHERE id = @id";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", habitacion.Id);
+                    command.Parameters.AddWithValue("@numero", habitacion.Numero);
+                    command.Parameters.AddWithValue("@estado", habitacion.Disponibilidad);
+                    command.Parameters.AddWithValue("@id_tipo", habitacion.Id_Tipo);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
+
         public bool EliminarHabitacion(int id)
         {
             using (SqlConnection connection = DatabaseConnection.GetConnection())

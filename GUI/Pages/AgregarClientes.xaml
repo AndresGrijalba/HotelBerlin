@@ -25,27 +25,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,45,415,455" Grid.ColumnSpan="3" Grid.RowSpan="2">
-                <TextBlock Text="Nombre"
-                           Foreground="{DynamicResource PrimaryBlueText}"
-                           FontWeight="SemiBold"
-                           FontSize="20"
-                           HorizontalAlignment="Left"
-                           Margin="54 40 0 8"/>
-
-                <TextBox x:Name="txtNombre" 
-                         FontSize="16"
-                         FontWeight="Normal"
-                         FontFamily="Montserrat"                            
-                         Foreground="{DynamicResource PrimaryBlueText}"
-                         CaretBrush="white"
-                         Background="Transparent"
-                         BorderBrush="{DynamicResource PrimaryBlueText}"
-                         BorderThickness="0,0,0,2"
-                         Height="25"
-                         Width="295"
-                         HorizontalAlignment="Center">
-                </TextBox>
-
+               
                 <TextBlock Text="Cedula"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
@@ -66,10 +46,31 @@
                          Width="295"
                          HorizontalAlignment="Center">
                 </TextBox>
+                
+                <TextBlock Text="Nombres"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="54 40 0 8"/>
+
+                <TextBox x:Name="txtNombre" 
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"                            
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="white"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
+                </TextBox>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,45,0,455" Grid.Column="2" Grid.RowSpan="2">
-                <TextBlock Text="Apellido"
+                <TextBlock Text="Apellidos"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
                            FontSize="20"

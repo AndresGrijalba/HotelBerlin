@@ -23,6 +23,16 @@ namespace BLL
             return habitacionDAL.ObtenerHabitaciones();
         }
 
+        public Habitacion obtenerHabitacionPorId(string habitacionId)
+        {
+            return habitacionDAL.obtenerHabitacionPorId(habitacionId);
+        }
+
+        public bool actualizarHabitacion(Habitacion habitacion)
+        {
+            return habitacionDAL.actualizarHabitacion(habitacion);
+        }
+
         public string EliminarHabitacion(int id)
         {
             try

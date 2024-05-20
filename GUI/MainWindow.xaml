@@ -28,6 +28,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -43,23 +44,19 @@
                         <RadioButton x:Name="rdRegistrarUsuario" Content="Agregar Cliente" Style="{DynamicResource MenuRadioButtonStyleRegistrarUsuarios}" Margin="0 1 0 1" Click="rdRegistrarUsuario_Click" Checked="rdRegistrarUsuario_Checked"/>
                         <RadioButton x:Name="rdUsuarios" Content="Clientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
                         <!--<RadioButton x:Name="rdUsuarios_Copiar" Content="PruebaClientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Click="rdUsuariosPrueba_Click" Checked="rdUsuariosPrueba_Checked"/>-->
-
                     </StackPanel>
 
-
-                    <Border Grid.Row="1" CornerRadius="18" Height="35" Background="Transparent" Margin="0,515,0,10">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="Modo Oscuro" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource PrimaryBlueText}" FontSize="18"/>
-                            <ToggleButton x:Name="Themes"
-                                          IsChecked="False"
-                                          Margin="30 0 0 0"
-                                          Click="Themes_Click"
-                                          Style="{DynamicResource ToggleButtonStyle}"/>
-                        </StackPanel>
-                    </Border>
-
-
-                    <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Height="70" Margin="0 590,0,0" Orientation="Vertical">
+                    <StackPanel Grid.Row="2" VerticalAlignment="Center">
+                        <Border CornerRadius="18" Height="35" Background="Transparent" Margin="0,0,0,10">
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Modo Oscuro" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource PrimaryBlueText}" FontSize="18"/>
+                                <ToggleButton x:Name="Themes"
+                                              IsChecked="False"
+                                              Margin="30 0 0 0"
+                                              Click="Themes_Click"
+                                              Style="{DynamicResource ToggleButtonStyle}"/>
+                            </StackPanel>
+                        </Border>
                         <Label Content="Administrador" FontSize="25" FontWeight="Bold" Foreground="{DynamicResource PrimaryBlueText}" Height="38"/>
                         <Label Content="hotelberlinva@gmail.com" Foreground="{DynamicResource PrimaryBlueText}" Height="37"/>
                     </StackPanel>

@@ -104,7 +104,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0" Grid.Column="1">
-                <Button x:Name="btnRegistrar" Content="Editar Habitacion" Click="ActualizarInformacion_Click"
+                <Button x:Name="btnRegistrar" Content="Editar Habitacion" Click="actualizarInformacion_Click"
                     FontSize="25"
                     FontFamily="Montserrat"
                     Foreground="{DynamicResource PrimaryColor}"
