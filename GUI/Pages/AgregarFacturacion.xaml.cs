@@ -32,7 +32,7 @@ namespace GUI.Pages
             double valor_noche = Convert.ToDouble(txtValorNoche.Text);
             int cantidad_noches = Convert.ToInt32(txtCantidadNoches.Text);
             double total = Convert.ToDouble(txtTotal.Text);
-            DateTime fecha_emision = Convert.ToDateTime(dpFechaEmision.Text);
+            DateTime fecha_emision = Convert.ToDateTime(DateTime.Now);
             
             FacturacionBLL facturacionBLL = new FacturacionBLL();
 

@@ -23,6 +23,7 @@ namespace BLL
             {
                 id_reserva = id_reserva,
                 valor_noche = valor_noche,
+                cantidad_noches = cantidad_noche,
                 total = total,
                 fecha_emision = fecha_emision
             };
