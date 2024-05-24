@@ -1,0 +1,264 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Entity||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\agregarclientes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\agregarclientes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\agregarclientes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\agregarclientes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\agregarfacturacion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\agregarfacturacion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\agregarfacturacion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\agregarfacturacion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B424F3DD-6828-4255-BC4B-A6E7ECE033FB}|DAL\\DAL.csproj|c:\\users\\carlo\\downloads\\clases\\p3\\proyecto de aula\\hotelberlinclone\\hotelberlin\\dal\\facturaciondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B424F3DD-6828-4255-BC4B-A6E7ECE033FB}|DAL\\DAL.csproj|solutionrelative:dal\\facturaciondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD2E858F-CFB4-4821-9E5A-0F9CB1AF9532}|Entity\\Entity.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\entity\\facturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD2E858F-CFB4-4821-9E5A-0F9CB1AF9532}|Entity\\Entity.csproj|solutionrelative:entity\\facturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CFDF37-8533-47E9-A000-135D3D6C63AA}|BLL\\BLL.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\bll\\facturacionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CFDF37-8533-47E9-A000-135D3D6C63AA}|BLL\\BLL.csproj|solutionrelative:bll\\facturacionbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\clientes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\clientes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\agregarhabitacion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\agregarhabitacion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\agregarreserva.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\agregarreserva.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CFDF37-8533-47E9-A000-135D3D6C63AA}|BLL\\BLL.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\bll\\clientebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CFDF37-8533-47E9-A000-135D3D6C63AA}|BLL\\BLL.csproj|solutionrelative:bll\\clientebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B424F3DD-6828-4255-BC4B-A6E7ECE033FB}|DAL\\DAL.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\dal\\clientedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B424F3DD-6828-4255-BC4B-A6E7ECE033FB}|DAL\\DAL.csproj|solutionrelative:dal\\clientedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\gui\\pages\\listafacturacion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A9A1E447-D28F-4B6B-AD4E-B6FED0EDE1E5}|GUI\\GUI.csproj|solutionrelative:gui\\pages\\listafacturacion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD2E858F-CFB4-4821-9E5A-0F9CB1AF9532}|Entity\\Entity.csproj|c:\\users\\carlo\\downloads\\clases\\p3\\proyecto de aula\\hotelberlinclone\\hotelberlin\\entity\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Entity",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\Entity\\Entity.csproj",
+              "RelativeDocumentMoniker": "Entity\\Entity.csproj",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\Entity\\Entity.csproj",
+              "RelativeToolTip": "Entity\\Entity.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-24T15:58:07.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Clientes.xaml",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\Clientes.xaml",
+              "RelativeDocumentMoniker": "GUI\\Pages\\Clientes.xaml",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\Clientes.xaml",
+              "RelativeToolTip": "GUI\\Pages\\Clientes.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-24T02:43:49.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Facturacion.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\Entity\\Facturacion.cs",
+              "RelativeDocumentMoniker": "Entity\\Facturacion.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\Entity\\Facturacion.cs",
+              "RelativeToolTip": "Entity\\Facturacion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T02:39:28.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AgregarReserva.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarReserva.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\Pages\\AgregarReserva.xaml.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarReserva.xaml.cs",
+              "RelativeToolTip": "GUI\\Pages\\AgregarReserva.xaml.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T02:20:37.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AgregarHabitacion.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarHabitacion.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\Pages\\AgregarHabitacion.xaml.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarHabitacion.xaml.cs",
+              "RelativeToolTip": "GUI\\Pages\\AgregarHabitacion.xaml.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T02:19:20.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ClienteDAL.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\DAL\\ClienteDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ClienteDAL.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\DAL\\ClienteDAL.cs",
+              "RelativeToolTip": "DAL\\ClienteDAL.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T22:59:06.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FacturacionDAL.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\DAL\\FacturacionDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\FacturacionDAL.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\DAL\\FacturacionDAL.cs",
+              "RelativeToolTip": "DAL\\FacturacionDAL.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAwwBkAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T16:51:38.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GUI\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\MainWindow.xaml",
+              "RelativeToolTip": "GUI\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-23T16:50:07.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AgregarFacturacion.xaml",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarFacturacion.xaml",
+              "RelativeDocumentMoniker": "GUI\\Pages\\AgregarFacturacion.xaml",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarFacturacion.xaml",
+              "RelativeToolTip": "GUI\\Pages\\AgregarFacturacion.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-23T16:49:28.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ListaFacturacion.xaml",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\ListaFacturacion.xaml",
+              "RelativeDocumentMoniker": "GUI\\Pages\\ListaFacturacion.xaml",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\ListaFacturacion.xaml",
+              "RelativeToolTip": "GUI\\Pages\\ListaFacturacion.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-23T16:49:15.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClienteBLL.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\BLL\\ClienteBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\ClienteBLL.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\BLL\\ClienteBLL.cs",
+              "RelativeToolTip": "BLL\\ClienteBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T16:46:44.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FacturacionBLL.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\BLL\\FacturacionBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\FacturacionBLL.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\BLL\\FacturacionBLL.cs",
+              "RelativeToolTip": "BLL\\FacturacionBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T03:52:10.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AgregarClientes.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarClientes.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\Pages\\AgregarClientes.xaml.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarClientes.xaml.cs",
+              "RelativeToolTip": "GUI\\Pages\\AgregarClientes.xaml.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowDsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T03:51:39.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AgregarFacturacion.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarFacturacion.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\Pages\\AgregarFacturacion.xaml.cs",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarFacturacion.xaml.cs",
+              "RelativeToolTip": "GUI\\Pages\\AgregarFacturacion.xaml.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAnwCsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T03:51:27.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AgregarClientes.xaml",
+              "DocumentMoniker": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarClientes.xaml",
+              "RelativeDocumentMoniker": "GUI\\Pages\\AgregarClientes.xaml",
+              "ToolTip": "C:\\Users\\carlo\\Downloads\\CLASES\\P3\\PROYECTO DE AULA\\HotelBerlinClone\\HotelBerlin\\GUI\\Pages\\AgregarClientes.xaml",
+              "RelativeToolTip": "GUI\\Pages\\AgregarClientes.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-23T23:22:48.918Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

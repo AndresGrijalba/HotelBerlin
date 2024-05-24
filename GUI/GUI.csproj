@@ -58,6 +58,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AgregarFacturacion.xaml.cs">
+      <DependentUpon>AgregarFacturacion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AgregarHabitacion.xaml.cs">
       <DependentUpon>AgregarHabitacion.xaml</DependentUpon>
     </Compile>
@@ -66,6 +69,9 @@
     </Compile>
     <Compile Include="Pages\EditarHabitacion.xaml.cs">
       <DependentUpon>EditarHabitacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListaFacturacion.xaml.cs">
+      <DependentUpon>ListaFacturacion.xaml</DependentUpon>
     </Compile>
     <Compile Include="Themes\ThemesController.cs" />
     <Page Include="Assets\Icons\Icons.xaml">
@@ -88,6 +94,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AgregarFacturacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\AgregarHabitacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +121,10 @@
     <Page Include="Pages\Habitaciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ListaFacturacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ListaReservas.xaml">
       <Generator>MSBuild:Compile</Generator>

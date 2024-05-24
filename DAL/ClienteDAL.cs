@@ -155,7 +155,7 @@ namespace DAL
                                 Telefono = reader["Telefono"].ToString()
                             };
 
-                            clientes.Add(cliente);
+                            clientes.Add(cliente);  
                         }
                     }
                 }

@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DatabaseConnection
     {
-        private static string connectionString = "Server=.\\SQLEXPRESS;Database=HotelBerlinDB;Trusted_Connection=True";
+        private static string connectionString = "Server=.\\SQLEXPRESS;Database=HotelBerlin;Trusted_Connection=True";
 
         public static SqlConnection GetConnection()
         {

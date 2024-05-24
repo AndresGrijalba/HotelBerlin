@@ -1,0 +1,185 @@
+﻿<Page x:Class="GUI.Pages.AgregarFacturacion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Pages"
+      mc:Ignorable="d" Width="820"
+      Title="AgregarReserva" Height="672">
+
+    <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
+        <Grid x:Name="gridReserva">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="104*"/>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="641*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="500"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="2" Margin="182,0,0,0">
+                <Label Content="Facturacion" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,45,415,455" Grid.ColumnSpan="3" Grid.RowSpan="2">
+
+                <TextBlock Text="ID Cliente"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="54 20 0 8"/>
+
+                <TextBox x:Name="txtIdCliente"
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center"/>
+
+                <TextBlock Text="ID Reserva"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="54 30 0 8"/>
+                <TextBox x:Name="txtIdReserva"
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"/>
+
+                <TextBlock Text="Total"
+                          Foreground="{DynamicResource ResourceKey=PrimaryBlueText}"
+                         FontWeight="SemiBold"
+                         FontSize="20" Width="60"
+                         Margin="-170 30 0 0"
+                />
+
+                <TextBox x:Name="txtTotal"
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,45,0,455" Grid.Column="2" Grid.RowSpan="2">
+                <TextBlock Text="Valor por Noche"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="54 40 0 8"/>
+
+                <TextBox x:Name="txtValorNoche"
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
+                </TextBox>
+
+                <TextBlock Text="Cantidad de Noches"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="54 40 0 8"/>
+
+                <TextBox x:Name="txtCantidadNoches"
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="2" Height="270" Width="439">
+                <TextBlock Text="Fecha de Emisión"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="70 40 0 8"/>
+
+                <DatePicker x:Name="dpFechaEmision"
+                            FontSize="16"
+                            FontWeight="Normal"
+                            FontFamily="Montserrat"
+                            Foreground="{DynamicResource PrimaryBlueText}"
+                            Background="Transparent"
+                            BorderBrush="{DynamicResource PrimaryBlueText}"
+                            BorderThickness="0,0,0,2"
+                            Height="25"
+                            Width="295"
+                            HorizontalAlignment="Center">
+                </DatePicker>
+
+                <Button x:Name="btnRegistrar" Content="Registrar Factura" Click="RegistrarReserva_Click"
+                        FontSize="25"
+                        FontFamily="Montserrat"
+                        Foreground="{DynamicResource PrimaryColor}"
+                        FontWeight="Bold"
+                        Height="40"
+                        Width="240"
+                        Margin="0 80 0 0">
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="220" Height="40"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

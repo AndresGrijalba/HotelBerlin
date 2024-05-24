@@ -9,17 +9,6 @@ C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.csproj.C
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.dll
 C:\Users\kevin\OneDrive\Documentos\HotelBerlinProject\DAL\obj\Debug\DAL.pdb
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\DAL.dll
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\DAL.pdb
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\Entity.dll
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\System.Data.SqlClient.dll
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\Entity.pdb
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\System.Data.SqlClient.xml
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.csproj.Up2Date
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.dll
-C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.pdb
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\DAL\bin\Debug\DAL.dll
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\DAL\bin\Debug\DAL.pdb
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\DAL\bin\Debug\Entity.dll
@@ -31,3 +20,14 @@ C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\DAL\obj\Debug\DAL.dll
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\DAL\obj\Debug\DAL.pdb
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\DAL.dll
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\DAL.pdb
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\Entity.dll
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\System.Data.SqlClient.dll
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\Entity.pdb
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\bin\Debug\System.Data.SqlClient.xml
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.dll
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\DAL\obj\Debug\DAL.pdb

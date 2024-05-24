@@ -105,5 +105,14 @@ namespace GUI
         {
             WindowState = WindowState.Minimized;
         }
+
+        private void rdAgregarFacturacion_Cheked(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void rdAgregarFacturacion_Click(object sender, RoutedEventArgs e)
+        {
+            frameContent.Navigate(new AgregarFacturacion());
+        }
     }
 }

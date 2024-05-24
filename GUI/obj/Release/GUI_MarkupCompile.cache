@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\kevin\OneDrive\Documentos\Visual Studio 2022\Proyectos\HotelBerlinProject\GUI\obj\Release\
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\GUI\obj\Release\
 GUI
 none
 false
 TRACE
-C:\Users\kevin\OneDrive\Documentos\Visual Studio 2022\Proyectos\HotelBerlinProject\GUI\App.xaml
-1219584333
+C:\Users\carlo\Downloads\CLASES\P3\PROYECTO DE AULA\HotelBerlinClone\HotelBerlin\GUI\App.xaml
+16-1850650944
 
-51579654133
-151565550982
-MainWindow.xaml;
+171296543273
+151917644086
+Assets\Icons\Icons.xaml;Login.xaml;MainWindow.xaml;Pages\AgregarFacturacion.xaml;Pages\AgregarHabitacion.xaml;Pages\AgregarReserva.xaml;Pages\AgregarClientes.xaml;Pages\EditarCliente.xaml;Pages\EditarHabitacion.xaml;Pages\Habitaciones.xaml;Pages\ListaFacturacion.xaml;Pages\ListaReservas.xaml;Pages\Clientes.xaml;Styles\RadioButtonStyle.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
 
 True
 
