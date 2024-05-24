@@ -8,6 +8,7 @@ namespace Entity
 {
     public class Cliente
     {
+        public int Id {  get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Correo { get; set; }
@@ -15,9 +16,16 @@ namespace Entity
         public string Telefono { get ; set; }
         public Cliente() { }
 
-        public override string ToString()
+        public Cliente(string id) {
+            this.Id = Convert.ToInt32(id);
+        }
+
+        public Cliente(int id, string nombres, string apellidos, string cedula)
         {
-            return $"{Cedula}";
+            this.Id = id;
+            this.Nombre = nombres;
+            this.Apellido = apellidos;
+            this.Cedula = cedula;
         }
     }
 }

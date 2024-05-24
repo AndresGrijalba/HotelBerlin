@@ -11,7 +11,7 @@ namespace DAL
 {
     public class ClienteDAL
     {
-        public void AgregarCliente(Cliente cliente)
+        public void agregarCliente(Cliente cliente)
         {
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
@@ -52,11 +52,10 @@ namespace DAL
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
-                string query = "SELECT * FROM clientes WHERE cedula = @cedula";
+                string query = "SELECT * FROM clientes";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@cedula", cedula);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())

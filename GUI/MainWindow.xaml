@@ -21,14 +21,14 @@
             </Grid.ColumnDefinitions>
 
             <Border CornerRadius="10"
-                    Padding="10"
+                    Padding="5"
                     Margin="10"
                     Background="{DynamicResource BlueTransparent}">
                 <Grid x:Name="gridMenu">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="590"/>
+                        <RowDefinition Height="110"/>
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -43,7 +43,7 @@
                         <RadioButton x:Name="rdHabitaciones" Content="Habitaciones" Style="{DynamicResource MenuRadioButtonStyleHabitaciones}" Margin="0 1 0 1" Click="rdHabitaciones_Click" Checked="rdHabitaciones_Checked"/>
                         <RadioButton x:Name="rdRegistrarUsuario" Content="Agregar Cliente" Style="{DynamicResource MenuRadioButtonStyleRegistrarUsuarios}" Margin="0 1 0 1" Click="rdRegistrarUsuario_Click" Checked="rdRegistrarUsuario_Checked"/>
                         <RadioButton x:Name="rdUsuarios" Content="Clientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
-                        <!--<RadioButton x:Name="rdUsuarios_Copiar" Content="PruebaClientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Click="rdUsuariosPrueba_Click" Checked="rdUsuariosPrueba_Checked"/>-->
+                        <RadioButton x:Name="rdFacturas" Content="Facturas" Style="{DynamicResource MenuRadioButtonStyleFacturas}" Click="rdRegistrarFacturas_Click" Checked="rdRegistrarFacturas_Checked"/>
                     </StackPanel>
 
                     <StackPanel Grid.Row="2" VerticalAlignment="Center">

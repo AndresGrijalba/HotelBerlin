@@ -25,8 +25,8 @@ namespace DAL
                 {
                     TipoHabitacion tipo = new TipoHabitacion
                     {
-                        Id = reader.GetInt32(0),
-                        Nombre = reader.GetString(1)
+                        Id = Convert.ToInt32(reader["id"]),
+                        Nombre = reader["nombre"].ToString()
                     };
 
                     tiposHabitacion.Add(tipo);

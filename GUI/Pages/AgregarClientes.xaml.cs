@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,6 +38,18 @@ namespace GUI.Pages
             
             ClienteBLL clienteBLL = new ClienteBLL();
 
+            if (!string.IsNullOrWhiteSpace(cedula) && !EsNumerico(cedula))
+            {
+                MessageBox.Show("La cédula debe contener solo caracteres numéricos.", "Error de Validación", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(telefono) && !EsNumerico(telefono))
+            {
+                MessageBox.Show("El numero de telefono debe contener solo caracteres numéricos.", "Error de Validación", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             try
             {
                 clienteBLL.AgregarCliente(txtNombre.Text, txtApellido.Text, txtCedula.Text, txtCorreo.Text, txtTelefono.Text);
@@ -54,13 +67,43 @@ namespace GUI.Pages
             }
         }
 
-        private void LimpiarCampos()
+        private bool EsNumerico(string input)
         {
-            txtNombre.Text = "";
-            txtApellido.Text = "";
-            txtCedula.Text = "";
-            txtCorreo.Text = "";
-            txtTelefono.Text = "";
+            return Regex.IsMatch(input, @"^\d+$");
+        }
+
+        private void InputTextBoxCedula_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                string input = textBox.Text;
+                if (!Regex.IsMatch(input, @"^\d*$"))
+                {
+                    ErrorCedula.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ErrorCedula.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
+
+        private void InputTextBoxTelefono_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                string input = textBox.Text;
+                if (!Regex.IsMatch(input, @"^\d*$"))
+                {
+                    ErrorTelefono.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ErrorTelefono.Visibility = Visibility.Collapsed;
+                }
+            }
         }
     }
 }

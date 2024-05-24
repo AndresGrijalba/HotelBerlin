@@ -30,7 +30,7 @@ namespace GUI
 
         private void rdReservas_Click(object sender, RoutedEventArgs e)
         {
-            frameContent.Navigate(new ListaReservas());
+            frameContent.Navigate(new Reservas());
         }
 
         private void rdReservas_Checked(object sender, RoutedEventArgs e)
@@ -83,6 +83,16 @@ namespace GUI
         }
 
         private void rdRegistrarHabitacion_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdRegistrarFacturas_Click(object sender, RoutedEventArgs e)
+        {
+            frameContent.Navigate(new Facturas());
+        }
+
+        private void rdRegistrarFacturas_Checked(object sender, RoutedEventArgs e)
         {
 
         }

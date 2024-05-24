@@ -43,6 +43,7 @@ namespace GUI.Pages
             EditarCliente editarClientePage = new EditarCliente(cedula);
             this.NavigationService.Navigate(editarClientePage);
         }
+
         private void EliminarCliente_Click(object sender, RoutedEventArgs e)
         {
             Button botonEliminar = sender as Button;

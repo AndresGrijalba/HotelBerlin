@@ -26,43 +26,45 @@
 
             <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,70,0,310" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center">
                 <TextBlock Text="Tipo de habitacion"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="10 40 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="10 40 0 8"/>
 
                 <ComboBox Name="cmbTipoHabitacion" 
-                      Width="295" 
-                      Height="25" 
-                      Margin="10"
-                      FontSize="16"
-                      FontWeight="SemiBold"
-                      FontFamily="Montserrat"
-                      Foreground="{DynamicResource PrimaryBlueText}"
-                      Background="Transparent"
-                      BorderBrush="{DynamicResource SecundaryBlueText}"
-                      BorderThickness="0,0,0,2"/>
+                          Width="295" 
+                          Height="25" 
+                          Margin="10"
+                          FontSize="16"
+                          DisplayMemberPath="Nombre"
+                          SelectedValuePath="Id"
+                          FontWeight="SemiBold"
+                          FontFamily="Montserrat"
+                          Foreground="{DynamicResource PrimaryBlueText}"
+                          Background="Transparent"
+                          BorderBrush="{DynamicResource SecundaryBlueText}"
+                          BorderThickness="0,0,0,2"/>
 
                 <TextBlock Text="Numero de Habitacion"
-                   Foreground="{DynamicResource PrimaryBlueText}"
-                   FontWeight="SemiBold"
-                   FontSize="20"
-                   HorizontalAlignment="Left"
-                   Margin="10 20 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="10 20 0 8"/>
 
                 <TextBox x:Name="txtNumero" 
-                 FontSize="16"
-                 FontWeight="Normal"
-                 FontFamily="Montserrat"                            
-                 Foreground="{DynamicResource PrimaryBlueText}"
-                 CaretBrush="LightGray"
-                 Background="Transparent"
-                 BorderBrush="{DynamicResource SecundaryBlueText}"
-                 BorderThickness="0,0,0,2"
-                 Height="25"
-                 Width="295"
-                 HorizontalAlignment="Center">
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"                            
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource SecundaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
                 </TextBox>
 
                 <CheckBox x:Name="cbDisponibilidad" Content="Disponible" IsChecked="True" FontSize="20" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Medium" Margin="10 40 0 0">
@@ -73,16 +75,16 @@
                                     <BulletDecorator.Bullet>
                                         <Grid Width="22" Height="22">
                                             <Ellipse x:Name="Ellipse"
-                                                 Stroke="{DynamicResource BlueTransparent}"
-                                                 StrokeThickness="2"
-                                                 Fill="{TemplateBinding Background}"
-                                                 Width="20" Height="20"/>
+                                                     Stroke="{DynamicResource BlueTransparent}"
+                                                     StrokeThickness="2"
+                                                     Fill="{TemplateBinding Background}"
+                                                     Width="20" Height="20"/>
                                             <Path x:Name="CheckMark"
-                                              Margin="-5 0 0 0"
-                                              Data="M0,6 L2,8 L8,2"
-                                              StrokeThickness="2"
-                                              Stroke="{DynamicResource PrimaryBlueText}"
-                                              Visibility="Collapsed"/>
+                                                  Margin="-5 0 0 0"
+                                                  Data="M0,6 L2,8 L8,2"
+                                                  StrokeThickness="2"
+                                                  Stroke="{DynamicResource PrimaryBlueText}"
+                                                  Visibility="Collapsed"/>
                                         </Grid>
                                     </BulletDecorator.Bullet>
                                     <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0"/>

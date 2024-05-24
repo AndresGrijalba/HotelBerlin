@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace GUI.Pages
 {
     /// <summary>
-    /// Lógica de interacción para ListaReservas.xaml
+    /// Lógica de interacción para Reservas.xaml
     /// </summary>
-    public partial class ListaReservas : Page
+    public partial class Reservas : Page
     {
-        public ListaReservas()
+        public Reservas()
         {
             InitializeComponent();
         }

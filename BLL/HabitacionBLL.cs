@@ -50,5 +50,9 @@ namespace BLL
             }
         }
 
+        public List<Habitacion> ObtenerHabitacionesDisponibles()
+        {
+            return habitacionDAL.ObtenerHabitacionesDisponibles();
+        }
     }
 }

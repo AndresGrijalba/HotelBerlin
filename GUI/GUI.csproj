@@ -67,6 +67,9 @@
     <Compile Include="Pages\EditarHabitacion.xaml.cs">
       <DependentUpon>EditarHabitacion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Facturas.xaml.cs">
+      <DependentUpon>Facturas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Themes\ThemesController.cs" />
     <Page Include="Assets\Icons\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -108,11 +111,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Facturas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Habitaciones.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\ListaReservas.xaml">
+    <Page Include="Pages\Reservas.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -143,8 +150,8 @@
     <Compile Include="Pages\Habitaciones.xaml.cs">
       <DependentUpon>Habitaciones.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ListaReservas.xaml.cs">
-      <DependentUpon>ListaReservas.xaml</DependentUpon>
+    <Compile Include="Pages\Reservas.xaml.cs">
+      <DependentUpon>Reservas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Clientes.xaml.cs">
       <DependentUpon>Clientes.xaml</DependentUpon>
@@ -204,6 +211,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bill.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

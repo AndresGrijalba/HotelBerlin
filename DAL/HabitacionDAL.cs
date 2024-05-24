@@ -34,7 +34,7 @@ namespace DAL
 
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
-                string query = "select h.id, h.numero, h.estado, th.nombre as tipo_habitacion, th.precio_noche from habitaciones as h left join tipo_habitacion as th on th.id=h.id_tipo;";
+                string query = "select h.id, h.numero, h.estado, th.nombre as tipo_habitacion, th.precio_noche from habitaciones as h left join tipo_habitacion as th on th.id=h.id_tipo";
 
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -154,6 +154,30 @@ namespace DAL
                     }
                 }
             }
+        }
+
+        public List<Habitacion> ObtenerHabitacionesDisponibles()
+        {
+            List<Habitacion> habitaciones = new List<Habitacion>();
+
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT * FROM habitaciones"; 
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Habitacion habitacion = new Habitacion
+                    {
+                        Numero = (int)reader["numero"],
+                    };
+                    habitaciones.Add(habitacion);
+                }
+            }
+
+            return habitaciones;
         }
 
     }

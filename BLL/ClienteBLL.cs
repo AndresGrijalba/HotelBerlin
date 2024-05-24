@@ -36,9 +36,7 @@ namespace BLL
                 Telefono = telefono
             };
 
-            
-
-            clienteDAL.AgregarCliente(cliente);
+            clienteDAL.agregarCliente(cliente);
 
         }
 

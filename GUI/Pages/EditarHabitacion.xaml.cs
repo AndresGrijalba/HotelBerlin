@@ -43,11 +43,11 @@ namespace GUI.Pages
             Habitacion habitacion = new Habitacion
             {
                 Id = Convert.ToInt32(_id),
-                Id_Tipo = Convert.ToInt32(cmbTipoHabitacion.SelectedIndex),
+                Id_Tipo = Convert.ToInt32(cmbTipoHabitacion.SelectedValue.ToString()),
                 Numero = Convert.ToInt32(txtNumero.Text),
-                Disponibilidad = Convert.ToBoolean(cbDisponibilidad.IsChecked)
+                Disponibilidad = Convert.ToBoolean(cbDisponibilidad.IsChecked)                
             };
-
+            
             bool exito = habitacionBLL.actualizarHabitacion(habitacion);
             if (exito)
             {

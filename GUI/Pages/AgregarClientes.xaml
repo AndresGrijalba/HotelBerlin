@@ -10,8 +10,6 @@
     <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
         <Grid x:Name="gridClientes">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="104*"/>
-                <ColumnDefinition Width="75*"/>
                 <ColumnDefinition Width="641*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -20,12 +18,12 @@
                 <RowDefinition Height="500"/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="2" Margin="182,0,0,0">
-                <Label Content="Cliente" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0 20 0 20"/>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="3">
+                <Label Content="Agregar Cliente" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,45,415,455" Grid.ColumnSpan="3" Grid.RowSpan="2">
-               
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="40,45,415,455" Grid.ColumnSpan="4" Grid.RowSpan="2">
+
                 <TextBlock Text="Cedula"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
@@ -44,9 +42,14 @@
                          BorderThickness="0,0,0,2"
                          Height="25"
                          Width="295"
-                         HorizontalAlignment="Center">
+                         HorizontalAlignment="Center"
+                         TextChanged="InputTextBoxCedula_TextChanged">
                 </TextBox>
-                
+
+                <Label Name="ErrorCedula" Content="Solo caracteres numéricos*" 
+                       Foreground="Red" Visibility="Collapsed" 
+                       HorizontalAlignment="Left" Margin="50 0 0 0"/>
+
                 <TextBlock Text="Nombres"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
@@ -69,7 +72,7 @@
                 </TextBox>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,45,0,455" Grid.Column="2" Grid.RowSpan="2">
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="420,45,0,455" Grid.RowSpan="2">
                 <TextBlock Text="Apellidos"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
@@ -112,7 +115,7 @@
                          HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="2" Height="270" Width="439">
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Column="3" Height="270" Width="439">
 
                 <TextBlock Text="Telefono"
                            Foreground="{DynamicResource PrimaryBlueText}"
@@ -132,8 +135,14 @@
                          BorderThickness="0,0,0,2"
                          Height="25"
                          Width="295"
-                         HorizontalAlignment="Center">
+                         HorizontalAlignment="Center"
+                         TextChanged="InputTextBoxTelefono_TextChanged">
                 </TextBox>
+
+                <Label Name="ErrorTelefono" Content="Solo caracteres numéricos*" 
+                       Foreground="Red" Visibility="Collapsed" 
+                       HorizontalAlignment="Left" Margin="67 0 0 0"/>
+
                 <Button x:Name="btnRegistrar" Content="Registrar cliente" Click="RegistrarCliente_Click"
                         FontSize="25"
                         FontFamily="Montserrat"
