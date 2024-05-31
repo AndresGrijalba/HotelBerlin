@@ -2,19 +2,9 @@
 using Entity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GUI.Pages
 {
@@ -23,19 +13,17 @@ namespace GUI.Pages
     /// </summary>
     public partial class AgregarReserva : Page
     {
-        private string _cedula;
         public List<Habitacion> habitacion = null;
         ClienteBLL clienteBLL = new ClienteBLL();
         ReservaBLL reservaBLL = new ReservaBLL();
         HabitacionBLL habitacionBLL = new HabitacionBLL();
+        TipoHabitacionBLL tipoHabitacionBLL = new TipoHabitacionBLL();
 
         public AgregarReserva()
         {
             InitializeComponent();
-            CargarDatosCliente();
             habitacion = habitacionBLL.ObtenerHabitaciones();
-            CargarHabitacionesDisponibles();
-            cargarDatosHabitacion();
+            CargarTiposHabitacion();
         }
 
         public void btnFecha_Click(object sender, RoutedEventArgs e)
@@ -52,9 +40,10 @@ namespace GUI.Pages
         {
             int idCliente;
             int idHabitacion;
-            DateTime fechaInicio;
-            DateTime fechaFin;
-            int cantidadNoches;
+
+            DateTime fechaInicio = dpDesde.SelectedDate.Value;
+            DateTime fechaFin = dpHasta.SelectedDate.Value;
+            DateTime fechaRegistro = DateTime.Now;
 
             if (cmbCedula.SelectedItem == null)
             {
@@ -80,28 +69,23 @@ namespace GUI.Pages
                 return;
             }
 
-            if (!int.TryParse(txtNumeroNoches.Text, out cantidadNoches))
-            {
-                MessageBox.Show("Por favor, ingrese un número de noches válido.");
-                return;
-            }
-
-            idCliente = (int)cmbCedula.SelectedValue;
-            idHabitacion = (int)cmbHabitaciones.SelectedValue;
+            idCliente = int.Parse(cmbCedula.SelectedValue.ToString());
+            idHabitacion = int.Parse(cmbHabitaciones.SelectedValue.ToString());
 
             Reserva nuevaReserva = new Reserva
             {
                 idCliente = idCliente,
                 idHabitacion = idHabitacion,
-                fechaInicio = fechaInicio,
-                fechaFin = fechaFin,
-                cantidadNoches = cantidadNoches
+                FechaInicio = fechaInicio,
+                FechaFin = fechaFin,
+                FechaRegistro = fechaRegistro
             };
+
 
             try
             {
-                reservaBLL.agregarReserva(nuevaReserva);
-                MessageBox.Show("Reserva agregada exitosamente.");
+                string mensaje = reservaBLL.agregarReserva(nuevaReserva);
+                MessageBox.Show(mensaje);
             }
             catch (Exception ex)
             {
@@ -109,41 +93,54 @@ namespace GUI.Pages
             }
         }
 
-        private void CargarDatosCliente()
+        private void OnListenerIdentification_PreviewKeyUp(object sender, KeyboardEventArgs e)
         {
-            Cliente cliente = clienteBLL.ObtenerClientePorCedula(_cedula);
-            if (cliente != null)
+            string cedula = cmbCedula.Text;
+            List<Cliente> clientes;
+
+            if (cedula.Length >= 3)
             {
-                cmbCedula.Text = cliente.Cedula;
-                txtNombre.Text = cliente.Nombre;
-                txtApellido.Text = cliente.Apellido;
-            }
-            else
-            {
-                MessageBox.Show("Cliente no encontrado.");
+                clientes = clienteBLL.BuscarClientesPorCedula(cedula);
+                cmbCedula.ItemsSource = clientes;
+                cmbCedula.DisplayMemberPath = "Nombre";
+                cmbCedula.SelectedValuePath = "Id";
             }
         }
 
-        private void CargarHabitacionesDisponibles()
+        private void cmbCedula_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<Habitacion> habitacionesDisponibles = habitacionBLL.ObtenerHabitacionesDisponibles();
+            if (cmbCedula.SelectedItem != null)
+            {
+                Cliente selectedCliente = (Cliente)cmbCedula.SelectedItem;
+                txtNombre.Text = selectedCliente.Nombre;
+                txtApellido.Text = selectedCliente.Apellido;
+                MessageBox.Show(selectedCliente.Id.ToString());
+            }
+        }
+
+        private void CargarTiposHabitacion()
+        {
+            List<TipoHabitacion> tiposHabitacion = tipoHabitacionBLL.ObtenerTiposHabitacion();
+            cmbTipoHabitacion.ItemsSource = tiposHabitacion;
+            cmbTipoHabitacion.DisplayMemberPath = "Nombre";
+            cmbTipoHabitacion.SelectedValuePath = "Id";
+        }
+
+        private void CargarHabitacionesPorTipo(int idTipo)
+        {
+            List<Habitacion> habitacionesDisponibles = habitacionBLL.ObtenerHabitacionesDisponibles(idTipo);
             cmbHabitaciones.ItemsSource = habitacionesDisponibles;
             cmbHabitaciones.DisplayMemberPath = "Numero";
-            cmbHabitaciones.SelectedValuePath = "Id"; 
+            cmbHabitaciones.SelectedValuePath = "Id";
         }
 
-        private void cargarDatosHabitacion()
+        private void cmbTipoHabitacion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Habitacion habitacion = habitacionBLL.ObtenerHabitacionPorId(_id);
-            //if (habitacion != null)
-            //{
-            //    cmbTipoHabitacion.SelectedValue = habitacion.Id_Tipo;
-            //    cmbHabitaciones.SelectedValue = habitacion.Id;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Habitación no encontrada");
-            //}
+            if (cmbTipoHabitacion.SelectedItem != null)
+            {
+                int idTipoHabitacion = (int)cmbTipoHabitacion.SelectedValue;
+                CargarHabitacionesPorTipo(idTipoHabitacion);
+            }
         }
     }
 }

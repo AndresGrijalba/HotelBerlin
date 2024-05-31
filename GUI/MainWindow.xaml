@@ -37,11 +37,9 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="1" VerticalAlignment="Center">
-                        <RadioButton x:Name="rdRegistrarReserva" Content="Registrar Reserva" Style="{DynamicResource MenuRadioButtonStyleRReservas}" Margin="0 30 0 0" Click="rdRegistrarReserva_Click" Checked="rdRegistrarReserva_Checked"/>
+                        <RadioButton x:Name="rdEstadisticas" Content="Estadisticas" Style="{DynamicResource MenuRadioButtonStyleREstadisticas}" Margin="0 30 0 1" Click="rdEstadisticas_Click" Checked="rdEstadisticas_Checked"/>
                         <RadioButton x:Name="rdReservas" Content="Reservas" Style="{DynamicResource MenuRadioButtonStyleReservas}" Margin="0 1 0 1" Click="rdReservas_Click" Checked="rdReservas_Checked"/>
-                        <RadioButton x:Name="rdRegistrarHabitacion" Content="Agregar Habitacion" Style="{DynamicResource MenuRadioButtonStyleRReservas}" Margin="0 1 0 1" Click="rdRegistrarHabitacion_Click" Checked="rdRegistrarHabitacion_Checked"/>
                         <RadioButton x:Name="rdHabitaciones" Content="Habitaciones" Style="{DynamicResource MenuRadioButtonStyleHabitaciones}" Margin="0 1 0 1" Click="rdHabitaciones_Click" Checked="rdHabitaciones_Checked"/>
-                        <RadioButton x:Name="rdRegistrarUsuario" Content="Agregar Cliente" Style="{DynamicResource MenuRadioButtonStyleRegistrarUsuarios}" Margin="0 1 0 1" Click="rdRegistrarUsuario_Click" Checked="rdRegistrarUsuario_Checked"/>
                         <RadioButton x:Name="rdUsuarios" Content="Clientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
                         <RadioButton x:Name="rdFacturas" Content="Facturas" Style="{DynamicResource MenuRadioButtonStyleFacturas}" Click="rdRegistrarFacturas_Click" Checked="rdRegistrarFacturas_Checked"/>
                     </StackPanel>

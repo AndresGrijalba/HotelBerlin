@@ -156,22 +156,24 @@ namespace DAL
             }
         }
 
-        public List<Habitacion> ObtenerHabitacionesDisponibles()
+        public List<Habitacion> ObtenerHabitacionesDisponibles(int idTipo)
         {
             List<Habitacion> habitaciones = new List<Habitacion>();
 
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
-                string query = "SELECT * FROM habitaciones"; 
-                SqlCommand cmd = new SqlCommand(query, connection);
-                SqlDataReader reader = cmd.ExecuteReader();
+                string query = "SELECT * FROM habitaciones WHERE estado = 1 and id_tipo = @id_tipo"; 
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id_tipo", idTipo);
+                SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
                     Habitacion habitacion = new Habitacion
                     {
-                        Numero = (int)reader["numero"],
+                        Id = Convert.ToInt32(reader["id"]),
+                        Numero = Convert.ToInt32(reader["numero"]),
                     };
                     habitaciones.Add(habitacion);
                 }

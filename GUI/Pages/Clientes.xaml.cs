@@ -36,6 +36,19 @@ namespace GUI.Pages
             ClientesDataGrid.ItemsSource = cliente;
         }
 
+        private void RegistrarCliente_Click(object sender, EventArgs e)
+        {
+            Window clientesWindow = Window.GetWindow(this);
+            AgregarCWindow cliWindow = new AgregarCWindow();
+
+            cliWindow.Owner = clientesWindow;
+            cliWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            cliWindow.ShowDialog();
+
+            Clientes updateCliente = new Clientes();
+            this.NavigationService.Navigate(updateCliente);
+        }
+
         private void EditarCliente_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;

@@ -26,6 +26,7 @@ namespace GUI
         public MainWindow()
         {
             InitializeComponent();
+            frameContent.Content = new Estadisticas();
         }
 
         private void rdReservas_Click(object sender, RoutedEventArgs e)
@@ -34,6 +35,16 @@ namespace GUI
         }
 
         private void rdReservas_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdEstadisticas_Click(object sender, RoutedEventArgs e)
+        {
+            frameContent.Navigate(new Estadisticas());
+        }
+
+        private void rdEstadisticas_Checked(object sender, RoutedEventArgs e)
         {
 
         }

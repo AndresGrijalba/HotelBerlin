@@ -12,9 +12,25 @@ namespace BLL
     {
         private ReservaDAL reservaDAL = new ReservaDAL();
 
-        public void agregarReserva(Reserva reserva)
+        public string agregarReserva(Reserva reserva)
         {
-            reservaDAL.agregarReserva(reserva);
+            try
+            {
+                int cantidadNoches = reserva.CalcularCantidadNoches();
+                reserva.CantidadNoches = cantidadNoches;
+
+                reservaDAL.agregarReserva(reserva);
+                return "Sucessfull";
+            }
+            catch (Exception ex)
+            {
+                return "Error: " + ex;
+            }
+        }
+
+        public List<Reserva> ObtenerReservas()
+        {
+            return reservaDAL.ObtenerReservas();
         }
     }
 }

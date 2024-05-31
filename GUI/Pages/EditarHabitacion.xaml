@@ -60,7 +60,7 @@
                          Foreground="{DynamicResource PrimaryBlueText}"
                          CaretBrush="LightGray"
                          Background="Transparent"
-                         BorderBrush="{DynamicResource SecundaryBlueText}"
+                         BorderBrush="{DynamicResource WhiteColor}"
                          BorderThickness="0,0,0,2"
                          Height="25"
                          Width="295"

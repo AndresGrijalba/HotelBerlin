@@ -14,14 +14,49 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Lista de Habitacion" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Numero de habitacion" FontSize="15" FontWeight="Bold" Margin="0 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Tipo de habitacion" FontSize="15" FontWeight="Bold" Margin="200 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Precio noche" FontSize="15" FontWeight="Bold" Margin="400 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Disponible" FontSize="15" FontWeight="Bold" Margin="580 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1010 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
 
-        <DataGrid x:Name="HabitacionesDataGrid" Grid.Row="1" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None" Margin="0,0,0,-21">
+        <Button x:Name="btnRegistrar" Content="Agregar Habitacion" Click="AgregarHabitacion_Click"
+                FontSize="18"
+                FontFamily="Montserrat"
+                Foreground="{DynamicResource PrimaryColor}"
+                FontWeight="Bold"
+                Height="40"
+                HorizontalAlignment="Right"
+                Margin="0, -40, 20, 0"
+                Width="240">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="220" Height="40"
+                            CornerRadius="10"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <Label Content="Lista de Habitacion" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Numero de habitacion" FontSize="15" FontWeight="Bold" Margin="0 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Tipo de habitacion" FontSize="15" FontWeight="Bold" Margin="225 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Precio noche" FontSize="15" FontWeight="Bold" Margin="445 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Disponible" FontSize="15" FontWeight="Bold" Margin="635 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+
+        <DataGrid x:Name="HabitacionesDataGrid" Grid.Row="1" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None" Margin="0,0,10,-21">
             <DataGrid.Resources>
                 <Style TargetType="DataGridCell">
                     <Setter Property="BorderThickness" Value="0"/>
@@ -70,7 +105,7 @@
             </DataGrid.Resources>
 
             <DataGrid.Columns>
-                <DataGridTextColumn IsReadOnly="True" Header="Numero" Binding="{Binding Numero}" Width="200">
+                <DataGridTextColumn IsReadOnly="True" Header="Numero" Binding="{Binding Numero}" Width="220">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -81,7 +116,7 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Tipo de Habitación" Binding="{Binding tipoHabitacion}" Width="200">
+                <DataGridTextColumn Header="Tipo de Habitación" Binding="{Binding tipoHabitacion}" Width="220">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -92,7 +127,7 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Precio noche" Binding="{Binding precioNoche}" Width="170">
+                <DataGridTextColumn Header="Precio noche" Binding="{Binding precioNoche}" Width="190">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -103,7 +138,7 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Disponibilidad" Binding="{Binding disponibilidadString}" Width="375">
+                <DataGridTextColumn Header="Disponibilidad" Binding="{Binding disponibilidadString}" Width="360">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -139,49 +174,6 @@
                                                 Background="{TemplateBinding Background}">
                                             <Grid>
                                                 <Image Source="/Images/edit.png" 
-                                                       VerticalAlignment="Center" 
-                                                       HorizontalAlignment="Left" 
-                                                       Width="16" 
-                                                       Height="16"
-                                                       Margin="5 0 0 0"/>
-                                                <ContentPresenter VerticalAlignment="Center"
-                                                                  HorizontalAlignment="Right"
-                                                                  Margin="0 0 10 0"
-                                                                  Content="{TemplateBinding Content}"/>
-                                            </Grid>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-
-                <DataGridTemplateColumn Width="Auto">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Eliminar" Click="EliminarHabitacion_Click" Tag="{Binding Id}" Margin=" 0 0 5 0">
-                                <Button.Style>
-                                    <Style TargetType="{x:Type Button}">
-                                        <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
-                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
-                                        <Setter Property="FontWeight" Value="Bold"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#D10000"/>
-                                                <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border Width="80" Height="25"
-                                                CornerRadius="5"
-                                                Background="{TemplateBinding Background}">
-                                            <Grid>
-                                                <Image Source="/Images/delete.png" 
                                                        VerticalAlignment="Center" 
                                                        HorizontalAlignment="Left" 
                                                        Width="16" 

@@ -27,34 +27,12 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,0,415,310" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                <TextBlock Text="Nombre"
-                           Foreground="{DynamicResource PrimaryBlueText}"
-                           FontWeight="SemiBold"
-                           FontSize="20"
-                           HorizontalAlignment="Left"
-                           Margin="51 40 0 8"/>
-
-                <TextBox x:Name="txtNombre" 
-                         IsEnabled="False"
-                         FontSize="16"
-                         FontWeight="Normal"
-                         FontFamily="Montserrat"                            
-                         Foreground="{DynamicResource PrimaryBlueText}"
-                         CaretBrush="LightGray"
-                         Background="Transparent"
-                         BorderBrush="{DynamicResource SecundaryBlueText}"
-                         BorderThickness="0,0,0,2"
-                         Height="25"
-                         Width="295"
-                         HorizontalAlignment="Center">
-                </TextBox>
-
                 <TextBlock Text="Cedula"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
                            FontSize="20"
                            HorizontalAlignment="Left"
-                           Margin="51 40 0 8"/>
+                           Margin="55 40 0 8"/>
 
                 <ComboBox Name="cmbCedula"
                           IsEditable="True"
@@ -62,51 +40,17 @@
                           IsTextSearchEnabled="True"
                           Text="{Binding Cedula}"
                           Height="25"
-                          Width="300">
+                          Width="300"
+                          SelectionChanged="cmbCedula_SelectionChanged"
+                          PreviewKeyUp="OnListenerIdentification_PreviewKeyUp">
                 </ComboBox>
 
-                <TextBlock Text="Cantidad de noches"
+                <TextBlock Text="Apellidos"
                            Foreground="{DynamicResource PrimaryBlueText}"
                            FontWeight="SemiBold"
                            FontSize="20"
                            HorizontalAlignment="Left"
-                           Margin="51 40 0 8"/>
-
-                <TextBox x:Name="txtNumeroNoches" 
-                         FontSize="16"
-                         FontWeight="Normal"
-                         FontFamily="Montserrat"                            
-                         Foreground="{DynamicResource PrimaryBlueText}"
-                         CaretBrush="LightGray"
-                         Background="Transparent"
-                         BorderBrush="{DynamicResource SecundaryBlueText}"
-                         BorderThickness="0,0,0,2"
-                         Height="25"
-                         Width="295"
-                         HorizontalAlignment="Center">
-                </TextBox>
-
-                <TextBlock Text="Hasta"
-                           Foreground="{DynamicResource PrimaryBlueText}"
-                           FontWeight="SemiBold"
-                           FontSize="20"
-                           HorizontalAlignment="Left"
-                           Margin="51 40 0 8"/>
-
-                <DatePicker x:Name="dpHasta"
-                            Background="{DynamicResource PrimaryBlueText}"
-                            Height="25"
-                            Width="295"/>
-
-            </StackPanel>
-
-            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,0,0,310" Grid.Column="1" Grid.RowSpan="2">
-                <TextBlock Text="Apellido"
-                           Foreground="{DynamicResource PrimaryBlueText}"
-                           FontWeight="SemiBold"
-                           FontSize="20"
-                           HorizontalAlignment="Left"
-                           Margin="51 40 0 8"/>
+                           Margin="55 40 0 8"/>
 
                 <TextBox x:Name="txtApellido"
                          FontSize="16"
@@ -128,15 +72,70 @@
                            FontWeight="SemiBold"
                            FontSize="20"
                            HorizontalAlignment="Left"
-                           Margin="51 40 0 8"/>
+                           Margin="55 40 0 8"/>
 
                 <ComboBox Name="cmbHabitaciones"
                           IsEditable="True"
-                          TextSearch.TextPath="Cedula"
                           IsTextSearchEnabled="True"
-                          Text="{Binding id_habitacion}"
+                          Text="{Binding Id}"
                           Height="25"
-                          Width="300">
+                          Width="300"
+                          SelectedValuePath="Id"
+                          DisplayMemberPath="Numero">
+                </ComboBox>
+
+                <TextBlock Text="Hasta"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="51 40 0 8"/>
+
+                <DatePicker x:Name="dpHasta"
+                            Background="{DynamicResource PrimaryBlueText}"
+                            Height="25"
+                            Width="295"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,0,0,310" Grid.Column="1" Grid.RowSpan="2">
+                <TextBlock Text="Nombres"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="51 40 0 8"/>
+
+                <TextBox x:Name="txtNombre" 
+                         IsEnabled="False"
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"                            
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource SecundaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
+                </TextBox>
+
+                <TextBlock Text="Tipo de habitacion"
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="51 40 0 8"/>
+
+                <ComboBox Name="cmbTipoHabitacion"
+                          IsEditable="True"
+                          IsTextSearchEnabled="True"
+                          Text="{Binding Id_Tipo}"
+                          Height="25"
+                          Width="300"
+                          SelectionChanged="cmbTipoHabitacion_SelectionChanged">
+                    
                 </ComboBox>
 
                 <TextBlock Text="Desde"
@@ -159,7 +158,7 @@
                            Margin="51 40 0 8"/>
 
 
-                <ComboBox x:Name="cmbTipoHabitacion"
+                <ComboBox x:Name="cmbPrecio"
                           FontSize="16"
                           FontWeight="Normal"
                           FontFamily="Montserrat"                            

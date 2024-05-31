@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,28 @@ namespace GUI.Pages
     /// </summary>
     public partial class Reservas : Page
     {
+        public List<Reserva> reserva = null;
+        ReservaBLL servicio = new ReservaBLL();
+
         public Reservas()
         {
             InitializeComponent();
+            DataContext = this;
+            reserva = servicio.ObtenerReservas();
+            ReservasDataGrid.ItemsSource = reserva;
+        }
+
+        private void AgregarReserva_Click(object sender, RoutedEventArgs e)
+        {
+            Window reservasWindow = Window.GetWindow(this);
+            AgregarRWindow revWindow = new AgregarRWindow();
+
+            revWindow.Owner = reservasWindow;
+            revWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            revWindow.ShowDialog();
+
+            Reservas updateReserva = new Reservas();
+            this.NavigationService.Navigate(updateReserva);
         }
     }
 }

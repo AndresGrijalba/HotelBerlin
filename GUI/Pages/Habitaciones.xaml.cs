@@ -13,6 +13,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -36,9 +37,17 @@ namespace GUI.Pages
             HabitacionesDataGrid.ItemsSource = habitacion;
         }
 
-        public Habitaciones(Habitacion habitacionId)
+        private void AgregarHabitacion_Click(object sender, RoutedEventArgs e)
         {
+            Window habitacionesWindow = Window.GetWindow(this);
+            AgregarHWindow habWindow = new AgregarHWindow();
 
+            habWindow.Owner = habitacionesWindow;
+            habWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            habWindow.ShowDialog();
+
+            Habitaciones updateHabitacion = new Habitaciones();
+            this.NavigationService.Navigate(updateHabitacion);
         }
 
         private void EditarHabitacion_Click(object sender, RoutedEventArgs e)

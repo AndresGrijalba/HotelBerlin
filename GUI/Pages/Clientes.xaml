@@ -14,12 +14,46 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Lista de Clientes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Button x:Name="btnRegistrar" Content="Agregar Cliente" Click="RegistrarCliente_Click"
+        FontSize="18"
+        FontFamily="Montserrat"
+        Foreground="{DynamicResource PrimaryColor}"
+        FontWeight="Bold"
+        Height="40"
+        HorizontalAlignment="Right"
+        Margin="0, -40, 20, 0"
+        Width="240">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="220" Height="40"
+                    CornerRadius="10"
+                    Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <Label Content="Lista de Clientes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Cedula" FontSize="15" FontWeight="Bold" Margin="0 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Nombre" FontSize="15" FontWeight="Bold" Margin="140 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Apellido" FontSize="15" FontWeight="Bold" Margin="280 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Nombre" FontSize="15" FontWeight="Bold" Margin="145 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Apellido" FontSize="15" FontWeight="Bold" Margin="285 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Correo" FontSize="15" FontWeight="Bold" Margin="420 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Telefono" FontSize="15" FontWeight="Bold" Margin="640 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Telefono" FontSize="15" FontWeight="Bold" Margin="670 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
 
         <DataGrid x:Name="ClientesDataGrid" Grid.Row="1" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None">
@@ -93,7 +127,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" Width="140">
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" Width="135">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -103,7 +137,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" Width="220">
+                <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" Width="250">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -113,7 +147,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="310">
+                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" Width="325">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -166,50 +200,6 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
-                <DataGridTemplateColumn Width="Auto">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Eliminar" Click="EliminarCliente_Click" Tag="{Binding Cedula}">
-                            <Button.Style>
-                                    <Style TargetType="{x:Type Button}">
-                                        <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
-                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
-                                        <Setter Property="FontWeight" Value="Bold"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#D10000"/>
-                                                <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border Width="80" Height="25"
-                                                CornerRadius="5"
-                                                Background="{TemplateBinding Background}">
-                                            <Grid>
-                                                <Image Source="/Images/delete.png" 
-                                                       VerticalAlignment="Center" 
-                                                       HorizontalAlignment="Left" 
-                                                       Width="16" 
-                                                       Height="16"
-                                                       Margin="5 0 0 0"/>
-                                                <ContentPresenter VerticalAlignment="Center"
-                                                                  HorizontalAlignment="Right"
-                                                                  Margin="0 0 10 0"
-                                                                  Content="{TemplateBinding Content}"/>
-                                            </Grid>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

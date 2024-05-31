@@ -16,3 +16,9 @@ C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.dll
 C:\Users\kevin\OneDrive\Documentos\Personal\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.pdb
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\bin\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\bin\Debug\Entity.pdb
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.dll
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\Entity\obj\Debug\Entity.pdb

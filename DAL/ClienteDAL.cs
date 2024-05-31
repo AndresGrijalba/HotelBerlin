@@ -52,21 +52,25 @@ namespace DAL
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
-                string query = "SELECT * FROM clientes";
+                string query = "SELECT * FROM clientes WHERE cedula = @cedula";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@cedula", cedula);
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
+
                             return new Cliente
                             {
-                                Cedula = reader["Cedula"].ToString(),
-                                Nombre = reader["Nombres"].ToString(),
-                                Apellido = reader["Apellidos"].ToString(),
-                                Correo = reader["Correo"].ToString(),
-                                Telefono = reader["Telefono"].ToString()
+                                Id = Convert.ToInt32(reader["id"].ToString()),
+                                Cedula = reader["cedula"].ToString(),
+                                Nombre = reader["nombres"].ToString(),
+                                Apellido = reader["apellidos"].ToString(),
+                                Correo = reader["correo"].ToString(),
+                                Telefono = reader["telefono"].ToString()
                             };
                         }
                         else
@@ -183,11 +187,12 @@ namespace DAL
                         {
                             Cliente cliente = new Cliente
                             {
-                                Nombre = reader["Nombres"].ToString(),
-                                Apellido = reader["Apellidos"].ToString(),
-                                Cedula = reader["Cedula"].ToString(),
-                                Correo = reader["Correo"].ToString(),
-                                Telefono = reader["Telefono"].ToString()
+                                Id = Convert.ToInt32(reader["id"].ToString()),
+                                Nombre = reader["nombres"].ToString(),
+                                Apellido = reader["apellidos"].ToString(),
+                                Cedula = reader["cedula"].ToString(),
+                                Correo = reader["correo"].ToString(),
+                                Telefono = reader["telefono"].ToString()
                             };
 
                             clientes.Add(cliente);
