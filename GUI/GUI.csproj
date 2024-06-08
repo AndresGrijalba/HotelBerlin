@@ -118,6 +118,12 @@
     <Compile Include="Pages\Estadisticas.xaml.cs">
       <DependentUpon>Estadisticas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GraficaInfoReserv.xaml.cs">
+      <DependentUpon>GraficaInfoReserv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GraficaIngresos.xaml.cs">
+      <DependentUpon>GraficaIngresos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\GraficaReservas.xaml.cs">
       <DependentUpon>GraficaReservas.xaml</DependentUpon>
     </Compile>
@@ -170,6 +176,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Estadisticas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GraficaInfoReserv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GraficaIngresos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -297,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SkiaSharp.NativeAssets.macOS.2.88.8\build\net462\SkiaSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.8\build\net462\SkiaSharp.NativeAssets.macOS.targets')" />

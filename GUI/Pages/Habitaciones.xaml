@@ -127,7 +127,7 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Precio noche" Binding="{Binding precioNoche}" Width="190">
+                <DataGridTextColumn Header="Precio noche" Binding="{Binding precioNoche,  StringFormat={}{0:C0}}" Width="190">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>

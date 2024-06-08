@@ -55,16 +55,16 @@
                 </Button.Template>
             </Button>
 
-            <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="300" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,120,0,0">
-                <Label FontSize="25" Width="340" Margin="80,0,0,0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="300" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,120,0,0">
+                <Grid>
+                    <local:GraficaIngresos Margin="20" Padding="10"/>
+                </Grid>
             </Border>
 
-            <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="300" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,120,0,0">
-                <Label FontSize="25" Width="340" Margin="80,0,0,0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-            </Border>
-
-            <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="300" Width="300" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,120,20,0">
-                <Label FontSize="25" Width="340" Margin="80,0,0,0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="300" Width="300" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,120,200,0">
+                <Grid>
+                    <local:GraficaInfoReserv Margin="20"/>
+                </Grid>
             </Border>
 
             <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="600" Width="1000" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,480,0,40">

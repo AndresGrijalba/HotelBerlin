@@ -165,8 +165,7 @@ namespace GUI.Pages
 
             var reservasFiltradas = reserva.Where(reserva => reserva.Cedula.ToLower().Contains(filtro) ||
                                                                reserva.Nombres.ToLower().Contains(filtro) ||
-                                                               reserva.Apellidos.ToLower().Contains(filtro) ||
-                                                               reserva.EstadoReserva.ToLower().Contains(filtro));
+                                                               reserva.Apellidos.ToLower().Contains(filtro));
             ReservasDataGrid.ItemsSource = reservasFiltradas;
         }
     }

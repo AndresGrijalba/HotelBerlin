@@ -57,15 +57,5 @@ namespace GUI.Pages
             EditarHabitacion editarHabitacionPage = new EditarHabitacion(Convert.ToString(habitacionId));
             this.NavigationService.Navigate(editarHabitacionPage);
         }
-
-        private void EliminarHabitacion_Click(object sender, RoutedEventArgs e)
-        {
-            Button botonEliminar = sender as Button;
-            int habitacionId = (int)botonEliminar.Tag;
-            var mensaje = servicio.EliminarHabitacion(habitacionId);
-            MessageBox.Show(mensaje);
-            Habitaciones updateHabitacion = new Habitaciones();
-            this.NavigationService.Navigate(updateHabitacion);
-        }
     }
 }

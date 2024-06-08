@@ -26,7 +26,6 @@ namespace GUI.Pages
         public List<Cliente> cliente = null;
 
         ClienteBLL servicio = new ClienteBLL();
-        
 
         public Clientes()
         {
@@ -55,16 +54,6 @@ namespace GUI.Pages
             string cedula = button.Tag as string;
             EditarCliente editarClientePage = new EditarCliente(cedula);
             this.NavigationService.Navigate(editarClientePage);
-        }
-
-        private void EliminarCliente_Click(object sender, RoutedEventArgs e)
-        {
-            Button botonEliminar = sender as Button;
-            string cedulaCliente = botonEliminar.Tag as string;
-            var mensaje = servicio.EliminarCliente(cedulaCliente);
-            MessageBox.Show(mensaje);
-            Clientes updateCliente = new Clientes();
-            this.NavigationService.Navigate(updateCliente);
         }
     }
 }

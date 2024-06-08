@@ -77,5 +77,28 @@ namespace DAL
 
             return facturas;
         }
+
+        public double ObtenerTotalFacturas()
+        {
+            double totalFacturas = 0.0;
+
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT SUM(total) as TotalFacturas FROM facturas";
+
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        totalFacturas = Convert.ToDouble(result);
+                    }
+                }
+                connection.Close();
+            }
+
+            return totalFacturas;
+        }
     }
 }

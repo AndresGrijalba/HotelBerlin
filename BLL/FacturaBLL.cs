@@ -21,5 +21,10 @@ namespace BLL
         {
             return facturaDAL.ObtenerFacturas();
         }
+
+        public double ObtenerTotalFacturas()
+        {
+            return facturaDAL.ObtenerTotalFacturas();
+        }
     }
 }

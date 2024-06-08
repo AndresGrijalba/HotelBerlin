@@ -40,5 +40,16 @@ namespace GUI.Pages
             List<Factura> facturas = facturaBLL.ObtenerFacturas();
             FacturasDataGrid.ItemsSource = facturas;
         }
+
+        private void txtFiltro_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string filtro = txtFiltro.Text.ToLower();
+
+            var facturasFiltradas = factura.Where(factura => factura.Cedula.ToLower().Contains(filtro) ||
+                                                               factura.Nombres.ToLower().Contains(filtro) ||
+                                                               factura.Apellidos.ToLower().Contains(filtro) ||
+                                                               factura.FechaEmision.ToLower().Contains(filtro));
+            FacturasDataGrid.ItemsSource = facturasFiltradas;
+        }
     }
 }

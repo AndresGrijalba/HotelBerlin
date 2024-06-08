@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\App.xaml
-181441612852
+201963026097
 13834282431
-19-923625931
+211592957908
 28-1059493611
-AgregarCWindow.xaml;AgregarHWindow.xaml;AgregarRWindow.xaml;Assets\Icons\Icons.xaml;InformacionFWindow.xaml;Login.xaml;MainWindow.xaml;Pages\EditarCliente.xaml;Pages\EditarHabitacion.xaml;Pages\Estadisticas.xaml;Pages\GraficaReservas.xaml;Pages\Facturas.xaml;Pages\Habitaciones.xaml;Pages\Reservas.xaml;Pages\Clientes.xaml;Styles\RadioButtonStyle.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
+AgregarCWindow.xaml;AgregarHWindow.xaml;AgregarRWindow.xaml;Assets\Icons\Icons.xaml;InformacionFWindow.xaml;Login.xaml;MainWindow.xaml;Pages\EditarCliente.xaml;Pages\EditarHabitacion.xaml;Pages\Estadisticas.xaml;Pages\GraficaInfoReserv.xaml;Pages\GraficaIngresos.xaml;Pages\GraficaReservas.xaml;Pages\Facturas.xaml;Pages\Habitaciones.xaml;Pages\Reservas.xaml;Pages\Clientes.xaml;Styles\RadioButtonStyle.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
 
 False
 
