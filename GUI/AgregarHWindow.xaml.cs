@@ -72,11 +72,19 @@ namespace GUI
             {
                 habitacionBLL.AgregarHabitacion(nuevaHabitacion);
                 MessageBox.Show("Habitación agregada exitosamente.");
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar la habitación: " + ex.Message);
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            cmbTipoHabitacion.SelectedIndex = -1;
+            txtNumero.Clear();
+
         }
 
         private void CargarTiposHabitacion()

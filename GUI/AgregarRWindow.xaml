@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStyle="None"
         Title="AgregarRWindow" Height="672" Width="820">
-    <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
+    <Border CornerRadius="5" Background="{DynamicResource PrimaryColor}">
         <Grid x:Name="gridReservas">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="179*"/>
@@ -25,43 +25,46 @@
 
             <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,0,415,310" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <TextBlock Text="Cedula"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="55 40 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="55 40 0 8"/>
 
                 <ComboBox Name="cmbCedula"
-                      IsEditable="True"
-                      TextSearch.TextPath="Cedula"
-                      IsTextSearchEnabled="True"
-                      Text="{Binding Cedula}"
-                      Height="25"
-                      Width="300"
-                      SelectionChanged="cmbCedula_SelectionChanged"
-                      PreviewKeyUp="OnListenerIdentification_PreviewKeyUp">
+                          IsEditable="True"
+                          FontWeight="SemiBold"
+                          FontSize="16"
+                          TextSearch.TextPath="Cedula"
+                          IsTextSearchEnabled="True"
+                          Text="{Binding Cedula}"
+                          Height="25"
+                          Width="300"
+                          SelectionChanged="cmbCedula_SelectionChanged"
+                          PreviewKeyUp="OnListenerIdentification_PreviewKeyUp"
+                          Style="{DynamicResource CustomComboBoxStyleText}">
                 </ComboBox>
 
                 <TextBlock Text="Apellidos"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="55 40 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="55 40 0 8"/>
 
                 <TextBox x:Name="txtApellido"
-                     FontSize="16"
-                     IsEnabled="False"
-                     FontWeight="Normal"
-                     FontFamily="Montserrat"                            
-                     Foreground="{DynamicResource PrimaryBlueText}"
-                     CaretBrush="LightGray"
-                     Background="Transparent"
-                     BorderBrush="{DynamicResource SecundaryBlueText}"
-                     BorderThickness="0,0,0,2"
-                     Height="25"
-                     Width="295"
-                     HorizontalAlignment="Center">
+                         FontSize="16"
+                         IsEnabled="False"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"                            
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource SecundaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
                 </TextBox>
 
                 <TextBlock Text="Habitacion"
@@ -72,120 +75,101 @@
                        Margin="55 40 0 8"/>
 
                 <ComboBox Name="cmbHabitaciones"
-                      IsEditable="True"
-                      IsTextSearchEnabled="True"
-                      Text="{Binding Id}"
-                      Height="25"
-                      Width="300"
-                      SelectedValuePath="Id"
-                      DisplayMemberPath="Numero">
+                          IsEditable="True"
+                          IsTextSearchEnabled="True"
+                          Text="{Binding Id}"
+                          FontWeight="SemiBold"
+                          FontSize="16"
+                          Height="25"
+                          Width="300"
+                          SelectedValuePath="Id"
+                          DisplayMemberPath="Numero"
+                          Style="{DynamicResource CustomComboBoxStyleText}">
                 </ComboBox>
 
                 <TextBlock Text="Hasta"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="51 40 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="51 40 0 8"/>
 
                 <DatePicker x:Name="dpHasta"
-                        Background="{DynamicResource PrimaryBlueText}"
-                        Height="25"
-                        Width="295"/>
-
+                            SelectedDateFormat="Long"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,0,0,310" Grid.Column="1" Grid.RowSpan="2">
                 <TextBlock Text="Nombres"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="51 40 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="51 40 0 8"/>
 
                 <TextBox x:Name="txtNombre" 
-                     IsEnabled="False"
-                     FontSize="16"
-                     FontWeight="Normal"
-                     FontFamily="Montserrat"                            
-                     Foreground="{DynamicResource PrimaryBlueText}"
-                     CaretBrush="LightGray"
-                     Background="Transparent"
-                     BorderBrush="{DynamicResource SecundaryBlueText}"
-                     BorderThickness="0,0,0,2"
-                     Height="25"
-                     Width="295"
-                     HorizontalAlignment="Center">
+                         IsEnabled="False"
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"                            
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource SecundaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
                 </TextBox>
 
                 <TextBlock Text="Tipo de habitacion"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="51 40 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="51 40 0 8"/>
 
                 <ComboBox Name="cmbTipoHabitacion"
-                      IsEditable="True"
-                      IsTextSearchEnabled="True"
-                      Text="{Binding Id_Tipo}"
-                      Height="25"
-                      Width="300"
-                      SelectionChanged="cmbTipoHabitacion_SelectionChanged">
+                          FontWeight="SemiBold"
+                          FontSize="16"
+                          IsEditable="True"
+                          IsTextSearchEnabled="True"
+                          Text="{Binding Id_Tipo}"
+                          Height="25"
+                          Width="300"
+                          SelectionChanged="cmbTipoHabitacion_SelectionChanged"
+                          Style="{DynamicResource CustomComboBoxStyleText}">
 
                 </ComboBox>
 
                 <TextBlock Text="Desde"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="51 40 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="51 40 0 8"/>
 
                 <DatePicker x:Name="dpDesde"
-                        Background="{DynamicResource PrimaryBlueText}"
-                        Height="25"
-                        Width="295"/>
-
-                <TextBlock Text="Precio Total"
-                       Foreground="{DynamicResource PrimaryBlueText}"
-                       FontWeight="SemiBold"
-                       FontSize="20"
-                       HorizontalAlignment="Left"
-                       Margin="51 40 0 8"/>
-
-
-                <ComboBox x:Name="cmbPrecio"
-                      FontSize="16"
-                      FontWeight="Normal"
-                      FontFamily="Montserrat"                            
-                      Foreground="{DynamicResource PrimaryBlueText}"
-                      BorderBrush="{DynamicResource SecundaryBlueText}"
-                      BorderThickness="0,0,0,2"
-                      Height="25"
-                      Width="295"
-                      HorizontalAlignment="Center"
-                      IsEditable="True"
-                      TextSearch.TextPath="Cedula"
-                      IsTextSearchEnabled="True">
-                </ComboBox>
+                            Background="{DynamicResource PrimaryBlueText}"
+                            Height="25"
+                            Width="295"/>
             </StackPanel>
 
             <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,215,0,0" Grid.Column="1">
-                <Button x:Name="btnRegistrar" Content="Registrar reserva" Click="AgregarReserva_Click"
-                    FontSize="25"
-                    FontFamily="Montserrat"
-                    Foreground="{DynamicResource PrimaryColor}"
-                    FontWeight="Bold"
-                    Height="40"
-                    Width="240">
+                <Button x:Name="btnRegistrar" Content="Registrar reserva" Cursor="Hand" Click="AgregarReserva_Click"
+                        FontSize="25"
+                        FontFamily="Montserrat"
+                        FontWeight="Bold"
+                        Height="40"
+                        Width="240">
 
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -201,9 +185,7 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-
                 </Button>
-
             </StackPanel>
 
 
@@ -213,7 +195,7 @@
 
             <StackPanel Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
 
-                <Button x:Name="btnClose" Content="X" Click="btnClose_Click" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold">
+                <Button x:Name="btnClose" Content="X" Click="btnClose_Click" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
@@ -240,7 +222,7 @@
                     </Button.Template>
                 </Button>
 
-                <Button x:Name="btnMinimize" Content="-" Click="btnMinimize_Click" FontSize="15" FontWeight="SemiBold">
+                <Button x:Name="btnMinimize" Content="-" Click="btnMinimize_Click" Cursor="Hand" FontSize="15" FontWeight="SemiBold">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>

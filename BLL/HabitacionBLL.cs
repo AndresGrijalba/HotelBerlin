@@ -11,7 +11,12 @@ namespace BLL
     public class HabitacionBLL
     {
         private HabitacionDAL habitacionDAL = new HabitacionDAL();
+        List<Habitacion> habitaciones = new List<Habitacion>();
 
+        public HabitacionBLL()
+        {
+            habitaciones = habitacionDAL.ObtenerHabitaciones();
+        }
 
         public void AgregarHabitacion(Habitacion habitacion)
         {
@@ -20,7 +25,8 @@ namespace BLL
 
         public List<Habitacion> ObtenerHabitaciones()
         {
-            return habitacionDAL.ObtenerHabitaciones();
+            //return habitacionDAL.ObtenerHabitaciones();
+            return habitaciones;
         }
 
         public Habitacion obtenerHabitacionPorId(string habitacionId)
@@ -53,6 +59,18 @@ namespace BLL
         public List<Habitacion> ObtenerHabitacionesDisponibles(int idTipo)
         {
             return habitacionDAL.ObtenerHabitacionesDisponibles(idTipo);
+        }
+
+        public float ObtenerPrecioHabitacion(int nHabitacion)
+        {
+            foreach (var item in habitaciones)
+            {
+                if (item.Numero == nHabitacion)
+                {
+                    return item.precioNoche;
+                }
+            }
+            return -1;
         }
     }
 }

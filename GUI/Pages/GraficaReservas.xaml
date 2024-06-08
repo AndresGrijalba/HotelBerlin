@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="GUI.Pages.GraficaReservas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI.Pages"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:sections="clr-namespace:GUI.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{d:DesignInstance sections:GraficaReservas}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ComboBox Grid.Row="0" 
+                  x:Name="PeriodoComboBox" 
+                  ItemsSource="{Binding PeriodoOptions}" 
+                  SelectedItem="{Binding SelectedPeriodo, Mode=TwoWay}" 
+                  SelectionChanged="PeriodoSelectionChanged" 
+                  SelectedIndex="0"/>
+
+        <lvc:CartesianChart Name="Chart" Grid.Row="2" Series="{Binding SeriesCollection}">
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Periodo" Labels="{Binding Periodos}" Foreground="{DynamicResource PrimaryBlueText}" LabelsRotation="-90"/>
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Reservas" Separator="{Binding AxisYSeparator}" Foreground="{DynamicResource PrimaryBlueText}" MinValue="0" MaxValue="10"/>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+    </Grid>
+</UserControl>

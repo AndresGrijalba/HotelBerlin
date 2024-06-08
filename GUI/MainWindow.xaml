@@ -37,11 +37,11 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="1" VerticalAlignment="Center">
-                        <RadioButton x:Name="rdEstadisticas" Content="Estadisticas" Style="{DynamicResource MenuRadioButtonStyleREstadisticas}" Margin="0 30 0 1" Click="rdEstadisticas_Click" Checked="rdEstadisticas_Checked"/>
-                        <RadioButton x:Name="rdReservas" Content="Reservas" Style="{DynamicResource MenuRadioButtonStyleReservas}" Margin="0 1 0 1" Click="rdReservas_Click" Checked="rdReservas_Checked"/>
-                        <RadioButton x:Name="rdHabitaciones" Content="Habitaciones" Style="{DynamicResource MenuRadioButtonStyleHabitaciones}" Margin="0 1 0 1" Click="rdHabitaciones_Click" Checked="rdHabitaciones_Checked"/>
-                        <RadioButton x:Name="rdUsuarios" Content="Clientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
-                        <RadioButton x:Name="rdFacturas" Content="Facturas" Style="{DynamicResource MenuRadioButtonStyleFacturas}" Click="rdRegistrarFacturas_Click" Checked="rdRegistrarFacturas_Checked"/>
+                        <RadioButton x:Name="rdEstadisticas" Content="Estadisticas" Style="{DynamicResource MenuRadioButtonStyleREstadisticas}" Cursor="Hand" Margin="0 30 0 1" Click="rdEstadisticas_Click" Checked="rdEstadisticas_Checked"/>
+                        <RadioButton x:Name="rdReservas" Content="Reservas" Style="{DynamicResource MenuRadioButtonStyleReservas}" Cursor="Hand" Margin="0 1 0 1" Click="rdReservas_Click" Checked="rdReservas_Checked"/>
+                        <RadioButton x:Name="rdHabitaciones" Content="Habitaciones" Style="{DynamicResource MenuRadioButtonStyleHabitaciones}" Cursor="Hand" Margin="0 1 0 1" Click="rdHabitaciones_Click" Checked="rdHabitaciones_Checked"/>
+                        <RadioButton x:Name="rdUsuarios" Content="Clientes" Style="{DynamicResource MenuRadioButtonStyleUsuarios}" Cursor="Hand" Margin="0 1 0 1" Click="rdUsuarios_Click" Checked="rdUsuarios_Checked"/>
+                        <RadioButton x:Name="rdFacturas" Content="Facturas" Style="{DynamicResource MenuRadioButtonStyleFacturas}" Cursor="Hand" Click="rdRegistrarFacturas_Click" Checked="rdRegistrarFacturas_Checked"/>
                     </StackPanel>
 
                     <StackPanel Grid.Row="2" VerticalAlignment="Center">
@@ -50,6 +50,7 @@
                                 <Label Content="Modo Oscuro" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="{DynamicResource PrimaryBlueText}" FontSize="18"/>
                                 <ToggleButton x:Name="Themes"
                                               IsChecked="False"
+                                              Cursor="Hand"
                                               Margin="30 0 0 0"
                                               Click="Themes_Click"
                                               Style="{DynamicResource ToggleButtonStyle}"/>
@@ -69,7 +70,7 @@
 
                 <StackPanel Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
 
-                    <Button x:Name="btnClose" Content="X" Click="btnClose_Click" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold">
+                    <Button x:Name="btnClose" Content="X" Click="btnClose_Click" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
@@ -96,7 +97,7 @@
                         </Button.Template>
                     </Button>
 
-                    <Button x:Name="btnMinimize" Content="-" Click="btnMinimize_Click" FontSize="15" FontWeight="SemiBold">
+                    <Button x:Name="btnMinimize" Content="-" Click="btnMinimize_Click" Cursor="Hand" FontSize="15" FontWeight="SemiBold">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>

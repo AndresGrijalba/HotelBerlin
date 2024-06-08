@@ -17,12 +17,13 @@
         
             <Image Source="/Images/profile.png" Height="50" Width="50" VerticalAlignment="Top" Margin="0,25,1000,0"/>
         
-            <Button VerticalAlignment="Top" Click="CerrarSesion_Click" HorizontalAlignment="Right" Margin="0,20,40,0">
+            <Button VerticalAlignment="Top" Click="CerrarSesion_Click" HorizontalAlignment="Right" Margin="0,20,40,0" Cursor="Hand">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
                         <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                         <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="ToolTip" Value="Cerrar sesión"/>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
@@ -39,11 +40,11 @@
                         Background="{TemplateBinding Background}">
                             <Grid>
                                 <Image Source="/Images/logout.png" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Left" 
-                               Width="60" 
-                               Height="60"
-                               Margin="0 0 0 0"/>
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Width="60" 
+                                       Height="60"
+                                       Margin="0 0 0 0"/>
                                 <ContentPresenter VerticalAlignment="Center"
                                           HorizontalAlignment="Right"
                                           Margin="0 0 10 0"
@@ -66,9 +67,9 @@
                 <Label FontSize="25" Width="340" Margin="80,0,0,0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
             </Border>
 
-            <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="600" Width="1000" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,480,0,0">
+            <Border Background="{DynamicResource BlueTransparent}" CornerRadius="14" Height="600" Width="1000" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,480,0,40">
                 <Grid>
-                    <local:Example Margin="20"/>
+                    <local:GraficaReservas Margin="20"/>
                 </Grid>
             </Border>
         </Grid>

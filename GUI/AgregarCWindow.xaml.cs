@@ -55,6 +55,7 @@ namespace GUI
                 clienteBLL.AgregarCliente(txtNombre.Text, txtApellido.Text, txtCedula.Text, txtCorreo.Text, txtTelefono.Text);
                 MessageBox.Show("Cliente registrado exitosamente.", "Registro Exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
                 Clientes clientePage = new Clientes();
+                LimpiarCampos();
             }
             catch (ArgumentException ex)
             {
@@ -69,6 +70,15 @@ namespace GUI
         private bool EsNumerico(string input)
         {
             return Regex.IsMatch(input, @"^\d+$");
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtCedula.Clear();
+            txtCorreo.Clear();
+            txtTelefono.Clear();
         }
 
         private void InputTextBoxCedula_TextChanged(object sender, TextChangedEventArgs e)

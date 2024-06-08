@@ -165,9 +165,7 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-
                 </Button>
-
             </StackPanel>
         </Grid>
     </Border>

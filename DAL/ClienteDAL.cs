@@ -82,6 +82,36 @@ namespace DAL
             }
         }
 
+        public Cliente ObtenerClientePorId(int idCliente)
+        {
+            Cliente cliente = null;
+
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT * FROM clientes WHERE id = @idCliente";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@idCliente", idCliente);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        cliente = new Cliente
+                        {
+                            Id = Convert.ToInt32(reader["id"]),
+                            Nombre = reader["nombres"].ToString(),
+                            Apellido = reader["apellidos"].ToString(),
+                            Correo = reader["correo"].ToString(),
+                            Telefono = reader["telefono"].ToString()
+                        };
+                    }
+                }
+            }
+
+            return cliente;
+        }
+
         public bool ActualizarCliente(Cliente cliente)
         {
             using (SqlConnection connection = DatabaseConnection.GetConnection())

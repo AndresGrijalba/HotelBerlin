@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
 
-        <Button x:Name="btnRegistrar" Content="Agregar Habitacion" Click="AgregarHabitacion_Click"
+        <Button x:Name="btnRegistrar" Content="Agregar Habitacion" Cursor="Hand" Click="AgregarHabitacion_Click"
                 FontSize="18"
                 FontFamily="Montserrat"
                 Foreground="{DynamicResource PrimaryColor}"
@@ -49,12 +49,12 @@
 
         </Button>
 
-        <Label Content="Lista de Habitacion" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Numero de habitacion" FontSize="15" FontWeight="Bold" Margin="0 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Tipo de habitacion" FontSize="15" FontWeight="Bold" Margin="225 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Precio noche" FontSize="15" FontWeight="Bold" Margin="445 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Disponible" FontSize="15" FontWeight="Bold" Margin="635 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Lista de Habitacion" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,20,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Numero de habitacion" FontSize="15" FontWeight="Bold" Margin="0 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Tipo de habitacion" FontSize="15" FontWeight="Bold" Margin="225 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Precio noche" FontSize="15" FontWeight="Bold" Margin="445 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Disponible" FontSize="15" FontWeight="Bold" Margin="635 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
 
         <DataGrid x:Name="HabitacionesDataGrid" Grid.Row="1" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None" Margin="0,0,10,-21">
             <DataGrid.Resources>
@@ -152,7 +152,7 @@
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Editar" Click="EditarHabitacion_Click" Tag="{Binding Id}" Margin="0 0 10 0">
+                            <Button Content="Editar" Click="EditarHabitacion_Click" Cursor="Hand" Tag="{Binding Id}" Margin="0 0 10 0">
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
@@ -160,7 +160,7 @@
                                         <Setter Property="FontWeight" Value="Bold"/>
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#266593"/>
+                                                <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
                                                 <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                                             </Trigger>
                                         </Style.Triggers>

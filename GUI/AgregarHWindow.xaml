@@ -8,7 +8,7 @@
         WindowStyle="None"
         Title="AgregarHWindow" Height="672" Width="820">
     
-    <Border CornerRadius="10" Background="{DynamicResource PrimaryColor}">
+    <Border CornerRadius="5" Background="{DynamicResource PrimaryColor}">
         <Grid x:Name="gridClientes">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="179*"/>
@@ -32,39 +32,41 @@
                        Margin="10 40 0 8"/>
 
                 <ComboBox Name="cmbTipoHabitacion" 
-                      Width="295" 
-                      Height="25" 
-                      Margin="10"
-                      FontSize="16"
-                      FontWeight="SemiBold"
-                      FontFamily="Montserrat"
-                      Foreground="{DynamicResource PrimaryBlueText}"
-                      Background="Transparent"
-                      BorderBrush="{DynamicResource SecundaryBlueText}"
-                      BorderThickness="0,0,0,2"/>
+                          Width="295" 
+                          Height="25" 
+                          Margin="10"
+                          FontSize="16"
+                          FontWeight="SemiBold"
+                          FontFamily="Montserrat"
+                          Background="Transparent"
+                          BorderBrush="{DynamicResource PrimaryBlueText}"
+                          BorderThickness="0,0,0,2"
+                          IsEditable="True"
+                          IsTextSearchEnabled="True"
+                          Style="{DynamicResource CustomComboBoxStyleText}"/>
 
                 <TextBlock Text="Numero de Habitacion"
-                   Foreground="{DynamicResource PrimaryBlueText}"
-                   FontWeight="SemiBold"
-                   FontSize="20"
-                   HorizontalAlignment="Left"
-                   Margin="10 20 0 8"/>
+                           Foreground="{DynamicResource PrimaryBlueText}"
+                           FontWeight="SemiBold"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           Margin="10 20 0 8"/>
 
                 <TextBox x:Name="txtNumero" 
-                 FontSize="16"
-                 FontWeight="Normal"
-                 FontFamily="Montserrat"                            
-                 Foreground="{DynamicResource PrimaryBlueText}"
-                 CaretBrush="LightGray"
-                 Background="Transparent"
-                 BorderBrush="{DynamicResource SecundaryBlueText}"
-                 BorderThickness="0,0,0,2"
-                 Height="25"
-                 Width="295"
-                 HorizontalAlignment="Center">
+                         FontSize="16"
+                         FontWeight="Normal"
+                         FontFamily="Montserrat"                            
+                         Foreground="{DynamicResource PrimaryBlueText}"
+                         CaretBrush="LightGray"
+                         Background="Transparent"
+                         BorderBrush="{DynamicResource PrimaryBlueText}"
+                         BorderThickness="0,0,0,2"
+                         Height="25"
+                         Width="295"
+                         HorizontalAlignment="Center">
                 </TextBox>
 
-                <CheckBox x:Name="cbDisponibilidad" Content="Disponible" IsChecked="True" FontSize="20" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Medium" Margin="10 40 0 0">
+                <CheckBox x:Name="cbDisponibilidad" Cursor="Hand" Content="Disponible" IsChecked="True" FontSize="20" Foreground="{DynamicResource PrimaryBlueText}" FontWeight="Medium" Margin="10 40 0 0">
                     <CheckBox.Template>
                         <ControlTemplate TargetType="CheckBox">
                             <StackPanel Orientation="Horizontal">
@@ -102,7 +104,7 @@
                 </CheckBox>
             </StackPanel>
 
-            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0" Grid.Column="1">
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" Cursor="Hand" VerticalAlignment="Top" Margin="0,155,0,0" Grid.Column="1">
                 <Button x:Name="btnRegistrar" Content="Registrar habitacion" Click="btnAgregarHabitacion_Click"
                     FontSize="25"
                     FontFamily="Montserrat"
@@ -111,13 +113,14 @@
                     Height="40"
                     Width="260"
                     Margin="0 0 0 0">
-
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -126,10 +129,10 @@
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="260" Height="40"
-                    CornerRadius="12"
-                    Background="{TemplateBinding Background}">
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
-                                  HorizontalAlignment="Center"/>
+                                                  HorizontalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
@@ -138,7 +141,7 @@
 
             <StackPanel Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
 
-                <Button x:Name="btnClose" Content="X" Click="btnClose_Click" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold">
+                <Button x:Name="btnClose" Content="X" Click="btnClose_Click" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
@@ -165,7 +168,7 @@
                     </Button.Template>
                 </Button>
 
-                <Button x:Name="btnMinimize" Content="-" Click="btnMinimize_Click" FontSize="15" FontWeight="SemiBold">
+                <Button x:Name="btnMinimize" Content="-" Click="btnMinimize_Click" Cursor="Hand" FontSize="15" FontWeight="SemiBold">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>

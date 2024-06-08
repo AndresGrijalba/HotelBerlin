@@ -14,33 +14,34 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Lista de Reservas" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Cedula" FontSize="15" FontWeight="Bold" Margin="0 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Nombres" FontSize="15" FontWeight="Bold" Margin="125 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Apellidos" FontSize="15" FontWeight="Bold" Margin="245 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="N° Noches" FontSize="15" FontWeight="Bold" Margin="365 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="T. Habitación" FontSize="15" FontWeight="Bold" Margin="485 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="N° Habitación" FontSize="15" FontWeight="Bold" Margin="605 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Fecha Registro" FontSize="15" FontWeight="Bold" Margin="725 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Lista de Reservas" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,20,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Cedula" FontSize="15" FontWeight="Bold" Margin="5 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Nombres" FontSize="15" FontWeight="Bold" Margin="105 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Apellidos" FontSize="15" FontWeight="Bold" Margin="205 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="N° Noches" FontSize="15" FontWeight="Bold" Margin="305 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="T. Habitación" FontSize="15" FontWeight="Bold" Margin="405 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="N°" FontSize="15" FontWeight="Bold" Margin="516 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Fecha Registro" FontSize="15" FontWeight="Bold" Margin="565 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Estado" FontSize="15" FontWeight="Bold" Margin="695 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="925 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
 
         <Button x:Name="btnRegistrar" Content="Agregar Reserva" Click="AgregarReserva_Click"
                 FontSize="18"
                 FontFamily="Montserrat"
-                Foreground="{DynamicResource PrimaryColor}"
                 FontWeight="Bold"
                 Height="40"
                 HorizontalAlignment="Right"
                 Margin="0, -40, 20, 0"
-                Width="240">
-
-
+                Width="240"
+                Cursor="Hand">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                         </Trigger>
                     </Style.Triggers>
                 </Style>
@@ -87,8 +88,8 @@
                     </Setter>
                 </Style>
 
-                
-                
+
+
                 <Style TargetType="DataGridRowHeader">
                     <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
                     <Setter Property="Template">
@@ -112,7 +113,7 @@
             </DataGrid.Resources>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}" Width="120">
+                <DataGridTextColumn Header="Cedula" Binding="{Binding Cedula}" Width="100">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -122,7 +123,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombres}" Width="120">
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombres}" Width="100">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -132,7 +133,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellidos}" Width="120">
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellidos}" Width="100">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -142,7 +143,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Noches" Binding="{Binding CantidadNoches}" Width="120">
+                <DataGridTextColumn Header="Noches" Binding="{Binding CantidadNoches}" Width="100">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -152,7 +153,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="THabitacion" Binding="{Binding TipoHabitacion}" Width="120">
+                <DataGridTextColumn Header="THabitacion" Binding="{Binding TipoHabitacion}" Width="110">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -162,7 +163,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="NHabitacion" Binding="{Binding NumeroHabitacion}" Width="120">
+                <DataGridTextColumn Header="NHabitacion" Binding="{Binding NumeroHabitacion}" Width="50">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -172,7 +173,17 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="FechaRegistro" Binding="{Binding FechaRegistro}" Width="270">
+                <DataGridTextColumn Header="FechaRegistro" Binding="{Binding FechaRegistro}" Width="130">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Estado" Binding="{Binding EstadoReserva}" Width="145">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
@@ -183,18 +194,26 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
+
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Editar" Tag="{Binding Cedula}" Margin="0 0 10 0">
+                            <Button Content="Cancelar" Tag="{Binding Id}" Click="CancelarReserva_Click" Margin="0 0 10 0" Cursor="Hand">
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
                                         <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
                                         <Setter Property="FontWeight" Value="Bold"/>
                                         <Style.Triggers>
+                                            
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Facturada">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Cancelada">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#266593"/>
+                                                <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
                                                 <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                                             </Trigger>
                                         </Style.Triggers>
@@ -203,20 +222,123 @@
 
                                 <Button.Template>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border Width="68" Height="25"
-                                            CornerRadius="5"
-                                            Background="{TemplateBinding Background}">
+                                        <Border Width="72" Height="25"
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}">
                                             <Grid>
-                                                <Image Source="/Images/edit.png" 
-                                                   VerticalAlignment="Center" 
-                                                   HorizontalAlignment="Left" 
-                                                   Width="16" 
-                                                   Height="16"
-                                                   Margin="5 0 0 0"/>
+                                                <Image Source="/Images/closecancel.png" 
+                                                       VerticalAlignment="Center" 
+                                                       HorizontalAlignment="Left" 
+                                                       Width="16" 
+                                                       Height="16"
+                                                       Margin="2 0 0 0"/>
                                                 <ContentPresenter VerticalAlignment="Center"
-                                                              HorizontalAlignment="Right"
-                                                              Margin="0 0 10 0"
-                                                              Content="{TemplateBinding Content}"/>
+                                                  HorizontalAlignment="Right"
+                                                  Margin="0 0 4 0"
+                                                  Content="{TemplateBinding Content}"/>
+                                            </Grid>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Confirmar" Tag="{Binding Id}" Click="ConfirmarReserva_Click" Margin="0 0 10 0" Cursor="Hand">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Style.Triggers>
+
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Facturada">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Cancelada">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Confirmada">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                                                <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Width="80" Height="25"
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}">
+                                            <Grid>
+                                                <Image Source="/Images/check.png" 
+                                                       VerticalAlignment="Center" 
+                                                       HorizontalAlignment="Left" 
+                                                       Width="16" 
+                                                       Height="16"
+                                                       Margin="3 0 0 0"/>
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Right"
+                                                                  Margin="0 0 3 0"
+                                                                  Content="{TemplateBinding Content}"/>
+                                            </Grid>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Facturar" Tag="{Binding Id}" Click="FacturarReserva_Click" Cursor="Hand">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlueText}"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Style.Triggers>
+
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Pendiente">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Cancelada">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
+                                                <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Width="72" Height="25"
+                                                CornerRadius="5"
+                                                Background="{TemplateBinding Background}">
+                                            <Grid>
+                                                <Image Source="/Images/bill.png" 
+                                                       VerticalAlignment="Center" 
+                                                       HorizontalAlignment="Left" 
+                                                       Width="16" 
+                                                       Height="16"
+                                                       Margin="3 0 0 0"/>
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Right"
+                                                                  Margin="0 0 5 0"
+                                                                  Content="{TemplateBinding Content}"/>
                                             </Grid>
                                         </Border>
                                     </ControlTemplate>
@@ -227,6 +349,43 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <ComboBox x:Name="myComboBox"
+                  Width="100"
+                  Height="40"
+                  Margin="480,-40,0,0"
+                  HorizontalAlignment="Center"
+                  Background="Transparent"
+                  Foreground="Black"
+                  FontSize="14"
+                  FontWeight="Normal"
+                  IsEditable="False"
+                  IsReadOnly="False"
+                  Cursor="Hand"
+                  IsEnabled="True"
+                  SelectionChanged="EstadoComboBox_SelectionChanged"
+                  SelectedIndex="0" 
+                  ToolTip="Filtrar reservas por estado"
+                  Style="{StaticResource CustomComboBoxStyle}">
+            <ComboBoxItem>Todas</ComboBoxItem>
+            <ComboBoxItem Content="Confirmadas"/>
+            <ComboBoxItem Content="Pendientes"/>
+            <ComboBoxItem Content="Canceladas"/>
+        </ComboBox>
+        <Image Source="/Images/filter.png" Height="30" Width="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,25,580,0"/>
+        <TextBox x:Name="txtFiltro" 
+                 HorizontalAlignment="Left" 
+                 Margin="570,30,0,0" 
+                 Cursor="IBeam" 
+                 TextWrapping="Wrap" 
+                 Foreground="{DynamicResource PrimaryBlueText}" 
+                 FontSize="16" 
+                 VerticalAlignment="Top" 
+                 Width="160" 
+                 Height="30" 
+                 Background="Transparent" 
+                 BorderBrush="{DynamicResource PrimaryBlueText}" 
+                 BorderThickness="0,0,0,2"
+                 TextChanged="txtFiltro_TextChanged"/>
     </Grid>
 </Page>
 

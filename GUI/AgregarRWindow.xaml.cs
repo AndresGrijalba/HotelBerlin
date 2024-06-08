@@ -44,6 +44,7 @@ namespace GUI
         {
             WindowState = WindowState.Minimized;
         }
+
         private void AgregarReserva_Click(object sender, RoutedEventArgs e)
         {
             int idCliente;
@@ -94,11 +95,24 @@ namespace GUI
             {
                 string mensaje = reservaBLL.agregarReserva(nuevaReserva);
                 MessageBox.Show(mensaje);
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar la reserva: " + ex.Message);
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            cmbCedula.SelectedIndex = -1;
+            cmbHabitaciones.SelectedIndex = -1;
+            cmbTipoHabitacion.SelectedIndex = -1;
+
+            dpDesde.SelectedDate = null;
+            dpHasta.SelectedDate = null;
         }
 
         private void OnListenerIdentification_PreviewKeyUp(object sender, KeyboardEventArgs e)

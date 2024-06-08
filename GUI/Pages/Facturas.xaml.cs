@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,23 @@ namespace GUI.Pages
     /// </summary>
     public partial class Facturas : Page
     {
+        public List<Factura> factura = null;
+        FacturaBLL servicio = new FacturaBLL();
+        private FacturaBLL facturaBLL = new FacturaBLL(); 
+
         public Facturas()
         {
             InitializeComponent();
+            DataContext = this;
+            factura = servicio.ObtenerFacturas();
+            FacturasDataGrid.ItemsSource = factura;
+            CargarFacturas();
+        }
+
+        private void CargarFacturas()
+        {
+            List<Factura> facturas = facturaBLL.ObtenerFacturas();
+            FacturasDataGrid.ItemsSource = facturas;
         }
     }
 }

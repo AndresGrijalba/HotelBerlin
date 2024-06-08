@@ -9,7 +9,7 @@
 
     <SolidColorBrush x:Key="PrimaryBlueText" Color="#E5E5E5"/>
     <SolidColorBrush x:Key="SecundaryBlueText" Color="#102341"/>
-    <SolidColorBrush x:Key="TertiaryBlueText" Color="#086BFF"/>
+    <SolidColorBrush x:Key="TertiaryBlueText" Color="#191970"/>
     <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#CACACA"/>
     <SolidColorBrush x:Key="TertiaryBackgroundColor" Color="#00090F"/>
 

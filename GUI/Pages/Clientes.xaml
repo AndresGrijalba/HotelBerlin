@@ -14,16 +14,15 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="btnRegistrar" Content="Agregar Cliente" Click="RegistrarCliente_Click"
-        FontSize="18"
-        FontFamily="Montserrat"
-        Foreground="{DynamicResource PrimaryColor}"
-        FontWeight="Bold"
-        Height="40"
-        HorizontalAlignment="Right"
-        Margin="0, -40, 20, 0"
-        Width="240">
-
+        <Button x:Name="btnRegistrar" Content="Agregar Cliente" Cursor="Hand" Click="RegistrarCliente_Click"
+                FontSize="18"
+                FontFamily="Montserrat"
+                Foreground="{DynamicResource PrimaryColor}"
+                FontWeight="Bold"
+                Height="40"
+                HorizontalAlignment="Right"
+                Margin="0, -40, 20, 0"
+                Width="240">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="{DynamicResource PrimaryBlueText}"/>
@@ -45,16 +44,15 @@
                     </Border>
                 </ControlTemplate>
             </Button.Template>
-
         </Button>
 
-        <Label Content="Lista de Clientes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Cedula" FontSize="15" FontWeight="Bold" Margin="0 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Nombre" FontSize="15" FontWeight="Bold" Margin="145 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Apellido" FontSize="15" FontWeight="Bold" Margin="285 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Correo" FontSize="15" FontWeight="Bold" Margin="420 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Telefono" FontSize="15" FontWeight="Bold" Margin="670 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 70 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Lista de Clientes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,20,0,0" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Cedula" FontSize="15" FontWeight="Bold" Margin="0 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Nombre" FontSize="15" FontWeight="Bold" Margin="145 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Apellido" FontSize="15" FontWeight="Bold" Margin="285 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Correo" FontSize="15" FontWeight="Bold" Margin="420 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Telefono" FontSize="15" FontWeight="Bold" Margin="670 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
 
         <DataGrid x:Name="ClientesDataGrid" Grid.Row="1" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None">
             <DataGrid.Resources>
@@ -161,7 +159,7 @@
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Editar" Click="EditarCliente_Click" Tag="{Binding Cedula}" Margin="0 0 10 0">
+                            <Button Content="Editar" Click="EditarCliente_Click" Cursor="Hand" Tag="{Binding Cedula}" Margin="0 0 10 0">
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>
@@ -169,7 +167,7 @@
                                         <Setter Property="FontWeight" Value="Bold"/>
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#266593"/>
+                                                <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
                                                 <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>
                                             </Trigger>
                                         </Style.Triggers>

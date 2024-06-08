@@ -37,5 +37,16 @@ namespace DAL
 
             return tiposHabitacion;
         }
+
+        public double ObtenerPrecioTiposHabitacion()
+        {
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT precio_noche FROM tipo_habitacion WHERE id = @Id";
+                SqlCommand command = new SqlCommand(query, connection);
+                return (double)command.ExecuteScalar();
+            }
+        }
     }
 }
