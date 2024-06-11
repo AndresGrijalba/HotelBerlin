@@ -151,7 +151,7 @@
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Ver PDF" Tag="{Binding Id}" Cursor="Hand">
+                            <Button Content="Ver PDF" Tag="{Binding Id}" Click="VerPDF_Click" Cursor="Hand">
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="{DynamicResource BlueTransparent}"/>

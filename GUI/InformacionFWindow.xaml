@@ -27,8 +27,8 @@
                 <!-- Header Section -->
                 <StackPanel Grid.Row="0" Orientation="Vertical">
                     <TextBlock Text="Factura" FontSize="30" FontWeight="Bold" FontFamily="segoe ui" Foreground="Black" Margin="0,30,50,20" HorizontalAlignment="Right"/>
-                    <TextBlock Text="Numero de factura:" FontSize="16" FontFamily="segoe ui" Foreground="#A5A5A5" FontWeight="SemiBold" Margin="10,5,200,0" HorizontalAlignment="Right"/>
-                    <TextBlock Text="{Binding Id}" FontSize="16" FontFamily="segoe ui" Foreground="Black" FontWeight="SemiBold" Margin="10,-20,174,0" HorizontalAlignment="Right"/>
+                    <TextBlock Text="Numero de factura:" FontSize="16" FontFamily="segoe ui" Foreground="#A5A5A5" FontWeight="SemiBold" Margin="0,5,220,0" HorizontalAlignment="Right"/>
+                    <TextBlock Text="{Binding Id}" FontSize="16" FontFamily="segoe ui" Foreground="Black" FontWeight="SemiBold" Margin="0,-20,174,0" HorizontalAlignment="Right"/>
                     <TextBlock Text="Fecha de la factura:" FontWeight="SemiBold" FontFamily="segoe ui" FontSize="16" Margin="10,5,200,0" Foreground="#A5A5A5" HorizontalAlignment="Right"/>
                     <TextBlock Name="FechaActual" FontSize="16" FontFamily="segoe ui" Foreground="Black" FontWeight="SemiBold" Margin="10,-20,90,10" HorizontalAlignment="Right"/>
 
@@ -78,7 +78,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Precio Total:" FontFamily="segoe ui" FontWeight="Bold" FontSize="18" Margin="10,30,10,0"/>
-                        <TextBlock Text="....................................................................................................................." FontSize="20" Margin="0,28,0,0"/>
+                        <TextBlock Text=".............................................................................................................." FontSize="20" Margin="0,28,0,0"/>
                         <TextBlock Text="{Binding PrecioTotal, StringFormat={}{0:C0}}" FontFamily="segoe ui" FontWeight="SemiBold" FontSize="15" Margin="10,32,10,0"/>
                     </StackPanel>
                 </StackPanel>

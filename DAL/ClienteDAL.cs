@@ -1,11 +1,7 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -156,11 +152,7 @@ namespace DAL
                         return false;
 
                     }
-                    
-
-
                 }
-
             }
         }
 
@@ -194,7 +186,6 @@ namespace DAL
                 }
                 connection.Close();
             }
-            
             return clientes;
         }
 
@@ -231,10 +222,7 @@ namespace DAL
                 }
                 connection.Close();
             }
-
             return clientes;
         }
-
-
     }
 }

@@ -2,12 +2,10 @@
 using Entity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
 using System.Net.Mime;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace BLL
@@ -28,7 +26,6 @@ namespace BLL
                 }
 
                 reserva.CantidadNoches = reserva.CalcularCantidadNoches();
-                reserva.PrecioTotal = reserva.CalcularPrecio();
                 reservaDAL.agregarReserva(reserva);
 
                 Cliente cliente = clienteDAL.ObtenerClientePorId(reserva.idCliente);
@@ -131,6 +128,28 @@ namespace BLL
             }
         }
 
+        public string FacturarReserva(string reservaId)
+        {
+            try
+            {
+                Reserva reserva = reservaDAL.ObtenerReservaPorId(reservaId);
+
+                if (reserva == null)
+                {
+                    return "La reserva especificada no existe.";
+                }
+
+                reserva.EstadoReserva = "Facturada";
+                reservaDAL.ActualizarReserva(reserva);
+
+                return "Reserva facturada correctamente.";
+            }
+            catch (Exception ex)
+            {
+                return "Error al facturar la reserva: " + ex.Message;
+            }
+        }
+
         public List<Reserva> ObtenerReservas()
         {
             return reservaDAL.ObtenerReservas();
@@ -149,6 +168,11 @@ namespace BLL
         public List<Reserva> ObtenerReservasConfirmadas()
         {
             return reservaDAL.ObtenerReservasConfirmadas();
+        }
+
+        public List<Reserva> ObtenerReservasFacturadas()
+        {
+            return reservaDAL.ObtenerReservasFacturadas();
         }
 
         public Dictionary<string, int> ObtenerReservasPorPeriodo(string periodo)

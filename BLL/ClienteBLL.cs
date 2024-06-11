@@ -1,11 +1,7 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DAL;
-using System.Net.Http;
 
 namespace BLL
 {
@@ -56,23 +52,6 @@ namespace BLL
         public bool ActualizarCliente(Cliente cliente)
         {
             return clienteDAL.ActualizarCliente(cliente);
-        }
-
-        public string EliminarCliente(string cedula)
-        {
-            try
-            {
-                var Respuesta = clienteDAL.EliminarCliente(cedula);
-                if (Respuesta)
-                {
-                    return "Se elimino el cliente correctamente";
-                }
-                return "No se eliminó el cliente";
-            }
-            catch (Exception ex)
-            {
-                return "Error al eliminar el cliente"; 
-            }
         }
 
         public List<Cliente> ObtenerClientes()

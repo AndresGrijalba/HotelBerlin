@@ -315,6 +315,9 @@
                                             <DataTrigger Binding="{Binding EstadoReserva}" Value="Cancelada">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding EstadoReserva}" Value="Facturada">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background" Value="{DynamicResource TertiaryBlueText}"/>
                                                 <Setter Property="Foreground" Value="{DynamicResource WhiteColor}"/>

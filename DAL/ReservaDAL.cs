@@ -1,11 +1,7 @@
 ﻿using Entity;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -13,16 +9,37 @@ namespace DAL
     {
         public void agregarReserva(Reserva reserva)
         {
-            string query = "INSERT INTO reservas (id_cliente, id_habitacion, fecha_inicio, fecha_fin, cantidad_noches, precio_total, fecha_registro, estado_reserva)" +
-                           "VALUES (@id_cliente, @id_habitacion, @fecha_inicio, @fecha_fin, @cantidad_noches, @precio_total, @fecha_registro, @estado_reserva)";
+            string queryReserva = "INSERT INTO reservas (id_cliente, id_habitacion, fecha_inicio, fecha_fin, cantidad_noches, precio_total, fecha_registro, estado_reserva)" +
+                               "VALUES (@id_cliente, @id_habitacion, @fecha_inicio, @fecha_fin, @cantidad_noches, @precio_total, @fecha_registro, @estado_reserva)";
+
+            string queryActualizarHabitacion = "UPDATE habitaciones SET estado = 0 WHERE id = @id_habitacion";
 
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 connection.Open();
 
-                SqlCommand command = setParamsToSave(query, connection, reserva);
+                SqlCommand commandReserva = setParamsToSave(queryReserva, connection, reserva);
+                SqlCommand commandActualizarHabitacion = new SqlCommand(queryActualizarHabitacion, connection);
+                commandActualizarHabitacion.Parameters.AddWithValue("@id_habitacion", reserva.idHabitacion);
 
-                using (command) { command.ExecuteNonQuery(); }
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        commandReserva.Transaction = transaction;
+                        commandActualizarHabitacion.Transaction = transaction;
+
+                        commandReserva.ExecuteNonQuery();
+                        commandActualizarHabitacion.ExecuteNonQuery();
+
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
             }
         }
 
@@ -80,7 +97,6 @@ namespace DAL
                 }
                 connection.Close();
             }
-
             return reservas;
         }
 
@@ -123,7 +139,6 @@ namespace DAL
                 }
                 connection.Close();
             }
-
             return reservas;
         }
 
@@ -166,7 +181,6 @@ namespace DAL
                 }
                 connection.Close();
             }
-
             return reservas;
         }
 
@@ -209,7 +223,48 @@ namespace DAL
                 }
                 connection.Close();
             }
+            return reservas;
+        }
 
+        public List<Reserva> ObtenerReservasFacturadas()
+        {
+            List<Reserva> reservas = new List<Reserva>();
+
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "select c.nombres, c.apellidos, c.cedula, c.correo, r.id, r.fecha_inicio, r.fecha_fin, r.cantidad_noches, r.precio_total, r.fecha_registro, r.estado_reserva, h.numero, th.nombre, th.precio_noche from reservas as r left join clientes as c on c.id = r.id_cliente left join habitaciones as h on h.id = r.id_habitacion left join tipo_habitacion as th on th.id = h.id_tipo where r.estado_reserva = 'Facturada'";
+
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Reserva reserva = new Reserva
+                            (
+                                Convert.ToInt32(reader["id"]),
+                                reader["nombres"].ToString(),
+                                reader["apellidos"].ToString(),
+                                reader["cedula"].ToString(),
+                                reader["correo"].ToString(),
+                                Convert.ToDateTime(reader["fecha_inicio"]),
+                                Convert.ToDateTime(reader["fecha_fin"]),
+                                Convert.ToInt32(reader["cantidad_noches"]),
+                                Convert.ToDouble(reader["precio_total"]),
+                                reader["numero"].ToString(),
+                                Convert.ToDateTime(reader["fecha_registro"].ToString()),
+                                reader["nombre"].ToString(),
+                                Convert.ToDouble(reader["precio_noche"]),
+                                reader["estado_reserva"].ToString()
+                                );
+
+                            reservas.Add(reserva);
+                        }
+                    }
+                }
+                connection.Close();
+            }
             return reservas;
         }
 
@@ -314,7 +369,6 @@ namespace DAL
                     }
                 }
             }
-
             return reservasPorPeriodo;
         }
     }

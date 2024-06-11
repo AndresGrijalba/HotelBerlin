@@ -102,6 +102,8 @@ namespace GUI.Pages
             InformacionFWindow detallesReservaWindow = new InformacionFWindow(reservaSeleccionada);
             detallesReservaWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             detallesReservaWindow.ShowDialog();
+            string resultado = reservaBLL.FacturarReserva(reservaId.ToString());
+            CargarReservas();
         }
 
         private void CargarReservas()

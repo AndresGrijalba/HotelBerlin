@@ -15,17 +15,5 @@ namespace Entity
         public string Cedula{ get; set; }
         public string Telefono { get ; set; }
         public Cliente() { }
-
-        public Cliente(string id) {
-            this.Id = Convert.ToInt32(id);
-        }
-
-        public Cliente(int id, string nombres, string apellidos, string cedula)
-        {
-            this.Id = id;
-            this.Nombre = nombres;
-            this.Apellido = apellidos;
-            this.Cedula = cedula;
-        }
     }
 }

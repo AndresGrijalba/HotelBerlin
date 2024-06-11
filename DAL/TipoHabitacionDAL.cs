@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -31,22 +28,9 @@ namespace DAL
 
                     tiposHabitacion.Add(tipo);
                 }
-
                 reader.Close();
             }
-
             return tiposHabitacion;
-        }
-
-        public double ObtenerPrecioTiposHabitacion()
-        {
-            using (SqlConnection connection = DatabaseConnection.GetConnection())
-            {
-                connection.Open();
-                string query = "SELECT precio_noche FROM tipo_habitacion WHERE id = @Id";
-                SqlCommand command = new SqlCommand(query, connection);
-                return (double)command.ExecuteScalar();
-            }
         }
     }
 }

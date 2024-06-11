@@ -9,10 +9,10 @@
         Icon="/Images/icon.ico"
         AllowsTransparency="True"
         Background="Transparent"
-        WindowStyle="None"
         WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        WindowStyle="None">
     <Border CornerRadius="0" Background="{DynamicResource PrimaryColor}">
 
         <Grid>

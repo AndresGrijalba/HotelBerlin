@@ -131,8 +131,10 @@ C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.exe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GUI.pdb
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\BLL.dll
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\Entity.dll
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GLWpfControl.dll
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\itextsharp.dll
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\LiveCharts.dll
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\LiveCharts.Wpf.dll
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\OpenTK.dll
@@ -148,6 +150,7 @@ C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\BLL.pdb
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\Entity.pdb
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\GLWpfControl.pdb
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\itextsharp.xml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\OpenTK.pdb
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\OpenTK.xml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\bin\Debug\SkiaSharp.pdb
@@ -173,6 +176,7 @@ C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\EditarHabitacion.g.cs
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\Estadisticas.g.cs
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaInfoReserv.g.cs
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaIngresos.g.cs
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaReservas.g.cs
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\Facturas.g.cs
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\Habitaciones.g.cs
@@ -195,6 +199,7 @@ C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\EditarHabitacion.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\Estadisticas.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaInfoReserv.baml
+C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaIngresos.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaReservas.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\Facturas.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\Habitaciones.baml
@@ -207,5 +212,3 @@ C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI.exe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\GUI.pdb
-C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaIngresos.g.cs
-C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Pages\GraficaIngresos.baml

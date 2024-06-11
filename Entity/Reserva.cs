@@ -52,10 +52,5 @@ namespace Entity
         {
             return (FechaFin - FechaInicio).Days;
         }
-
-        public double CalcularPrecio()
-        {
-            return (CantidadNoches *  ValorNoche);
-        }
     }
 }

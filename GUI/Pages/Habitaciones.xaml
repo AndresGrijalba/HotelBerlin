@@ -53,7 +53,7 @@
         <Label Content="Numero de habitacion" FontSize="15" FontWeight="Bold" Margin="0 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Tipo de habitacion" FontSize="15" FontWeight="Bold" Margin="225 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Precio noche" FontSize="15" FontWeight="Bold" Margin="445 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
-        <Label Content="Disponible" FontSize="15" FontWeight="Bold" Margin="635 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
+        <Label Content="Disponibilidad" FontSize="15" FontWeight="Bold" Margin="635 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
         <Label Content="Acciones" FontSize="15" FontWeight="Bold" Margin="1000 80 0 12" Foreground="{DynamicResource PrimaryBlueText}"/>
 
         <DataGrid x:Name="HabitacionesDataGrid" Grid.Row="1" IsReadOnly="True" BorderThickness="0" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" Background="{DynamicResource PrimaryColor}" RowBackground="{DynamicResource PrimaryColor}" GridLinesVisibility="None" SelectionMode="Single" HeadersVisibility="None" Margin="0,0,10,-21">

@@ -43,11 +43,11 @@ namespace Entity
         {
             if (disponibilidad.Equals("1"))
             {
-                this.disponibilidadString = "Si";
+                this.disponibilidadString = "Disponible";
             }
             else
             {
-                this.disponibilidadString = "No";
+                this.disponibilidadString = "Reservada";
             }
         }
     }

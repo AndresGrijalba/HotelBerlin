@@ -95,7 +95,11 @@
                            Margin="51 40 0 8"/>
 
                 <DatePicker x:Name="dpHasta"
-                            SelectedDateFormat="Long"/>
+                            Background="Transparent"
+                            Height="25"
+                            Width="295"
+                            BorderBrush="{DynamicResource PrimaryBlueText}"
+                            BorderThickness="0,0,0,2"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Orientation="Vertical" Margin="236,0,0,310" Grid.Column="1" Grid.RowSpan="2">
@@ -149,9 +153,11 @@
                            Margin="51 40 0 8"/>
 
                 <DatePicker x:Name="dpDesde"
-                            Background="{DynamicResource PrimaryBlueText}"
+                            Background="Transparent"
                             Height="25"
-                            Width="295"/>
+                            Width="295"
+                            BorderBrush="{DynamicResource PrimaryBlueText}"
+                            BorderThickness="0,0,0,2"/>
             </StackPanel>
 
             <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,215,0,0" Grid.Column="1">
