@@ -2,11 +2,10 @@
 
 namespace GUI
 {
-
     public partial class Login : Window
     {
         string user = "hotelberlinva@gmail.com";
-        string password = "adminhotelberlin";
+        string password = "adminhb";
 
         public Login()
         {

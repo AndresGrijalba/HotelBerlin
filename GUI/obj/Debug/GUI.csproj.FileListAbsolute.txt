@@ -191,7 +191,6 @@ C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBe
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\AgregarCWindow.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\AgregarHWindow.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\AgregarRWindow.baml
-C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Assets\Icons\Icons.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\InformacionFWindow.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\Login.baml
 C:\Users\kevin\OneDrive\Desktop\Ing Sistemas\5 Semestre\Programacion III\HotelBerlin\HotelBerlin\GUI\obj\Debug\MainWindow.baml

@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Top">
+        <lvc:CartesianChart Series="{Binding SeriesCollection}" Foreground="{DynamicResource PrimaryBlueText}" LegendLocation="Top">
             <lvc:CartesianChart.AxisY>
                 <lvc:Axis Title="Ingresos" Foreground="{DynamicResource PrimaryBlueText}" Labels="{Binding Labels}" />
             </lvc:CartesianChart.AxisY>
